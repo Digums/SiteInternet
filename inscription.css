@@ -1,0 +1,16 @@
+#formulaire{
+    align-content: center;
+    width: 60%;
+    margin-top: 15%;
+    margin-left: 25%;
+}
+#formulaire #gauche{
+    margin-left: 10%;
+
+    float:left;
+    width:30%;
+}
+#formulaire #droite{
+    margin-left:55%;
+    width:30%;
+}
