@@ -1,7 +1,7 @@
 body{
     margin:0;
     padding:0;
-    background: url(../images/background2.png) no-repeat center fixed;
+    background: url(Quentin/images/background2.png) no-repeat center fixed;
     -webkit-background-size: cover;
     background-size: cover;
     font-family: Arial;
@@ -12,7 +12,7 @@ div#menutop ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #64A1A0;
 }
 
 div#menutop li {
@@ -34,7 +34,7 @@ div#menutop li a {
 }
 
 div#menutop li a:hover{
-    background-color: #111;
+    background-color: #6BB0AF;
 }
 
 /*Menu left*/
@@ -91,3 +91,49 @@ div#menuleft .dropdown-content a:hover {
 div#menuleft .dropdown:hover .dropdown-content{
     display: block;
 }
+div#groscadre {
+    width: 70%;
+    position: absolute;
+    text-align: justify;
+    border: 5px double #64A1A0;
+    margin-left: 19.5%;
+    margin-top: 5%;}
+
+div#souscadrehg {
+    width: 30%;
+    position: absolute;
+    text-align: justify;
+    border: 5px solid black;
+    margin-right: 50%;
+    margin-bottom: 50%;
+}
+
+div#souscadrehd {
+    width: 30%;
+    position: absolute;
+    text-align: justify;
+    border: 5px solid black;
+    margin-left: 50%;
+    margin-bottom: 50%;
+}
+
+div#souscadrebg {
+    width: 30%;
+    position: absolute;
+    text-align: justify;
+    border: 5px solid black;
+    margin-right: 50%;
+    margin-top: 50%;
+}
+
+div#souscadrebd {
+    width: 30%;
+    position: absolute;
+    text-align: justify;
+    border: 5px solid black;
+    margin-left: 50%;
+    margin-top: 50%;
+}
+
+
+
