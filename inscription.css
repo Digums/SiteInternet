@@ -1,6 +1,8 @@
 #formulaire{
+    align-content: center;
     width: 60%;
-    margin-left: 30%;
+    margin-top: 15%;
+    margin-left: 25%;
 }
 #formulaire #gauche{
     margin-left: 10%;
