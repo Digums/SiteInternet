@@ -1,7 +1,7 @@
 body{
     margin:0;
     padding:0;
-    background: url(../../../images/background2.png) no-repeat center fixed;
+    background: url(../images/background2.png) no-repeat center fixed;
     -webkit-background-size: cover;
     background-size: cover;
 }
@@ -12,7 +12,7 @@ div#menutop ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    width: 100%;
+    /*width: 100%;*/
 }
 
 div#menutop li {
