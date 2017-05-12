@@ -1,0 +1,143 @@
+body{
+    size: 80%;
+    align-content: space-around;
+}
+h1{
+    color: darkred;
+    font-family: Arial;
+    font-size: 1.6em;
+}
+
+li{
+    color: red;
+}
+
+.capteur{
+    width: 200px;
+    float: left;
+}
+
+em{
+    color: blue;
+}
+
+
+span {
+    color: darkred;
+    cursor: pointer;
+}
+
+.liste {
+    position: relative;
+    display: inline-block;
+}
+
+.contenu_liste {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 5px 10px 0px;
+    padding: 12px 16px;
+}
+
+.liste:hover .contenu_liste {
+    display: block;
+}
+
+a:hover {
+    cursor: pointer;
+    background-color: lightgrey;
+}
+body{
+    margin:0;
+    padding:0;
+    background: url(../images/background2.png) no-repeat center fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+/*Menu top*/
+div#menutop ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+div#menutop li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+div#menutop li:last-child {
+    border-right: none;
+}
+
+div#menutop li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    width: 350px;
+}
+
+div#menutop li a:hover{
+    background-color: #111;
+}
+
+/*Menu left*/
+div#menuleft ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 10%; /*Largeur du tableau*/
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+div#menuleft li a, .dropbtn{
+    display: inline-block;
+    color: white;
+    /*text-align: center;*/
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+div#menuleft li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+div#menuleft li a:hover, .dropdown:hover .dropbtn{
+    background-color: #4CAF50;
+    color: black;
+}
+div#menuleft li.dropdown{
+    /*display: inline-block;*//*Empecher le vert plein quand on metter la souris*/
+}
+div#menuleft .dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px; /*Permet de faire en sorte que le dropbown ai la bonne taille*/
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+div#menuleft .dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+div#menuleft .dropdown-content a:hover {
+    background-color: aquamarine;
+}
+div#menuleft .dropdown:hover .dropdown-content{
+    display: block;
+}
