@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <link rel='stylesheet' href="inscription.css">
@@ -7,16 +8,26 @@
 </head>
 <body>
 <form>
-    <p><label>Nom*</label><input type="text" name="name" placeholder=""></p>
-    <p><label>Prénom*</label><input type="text" name="name" placeholder=""></p>
-    <p><label>Date de naissance*</label><input type="text" name="name" placeholder=""></p>
-    <p><label>E-mail*</label><input type="text" name="name" placeholder=""></p>
-    <p><label>Mot de passe*</label><input type="text" name="name" placeholder=""></p>
-    <p><label>Ressaisie du mot de passe*</label><input type="text" name="name" placeholder=""></p>
-    <p><label>Nom</label><input type="text" name="name" placeholder=""></p>
-    <p><label>Nom</label><input type="text" name="name" placeholder=""></p>
-    <p><label>Nom</label><input type="text" name="name" placeholder=""></p>
-
+    <div id="formulaire">
+    <fieldset>
+        <legend>Vos coordonnées</legend>
+    <div id="gauche">
+        <p><label>Nom*</label></br><input type="text" name="name" placeholder="" required></p>
+        <p> <label>Prénom*</label></br><input type="text" name="name" placeholder="" required></p>
+        <p><label>Date de naissance*</label></br><input type="date" name="name" placeholder="jj/mm/aa" required></p>
+        <p><label>E-mail*</label></br><input type="text" name="name" placeholder="" required></p>
+        <p><label>Mot de passe*</label></br><input type="password" name="name" placeholder="" required></p>
+        <p><label>Ressaisie du mot de passe*</label></br><input type="password" name="name" placeholder="" required></p>
+    </div>
+    <div id="droite">
+        <p><label>Adresse*</label></br><input type="text" name="name" placeholder="" required></p>
+        <p><label>Code postal*</label></br><input type="text" name="name" placeholder="" required></p>
+        <p><label>Ville*</label></br><input type="text" name="name" placeholder="" required></p>
+        <p><label>Pays*</label></br><input type="text" name="name" placeholder="" required></p>
+        <p><label>Téléphone</label></br><input type="tel" name="name" placeholder=""></p>
+    </div>
+    </div>
+    </fieldset>
 </form>
 
 </body>
