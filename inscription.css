@@ -1,3 +1,14 @@
 #formulaire{
-    width: 100%;
+    width: 60%;
+    margin-left: 30%;
+}
+#formulaire #gauche{
+    margin-left: 10%;
+
+    float:left;
+    width:30%;
+}
+#formulaire #droite{
+    margin-left:55%;
+    width:30%;
 }
