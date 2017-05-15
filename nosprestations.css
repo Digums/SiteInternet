@@ -18,6 +18,7 @@ div#menutop ul {
 div#menutop li {
     float: left;
     border-right:1px solid #bbb;
+    width: 24.95%;
 }
 
 div#menutop li:last-child {
@@ -30,7 +31,7 @@ div#menutop li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    width: 350px;
+    /*width: 350px;*/
 }
 
 div#menutop li a:hover{
@@ -68,7 +69,7 @@ div#menuleft li a:hover, .dropdown:hover .dropbtn{
     color: black;
 }
 div#menuleft li.dropdown{
-    /*display: inline-block;*//*Empecher le vert plein quand on metter la souris*/
+    /*display: inline-block;*//*Empecher le vert plein quand on mettait la souris*/
 }
 div#menuleft .dropdown-content{
     display: none;
@@ -91,49 +92,60 @@ div#menuleft .dropdown-content a:hover {
 div#menuleft .dropdown:hover .dropdown-content{
     display: block;
 }
-div#groscadre {
-    width: 70%;
-    position: absolute;
+#groscadre {
+    width: 85%;
     text-align: justify;
     border: 5px double #64A1A0;
-    margin-left: 19.5%;
-    margin-top: 5%;}
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+h1{
+    width: 100%;
+}
+.souscadre{
+    width: 45%;
+    border: 5px outset ;
+    margin: 2%;
+}
 
-div#souscadrehg {
+/*div#souscadrehg {
     width: 30%;
-    position: absolute;
+    height: 30%;
     text-align: justify;
     border: 5px solid black;
     margin-right: 50%;
     margin-bottom: 50%;
+    overflow: auto;
 }
 
 div#souscadrehd {
     width: 30%;
-    position: absolute;
     text-align: justify;
     border: 5px solid black;
     margin-left: 50%;
     margin-bottom: 50%;
+    overflow: auto;
 }
 
 div#souscadrebg {
     width: 30%;
-    position: absolute;
     text-align: justify;
     border: 5px solid black;
     margin-right: 50%;
     margin-top: 50%;
+    overflow: auto;
 }
 
 div#souscadrebd {
     width: 30%;
-    position: absolute;
     text-align: justify;
     border: 5px solid black;
     margin-left: 50%;
     margin-top: 50%;
+    overflow: auto;
 }
-
-
+*/
 
