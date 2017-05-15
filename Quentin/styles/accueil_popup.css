@@ -18,7 +18,7 @@ div#menutop ul {
 div#menutop li {
     float: left;
     border-right:1px solid #bbb;
-    width: 24.95%;
+    width: 19.95%;
 }
 
 div#menutop li:last-child {
@@ -35,6 +35,9 @@ div#menutop li a {
 
 div#menutop li a:hover{
     background-color: #6BB0AF;
+}
+div#menutop .active{
+    background-color: #4CAF50;
 }
 
 /*Connexion*/
