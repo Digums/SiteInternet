@@ -11,6 +11,6 @@
     $user='root';
     $pass='';
 
-    $db = new PDO("mysql:host=$host;dbname=$dbname", "$user", "$pass");
-    $db->query("SET NAMES UTF8");
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", "$user", "$pass");
+    $conn->query("SET NAMES UTF8");
 ?>
