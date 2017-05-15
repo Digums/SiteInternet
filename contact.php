@@ -6,6 +6,14 @@
     <title>Title</title>
 </head>
 <body>
+
+<header>
+<?php
+require("footer.html");
+?>
+</header>
+
+<section>
 <div id="grande">
     <div id="haut">
         <p>
@@ -24,15 +32,17 @@
     <div id="droite">
         <form method="post" action="traitement.php">
         <p>
-            <label for="commentaire">Commentaire</label><br />
+            <label for="commentaire" id="commentaire">Commentaire</label><br />
             <textarea name="commentaire" id="commentaire" placeholder="Pas de commentaire"></textarea>
         </p>
-            <input type="submit" value="Envoyer" />
+            <input type="submit" id="sent" value="Envoyer" />
 
         </form>
     </div>
 
 </fieldset>
 </div>
+</section>
+
 </body>
 </html>

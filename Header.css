@@ -1,0 +1,50 @@
+body{
+    margin:0;
+    padding:0;
+    background: url(../images/background2.png) no-repeat center fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+/*Menu top*/
+div#menutop ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #64A1A0;
+    /*width: 100%;*/
+}
+
+div#menutop li {
+    float: left;
+    border-right:1px solid #bbb;
+    width: 19.95%;
+}
+
+div#menutop li:last-child {
+    border-right: none;
+}
+
+div#menutop li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+div#menutop li a:hover{
+    background-color: #6BB0AF;
+}
+
+/*Cadre*/
+div#cadre {
+    width: 50%;
+    /*text-align: justify;*/
+    text-align: center;
+    border: 2.5px solid #64A1A0;
+    margin-left: 24.95%;
+    margin-top: 10%;
+    display: block;
+    flex-wrap: wrap;
+}

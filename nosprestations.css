@@ -46,7 +46,7 @@ div#menuleft ul {
     width: 10%; /*Largeur du tableau*/
     background-color: #CFB294;
     position: fixed;
-    height: 100%;
+    height: 85%;
     overflow: auto;
 }
 div#menuleft li a, .dropbtn{

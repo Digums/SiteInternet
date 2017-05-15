@@ -12,5 +12,5 @@
     $pass='';
 
     $conn = new PDO("mysql:host=$host;dbname=$dbname", "$user", "$pass");
-    $conn->query("SET NAMES UTF8");
+    $conn->query("SET NAMES UTF8")
 ?>

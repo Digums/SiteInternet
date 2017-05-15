@@ -1,24 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="Quentin/images/floticon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="Quentin/images/floticon.ico" >
+    <link rel="stylesheet" type="text/css" href="Quentin/styles/accueil_popup.css">
     <title>Footer</title>
 
     <style>
-        header, footer {
-            padding: 1em;
+        footer {
+            padding-left: 2%;
+            padding-top: 1%;
+            padding-bottom: 1%;
             color: white;
-            background-color: black;
-            clear: left;
+            background-color: #6BB0AF;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+        div#copy {
             text-align: center;
+            position: fixed;
+            right: 2%;
+        }
+
+        div#lien {
+            text-align: left;
+        }
+        a {
+            color: white;
         }
     </style>
 </head>
 <body>
 
+<header>
+
+</header>
+
+<nav>
+    <div id="menutop">
+        <ul>
+            <li><a                     title="A propos de nous ?"  href="quisommesnous.html">A propos de nous ?</a></li>
+            <li><a                     title="Nos prestations"     href="nosprestations.php">Nos prestation</a></li>
+            <li><a                     title="Contact"             href="contact.php">Contact</a></li>
+            <li><a                     title="Aide"                href="aide.html">Aide</a></li>
+            <!--<li><a   class="active"    title="Login"               href="">Login</a></li>-->
+            <li><button onclick="document.getElementById('id01').style.display='block'" style="width:100%;">Login</button></li>
+
+        </ul>
+    </div>
+
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate" action="/action_page.php">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="img_avatar2.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit">Login</button>
+                <input type="checkbox" checked="checked"> Remember me
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+    </ul>
+
+</nav>
+
 <footer>
-    Copyright &copy; At'Hom
-    <br> G7C
+    <div id="copy">
+        Developed by <a href="G7C">At'Hom</a>
+    </div>
+
+    <div id="lien">
+        <a href="">Politique de Confidentialité</a> <a href=""> Conditions</a> <a href="contact.php">Noous contacter</a>
+
+    </div>
 </footer>
+
 </body>
 </html>

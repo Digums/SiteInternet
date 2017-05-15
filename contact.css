@@ -1,6 +1,6 @@
 #grande{
     margin-left: 25%;
-    margin-top: 10%;
+    margin-top:5%;
     width: 60%;
     border: 1px solid black;
 
@@ -17,7 +17,7 @@
 #principale #gauche{
     float: left;
     width:30%;
-    margin-left: 10%;
+    margin-left: 5%;
 }
 #principale #droite{
     margin-left: 10%;
@@ -25,4 +25,9 @@
 #commentaire{
     width: 60%;
     height: 10em;
+    margin-left: 5%;
+}
+
+#sent {
+    margin-left: 5%;
 }
