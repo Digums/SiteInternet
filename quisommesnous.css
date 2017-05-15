@@ -12,7 +12,7 @@ div#menutop ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #64A1A0;
+    background-color: #8CAA8E;
 }
 
 div#menutop li {
@@ -35,7 +35,7 @@ div#menutop li a {
 }
 
 div#menutop li a:hover{
-    background-color: #6BB0AF;
+    background-color: #A7C4A9;
 }
 
 /*Menu left*/
@@ -65,7 +65,7 @@ div#menuleft li a {
 }
 
 div#menuleft li a:hover, .dropdown:hover .dropbtn{
-    background-color: #4CAF50;
+    background-color: #104E1B;
     color: black;
 }
 div#menuleft li.dropdown{
@@ -87,7 +87,7 @@ div#menuleft .dropdown-content a{
     text-align: left;
 }
 div#menuleft .dropdown-content a:hover {
-    background-color: aquamarine;
+    background-color: #298539;
 }
 div#menuleft .dropdown:hover .dropdown-content{
     display: block;
@@ -95,7 +95,7 @@ div#menuleft .dropdown:hover .dropdown-content{
 
 #cadre{
     width: 85%;
-    border: 5px double #64A1A0;
+    border: 5px double #8CAA8E;
     text-align: justify;
     margin-left: 12.5%;
     margin-right: 12.5%;
