@@ -7,6 +7,6 @@
 */
 session_start();
 require ("Quentin/index.html");
-include ("footer.html");
+include("footer.html");
 
 ?>

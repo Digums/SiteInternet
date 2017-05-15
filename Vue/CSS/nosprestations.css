@@ -1,52 +1,22 @@
 body{
     margin:0;
     padding:0;
-    background: url(Quentin/images/background2.png) no-repeat center fixed;
     -webkit-background-size: cover;
     background-size: cover;
     font-family: Arial;
 }
-/*Menu top*/
-div#menutop ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #8CAA8E;
+header{
+    background: black;
 }
-
-div#menutop li {
-    float: left;
-    border-right:1px solid #bbb;
-    width: 24.95%;
-}
-
-div#menutop li:last-child {
-    border-right: none;
-}
-
-div#menutop li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    /*width: 350px;*/
-}
-
-div#menutop li a:hover{
-    background-color: #A7C4A9;
-}
-
 /*Menu left*/
 div#menuleft ul {
     list-style-type: none;
-    margin: 0;
+    margin-left: 2%;
     padding: 0;
     width: 10%; /*Largeur du tableau*/
     background-color: #CFB294;
     position: fixed;
-    height: 85%;
+    height: 80%;
     overflow: auto;
 }
 div#menuleft li a, .dropbtn{
@@ -93,12 +63,13 @@ div#menuleft .dropdown:hover .dropdown-content{
     display: block;
 }
 #groscadre {
-    width: 85%;
+    width: 80%;
     text-align: justify;
     border: 5px double #8CAA8E;
-    margin-left: 12.5%;
+    margin-left: 15.5%;
     margin-right: 12.5%;
     margin-top: 5%;
+    margin-bottom: 5%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -107,8 +78,9 @@ h1{
 }
 .souscadre{
     width: 44%;
+    height: 30%;
     border: 5px outset ;
-    margin: 2%;
+    margin: 1%;
     padding: 5px;
 }
 

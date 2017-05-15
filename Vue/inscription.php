@@ -2,8 +2,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel='stylesheet' href="Quentin/styles/index_main.css">
-    <link rel='stylesheet' href="inscription.css">
+    <link rel='stylesheet' href="../Quentin/styles/index_main.css">
+    <link rel='stylesheet' href="CSS/inscription.css">
     <title>Title</title>
 </head>
 <body>
