@@ -106,13 +106,15 @@ h1{
     width: 100%;
 }
 .souscadre{
-    width: 45%;
+    width: 44%;
     border: 5px outset ;
     margin: 2%;
+    padding: 5px;
 }
 
 .images{
     float: left;
+    padding: 1px;
 }
 
 /*div#souscadrehg {
