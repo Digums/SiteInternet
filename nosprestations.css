@@ -111,6 +111,10 @@ h1{
     margin: 2%;
 }
 
+.images{
+    float: left;
+}
+
 /*div#souscadrehg {
     width: 30%;
     height: 30%;
