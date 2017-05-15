@@ -103,3 +103,23 @@ div#menuleft .dropdown:hover .dropdown-content{
     padding: 5px;
 
 }
+#align{
+    display: flex;
+    justify-content: space-around;
+}
+.img1{
+
+    width: 20%;
+    height: 20%;
+}
+
+.img2{
+
+    width: 20%;
+    height: 20%;
+}
+
+.img3{
+    width: 20%;
+    height: 20%;
+}
