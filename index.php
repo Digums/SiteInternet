@@ -7,6 +7,18 @@
 */
 session_start();
 require ("Quentin/index.html");
-include("footer.html");
+include("Vue/footer.html");
+
+if(isset($_GET['cible'])) { // on regarde à quelle page la personne souhaite accéder
+    if ($_GET['cible'] == "A propos de nous ?") {
+        include("Vue/quisommesnous.html");
+    } else if ($_GET['cible'] == "Nos prestations") {
+        include("Vue/nosprestations.php");
+    } else if ($_GET['cible'] == "Contact") {
+        include("Vue/contact.php");
+    } else if ($_GET['cible'] == "Aide") {
+        include("Vue/aide.html");
+    }
+}
 
 ?>
