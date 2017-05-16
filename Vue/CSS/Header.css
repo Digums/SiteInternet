@@ -1,7 +1,7 @@
 body{
     margin:0;
     padding:0;
-    background: url(../../Autre/images/background2.png) no-repeat center fixed;
+    background: url(../images/background2.png) no-repeat center fixed;
     -webkit-background-size: cover;
     background-size: cover;
 }
@@ -18,7 +18,7 @@ div#menutop ul {
 div#menutop li {
     float: left;
     border-right:1px solid #bbb;
-    width: 24.95%;
+    width: 19.95%;
 }
 
 div#menutop li:last-child {
@@ -35,34 +35,6 @@ div#menutop li a {
 
 div#menutop li a:hover{
     background-color: #6BB0AF;
-}
-
-/*Connexion*/
-
-input[type=text], select {
-    width: 30%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-left: 30%;
-}
-input[type=password], select {
-    width: 30%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-left: 30%;
-}
-div#connexion {
-    border-radius: 5px;
-    background-color: #f1f1f1;
-    padding: 20px;
 }
 
 /*Cadre*/

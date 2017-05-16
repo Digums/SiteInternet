@@ -1,0 +1,129 @@
+body{
+    margin:0;
+    padding:0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    font-family: Arial;
+}
+header{
+    background: black;
+}
+/*Menu left*/
+div#menuleft ul {
+    list-style-type: none;
+    margin-left: 2%;
+    padding: 0;
+    width: 10%; /*Largeur du tableau*/
+    background-color: #CFB294;
+    position: fixed;
+    height: 80%;
+    overflow: auto;
+}
+div#menuleft li a, .dropbtn{
+    display: inline-block;
+    color: white;
+    /*text-align: center;*/
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+div#menuleft li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+div#menuleft li a:hover, .dropdown:hover .dropbtn{
+    background-color: #104E1B;
+    color: black;
+}
+div#menuleft li.dropdown{
+    /*display: inline-block;*//*Empecher le vert plein quand on mettait la souris*/
+}
+div#menuleft .dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #CFB294;
+    min-width: 160px; /*Permet de faire en sorte que le dropbown ai la bonne taille*/
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+div#menuleft .dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+div#menuleft .dropdown-content a:hover {
+    background-color: #298539;
+}
+div#menuleft .dropdown:hover .dropdown-content{
+    display: block;
+}
+#groscadre {
+    width: 80%;
+    text-align: justify;
+    border: 5px double #8CAA8E;
+    margin-left: 15.5%;
+    margin-right: 12.5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+h1{
+    width: 100%;
+}
+.souscadre{
+    width: 44%;
+    height: 30%;
+    border: 5px outset ;
+    margin: 1%;
+    padding: 5px;
+}
+
+.images{
+    float: left;
+    padding: 1px;
+}
+
+/*div#souscadrehg {
+    width: 30%;
+    height: 30%;
+    text-align: justify;
+    border: 5px solid black;
+    margin-right: 50%;
+    margin-bottom: 50%;
+    overflow: auto;
+}
+
+div#souscadrehd {
+    width: 30%;
+    text-align: justify;
+    border: 5px solid black;
+    margin-left: 50%;
+    margin-bottom: 50%;
+    overflow: auto;
+}
+
+div#souscadrebg {
+    width: 30%;
+    text-align: justify;
+    border: 5px solid black;
+    margin-right: 50%;
+    margin-top: 50%;
+    overflow: auto;
+}
+
+div#souscadrebd {
+    width: 30%;
+    text-align: justify;
+    border: 5px solid black;
+    margin-left: 50%;
+    margin-top: 50%;
+    overflow: auto;
+}
+*/
+
