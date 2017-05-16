@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <link rel='stylesheet' href="Quentin/styles/index_main.css">
     <link rel='stylesheet' href="inscription.css">
-    <title>Title</title>
+    <title>Inscription</title>
 </head>
 <body>
 <form>
