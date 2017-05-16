@@ -14,18 +14,18 @@ div#menutop ul {
     list-style-type: none;
     position: fixed;
     top: 2%;
-    left: 2%;
+    left: 3%;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #64A1A0;
-    width: 96%;
+    width: 94%;
 }
 
 div#menutop li {
     float: left;
     border-right:1px solid #bbb;
-    width: 16.6%;
+    width: 16.57%;
 }
 
 div#menutop li:last-child {
