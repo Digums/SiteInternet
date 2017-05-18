@@ -1,35 +1,14 @@
-#groscadre {
-    width: 80%;
-    text-align: justify;
-    border: 5px double #8CAA8E;
-    margin-left: 15.5%;
-    margin-right: 12.5%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    display: flex;
-    flex-wrap: wrap;
+body{
+    margin:0;
+    padding:0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    font-family: Arial;
 }
-h1{
-    width: 100%;
-}
-.souscadre{
-    width: 44%;
-    height: 30%;
-    border: 5px outset ;
-    margin: 1%;
-    padding: 5px;
+header{
+    background: black;
 }
 
-#cadre{
-    width: 85%;
-    border: 5px double #8CAA8E;
-    text-align: justify;
-    margin-left: 12.5%;
-    margin-right: 12.5%;
-    margin-top: 5%;
-    padding: 5px;
-
-}
 #align{
     display: flex;
     justify-content: space-around;
@@ -101,17 +80,8 @@ h1{
     margin-left: 5%;
 }
 
-body{
-    margin:0;
-    padding:0;
-    -webkit-background-size: cover;
-    background-size: cover;
-    font-family: Arial;
-}
-header{
-    background: black;
-}
-/*Menu left*/
+
+/*Menu left ------------------------------------------------------------------------------------------------------------*/
 div#menuleft ul {
     list-style-type: none;
     margin-left: 2%;
@@ -164,4 +134,43 @@ div#menuleft .dropdown-content a:hover {
 }
 div#menuleft .dropdown:hover .dropdown-content{
     display: block;
+}
+
+/* Nos prestations -----------------------------------------------------------------------------------------------------*/
+#groscadre {
+    width: 80%;
+    text-align: justify;
+    border: 5px double #8CAA8E;
+    margin-left: 15.5%;
+    margin-right: 12.5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+h1{
+    width: 100%;
+}
+.souscadre{
+    width: 44%;
+    height: 30%;
+    border: 5px outset ;
+    margin: 1%;
+    padding: 5px;
+}
+
+#cadre{
+    width: 85%;
+    border: 5px double #8CAA8E;
+    text-align: justify;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    margin-top: 5%;
+    padding: 5px;
+
+}
+
+.images{
+    float: left;
+    padding: 1px;
 }
