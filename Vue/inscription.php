@@ -2,15 +2,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel='stylesheet' href="../Quentin/styles/index_main.css">
     <link rel='stylesheet' href="CSS/style.css">
     <title>Title</title>
 </head>
+
 <body>
 <form>
     <div id="formulaire">
         <fieldset>
             <legend>Vos coordonnées</legend>
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <div id="gauche">
                 <p><label>Nom*</label></br><input type="text" name="name" placeholder="" required></p>
                 <p> <label>Prénom*</label></br><input type="text" name="name" placeholder="" required></p>
@@ -50,6 +51,7 @@
                 <a href="aide.html"><input type="submit" value="Envoyer" /></a>
             </div>
     </div>
+</form>
     </fieldset>
 </form>
 

@@ -6,7 +6,7 @@
 * Time: 11:41
 */
 session_start();
-require ("Quentin/index.html");
+require("Vue/Header.php");
 include("Vue/footer.html");
 
 if(isset($_GET['cible'])) { // on regarde à quelle page la personne souhaite accéder
