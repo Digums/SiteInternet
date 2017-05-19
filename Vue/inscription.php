@@ -7,6 +7,17 @@
 </head>
 
 <body>
+
+<header>
+    <?php
+    require ("Header.php");
+    ?>
+</header>
+
+<?php
+require ("Menu_user.php");
+?>
+
 <form>
     <div id="formulaire">
         <fieldset>
@@ -54,6 +65,12 @@
 </form>
     </fieldset>
 </form>
+
+<footer>
+    <?php
+    require ("footer.html");
+    ?>
+</footer>
 
 </body>
 </html>

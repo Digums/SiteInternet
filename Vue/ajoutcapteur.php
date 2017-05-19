@@ -1,3 +1,29 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: alexa
+ * Date: 17/05/2017
+ * Time: 19:17
+ */
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname ="at'hom";
+
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    //
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn->query("SET NAMES UTF8");
+
+}
+
+catch(PDOException $e)
+{
+    echo "Connection failed:" . $e ->gerMessage();
+}
+?>
+
 <!DOCTYPE HTML>
 <html>
 
@@ -16,9 +42,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $nameErr = "Le nom est requis";
     } else {
         $name = test_input($_POST["name"]);
-        if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-            $nameErr = "Only letters and white space allowed";
-        }
+        /*if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+            $nameErr = "lettre [A-Z] et [espace]";
+        }*/
     }
 
     if (empty($_POST["type"])) {
@@ -46,13 +72,13 @@ function test_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
+
 ?>
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
-    <label>Nom du capteur:*
-        <input type="text" name="<?php echo $name; ?>" required>
-    </label>
-    <span style="color: red"> *<?php echo $etatErr; ?></span>
+    <label>Nom du capteur:*</label>
+        <input type="text" name="name" required>
+    <span style="color: red">* <?php echo $etatErr;?></span>
     <br><br>
 
 Type de capteur:
@@ -71,43 +97,28 @@ Etat du capteur :
     <span style="color: red"> <?php echo $etatErr; ?><br><br></span>
 
 Nom de la pièce :
-    <input type="text" name="piece" required> <?php echo $pieceErr; ?>
+    <input type="" name="piece" required> <?php echo $pieceErr; ?>
     <br><br>
 
-    <input type="submit">
+    <input type="submit" name="submit" value="Valider">
 
 </form>
 
-<?php
-/**
- * Created by PhpStorm.
- * User: alexa
- * Date: 17/05/2017
- * Time: 19:17
- */
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname ="at'hom";
 
+<?php
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    //
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "INSERT INTO capteur(id,nom_capteur,type_capteur,etat,donnée, id_piece,id_action) 
-VALUES ('','$name','$type','$etat','',1,'')";
+    $sql = "INSERT INTO `capteur`(`nom_capteur`, `type_capteur`, `etat`, `id_piece`)
+VALUES ('$name','$type','$etat','$piece')";
 // use exec() because no results are returned
     $conn->exec($sql);
     echo "New record created successfully";
 }
-
-
 catch(PDOException $e)
 {
-    echo "Connection failed:" . $e ->gerMessage();
+    echo $sql . "<br>" . $e->getMessage();
 }
 ?>
 
-
 </body>
 </html>
+

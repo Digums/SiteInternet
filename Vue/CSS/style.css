@@ -5,9 +5,9 @@ body{
     background-size: cover;
     font-family: Arial;
 }
-header{
+/*header{
     background: black;
-}
+}*/
 
 #align{
     display: flex;
