@@ -5,23 +5,7 @@
  * Date: 17/05/2017
  * Time: 19:17
  */
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname ="at'hom";
-
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    //
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $conn->query("SET NAMES UTF8");
-
-}
-
-catch(PDOException $e)
-{
-    echo "Connection failed:" . $e ->gerMessage();
-}
+ require ("../Modele/connexion M.php");
 ?>
 
 <!DOCTYPE HTML>
@@ -33,46 +17,7 @@ catch(PDOException $e)
 <body>
 
 <?php
-// define variables and set to empty values
-$nameErr = $typeErr = $etatErr = $pieceErr = "";
-$name = $type = $etat = $piece = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty($_POST["name"])) {
-        $nameErr = "Le nom est requis";
-    } else {
-        $name = test_input($_POST["name"]);
-        /*if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-            $nameErr = "lettre [A-Z] et [espace]";
-        }*/
-    }
-
-    if (empty($_POST["type"])) {
-        $typeErr = " Le type est requis";
-    } else {
-        $type = test_input($_POST["type"]);
-    }
-
-    if (empty($_POST["etat"])) {
-        $etat = "";
-    } else {
-        $etat = test_input($_POST["etat"]);
-    }
-
-    if (empty($_POST["piece"])) {
-        $pieceErr = "La pièce est requise";
-    } else {
-        $piece = test_input($_POST["piece"]);
-    }
-}
-
-function test_input($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
-
+    require ("../Controleur/test_ajout_capteur.php");
 ?>
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">

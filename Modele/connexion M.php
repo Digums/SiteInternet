@@ -2,15 +2,25 @@
 /**
  * Created by PhpStorm.
  * User: alexa
- * Date: 12/05/2017
- * Time: 09:58
+ * Date: 17/05/2017
+ * Time: 19:17
  */
 
-    $dbname = "SiteInternet";
-    $host='localhost';
-    $user='root';
-    $pass='';
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname ="at'hom";
 
-    $conn = new PDO("mysql:host=$host;dbname=$dbname", "$user", "$pass");
-    $conn->query("SET NAMES UTF8")
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    //
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn->query("SET NAMES UTF8");
+
+}
+catch(PDOException $e)
+{
+    echo "Connection failed:" . $e ->gerMessage();
+}
+
 ?>
