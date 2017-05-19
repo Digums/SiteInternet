@@ -1,7 +1,7 @@
 body{
     margin:0;
     padding:0;
-    background: gray  /*no-repeat center fixed*/;
+    background: url(../../Autre/images/background2.png) no-repeat center fixed;
     -webkit-background-size: cover;
     background-size: cover;
 }
@@ -18,7 +18,7 @@ div#menutop ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #64A1A0;
+    background-color: #8CAA8E;
     width: 94%;
 }
 
