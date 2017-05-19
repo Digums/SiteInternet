@@ -4,11 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <link rel='stylesheet' href="Quentin/styles/index_main.css">
-    <link rel='stylesheet' href="inscription.css">
+    <link rel='stylesheet' href="CSS/inscription.css">
     <title>Inscription</title>
 </head>
 <body>
 <form>
+    <?php
+    // Sous WAMP (Windows)
+    $bdd = new PDO('mysql:host=localhost;dbname=app;charset=utf8', 'root', '');
+
+    $reponse = $bdd->query('SELECT * FROM app');
+    $donnes=$reponse->fetch();
+    ?>
     <div id="formulaire">
         <fieldset>
             <legend>Vos coordonnées</legend>
