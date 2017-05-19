@@ -4,7 +4,7 @@
     <title>Nos prestations</title>
     <link rel="icon" type="image/png" href="../Autre/images/floticon.png">
     <link rel="shortcut icon" type="image/x-icon" href="images/floticon.ico" >
-    <link rel="stylesheet" href="CSS/nosprestations.css">
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>

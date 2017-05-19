@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <link rel='stylesheet' href="CSS/contact.css">
+    <link rel='stylesheet' href="CSS/style.css">
     <title>Title</title>
 </head>
 <body>
