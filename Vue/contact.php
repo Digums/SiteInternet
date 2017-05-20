@@ -1,15 +1,26 @@
+<?php
+try
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=athom;charset=utf8', 'root', '',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+}
+catch (Exception $e)
+{
+    die('Erreur : ' . $e->getMessage());
+}
+?>
+
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <link rel='stylesheet' href="CSS/style.css">
+    <link rel='stylesheet' href="CSS/contact.css">
     <title>Title</title>
 </head>
 <body>
 
 <header>
-<?php
-require("footer.html");
-?>
+    <?php
+    require("footer.html");
+    ?>
 </header>
 
 <section>
@@ -21,27 +32,23 @@ require("footer.html");
         </div>
         <fieldset id="principale">
             <legend>Votre message</legend>
-            <div id="gauche">
-                <form method="post" action="contact.php">
+            <form method="post" action="../Modele/traitement.php">
+                <div id="gauche">
                     <p><label>Nom* </label></br><input type="text" name="nom" placeholder="Nom" required/></p>
                     <p><label>Prénom* </label></br><input type="text" name="prenom" id="prenom" placeholder="Prénom" required/></p>
                     <p><label>Pseudo* </label></br><input type="text" name="pseudo" placeholder="Pseudo" required/></p>
-                </form>
-            </div>
-            <div id="droite">
-                <form method="post" action="traitement.php">
+                </div>
+                <div id="droite">
                     <p>
                         <label for="commentaire" id="commentaire">Commentaire</label><br />
                         <textarea name="commentaire" id="commentaire" placeholder="Pas de commentaire"></textarea>
                     </p>
                     <input type="submit" id="sent" value="Envoyer" />
 
-                </form>
-            </div>
-
+                </div>
+            </form>
         </fieldset>
     </div>
 </section>
-
 </body>
 </html>

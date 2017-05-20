@@ -1,16 +1,21 @@
-form{
-    align-content: center;
-    width: 60%;
-    margin-top: 15%;
-    margin-left: 25%;
+div.newcapteur{
+    width: 30%;
+    margin-left: auto;
+    position: relative;
 }
-#formulaire #gauche{
-    margin-left: 10%;
+/*fieldset{
+    border: none;
+}*/
 
-    float:left;
-    width:30%;
+div.delcapteur{
+    width: 30%;
+    //border: 1px solid black;
+    margin-right: auto;
 }
-#formulaire #droite{
-    margin-left:55%;
-    width:30%;
+div.sousligne{
+    text-decoration: underline;
+}
+div.test{
+    margin-top: 10%;
+    display: flex;
 }

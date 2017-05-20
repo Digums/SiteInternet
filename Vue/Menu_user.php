@@ -15,7 +15,7 @@
         <li><a title="Maison "      href="">Maison</a></li>
         <li><a title="Statistique " href="">Statistique</a></li>
         <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Capteur</a>
+            <a href="capteur2.php" class="dropbtn">Capteur</a>
             <div class="dropdown-content">
                 <a title="Température" href="">Température</a>
                 <a title="Humidité"    href="">Humidité</a>
