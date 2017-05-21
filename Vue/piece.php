@@ -10,7 +10,7 @@
 <body>
 <header>
     <?php
-    require("footer.html");
+    require("Header.php");
     ?>
 </header>
 
@@ -33,17 +33,20 @@
         </li>
     </ul>
 </div>
+
 <form>
     <div id="groscadre">
         <h1>Gestion des pièces</h1>
 
-        <label for="nom">Nom de la pièce</label>
-        <input type="text" id="nom" name="nom_de_la_piece" placeholder="">
+        <label> Nom de la pièce</label>
+        <input type="text" id="nom" name="nom" placeholder="">
+        <br>
 
-        <label for="taille">Taille de la pièce</label>
+        <label> Taille de la pièce</label>
         <input type="int" id="taille" name="taille" placeholder="">
+        <br>
 
-        <label for="capteur">Nombre de capteurs</label>
+        <label> Nombre de capteurs</label>
         <select id="capteur" name="capteur">
             <option value="1">1</option>
             <option value="2">2</option>
@@ -57,8 +60,18 @@
             <option value="10">10</option>
 
         </select>
+        <br>
+
         <input type="submit" value="Submit">
     </div>
 </form>
 
+<footer>
+    <?php
+require ("footer.html");
+?>
+</footer>
+
+</body>
+</html>
 

@@ -10,32 +10,13 @@
 <body>
 <header>
     <?php
-    require("footer.html");
+    require("Header.php");
     ?>
 </header>
 
-<div id="menuleft">
-    <ul>
-        <li><a title="Menu"         href="">Menu</a></li>
-        <li><a title="Profil "      href="">Profil</a></li>
-        <li><a title="Maison "      href="">Maison</a></li>
-        <li><a title="Statistique " href="">Statistique</a></li>
-        <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Capteur</a>
-            <div class="dropdown-content">
-                <a title="Température" href="">Température</a>
-                <a title="Humidité"    href="">Humidité</a>
-                <a title="Caméra "     href="">Caméra</a>
-                <a title="Porte "      href="">Porte</a>
-                <a title="Fumée "      href="">Fumée</a>
-            </div>
-        </li>
-    </ul>
-</div>
-
-
-
-
+<?php
+include("Menu_user.php");
+?>
 
 <div id="cadre">
 
@@ -56,6 +37,11 @@
 
 </div>
 
+<footer>
+    <?php
+    require("footer.html");
+    ?>
+</footer>
 </body>
 
 </html>
