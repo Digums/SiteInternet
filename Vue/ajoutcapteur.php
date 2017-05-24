@@ -12,7 +12,7 @@
 <html>
 
 <head>
-<link rel="stylesheet" href="CSS/ajout_capteur.css">
+<link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
 
@@ -56,7 +56,7 @@ try {
 VALUES ('$name','$type','$etat','$piece')";
 // use exec() because no results are returned
     $conn->exec($sql);
-    echo "New record created successfully";
+    /*echo "New record created successfully";*/
 }
 catch(PDOException $e)
 {

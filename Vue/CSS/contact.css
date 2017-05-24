@@ -1,6 +1,6 @@
-#grande{
+div.grande{
     margin-left: 25%;
-    margin-top:5%;
+    margin-top: 15%;
     width: 60%;
     border: 1px solid black;
 
@@ -10,23 +10,49 @@
     margin-left: 5%;
 }
 
-#principale{
+#commentaire{
+    margin-left: 25%;
+    margin-top:5%;
+    width: 50%;
+    border: 1px solid black;
 
 }
+
 #principale #gauche{
     float: left;
-    width:30%;
+    width:25%;
     margin-left: 5%;
 }
 #principale #droite{
     margin-left: 10%;
 }
-#commentaire{
-    width: 60%;
-    height: 10em;
-    margin-left: 5%;
-}
 
 #sent {
     margin-left: 5%;
+}
+
+/*partie admin*/
+
+div.affichage_commentaire{
+    width: 60%;
+    margin-top: 7%;
+    margin-left: 20%;
+}
+div.message{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #717171;
+    border-bottom: 0px;
+}
+/*#reponse{
+    float: right;
+}*/
+
+span{
+    color: #1F2596;
+    text-decoration: underline;
+}
+
+#sent_reponse{
+    margin-left: 30%;
 }

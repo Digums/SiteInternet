@@ -9,6 +9,7 @@
 <body>
 
 
+<form>
 
 <form method="post" action="../Modele/TraitementInscription.php">
 

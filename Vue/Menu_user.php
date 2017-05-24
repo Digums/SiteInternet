@@ -10,12 +10,12 @@
 
 <div id="menuleft">
     <ul>
-        <li><a title="Menu"         href="">Menu</a></li>
+        <li><a title="Accueil"         href="accueil_user.php">Accueil</a></li>
         <li><a title="Profil "      href="">Profil</a></li>
         <li><a title="Maison "      href="">Maison</a></li>
         <li><a title="Statistique " href="">Statistique</a></li>
         <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Capteur</a>
+            <a href="capteur2.php" class="dropbtn">Capteur</a>
             <div class="dropdown-content">
                 <a title="Température" href="">Température</a>
                 <a title="Humidité"    href="">Humidité</a>

@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <title>Nos prestations</title>
-    <link rel="icon" type="image/png" href="../Autre/images/floticon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="images/floticon.ico" >
+    <title>Qui sommes nous ?</title>
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 
@@ -13,10 +11,6 @@
     require("Header.php");
     ?>
 </header>
-
-<?php
-include("Menu_user.php");
-?>
 
 <div id="cadre">
 

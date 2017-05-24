@@ -2,13 +2,13 @@
 <head>
     <meta charset="UTF-8">
     <link rel='stylesheet' href="CSS/style.css">
-    <title>Title</title>
+    <title>Contact</title>
 </head>
 <body>
 
 <header>
 <?php
-require("footer.html");
+require("Header.php");
 ?>
 </header>
 
@@ -17,6 +17,7 @@ require("footer.html");
         <div id="haut">
             <p>
                 <img src="../Autre/images/bonhommetel.jpg" id="telephone">
+                Pour toutes question, vous pouvez nous envoyer un message !
             </p>
         </div>
         <fieldset id="principale">
@@ -43,5 +44,11 @@ require("footer.html");
     </div>
 </section>
 
+<footer>
+    <?php
+require ("footer.html");
+?>
+
+</footer>
 </body>
 </html>
