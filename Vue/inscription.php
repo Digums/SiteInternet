@@ -1,9 +1,3 @@
-<?php $bdd = new PDO("mysql:host=localhost;dbname=app","root","");
-$bdd -> query("SET NAME UTF8");
-
-
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,32 +7,10 @@ $bdd -> query("SET NAME UTF8");
     <title>Inscription</title>
 </head>
 <body>
-<?php
-
-// Sous WAMP (Windows)
 
 
-    $reponse = $bdd->query('SELECT * FROM membre');
-    while ($donnees=$reponse->fetch()){
-        echo $donnees['nom'];
-  }
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nom = $_POST['nom'];
-    $prenom = $_POST['prenom'];
-    $date = $_POST['date'];
-    $email = $_POST['email'];
-    $mdp = $_POST['mdp'];
-    $mdp2 = $_POST['mdp2'];
-    $statut = 1;
-    $ville = $_POST['ville'];
-    $codepostal = $_POST['codepostal'];
-    $pays = $_POST['pays'];
-    $adresse = "$ville" + " " + "$pays" + "$codepostal";
-}
-    ?>
 
-
-<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+<form method="post" action="../Modele/TraitementInscription.php">
 
     <div id="formulaire">
         <fieldset>
@@ -87,30 +59,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 </p>
                 <p><label>Téléphone</label></br><input type="tel" name="tel" placeholder=""></p>
 
-                <a href="aide.html"><input type="submit" value="Envoyer" /></a>
+                <input type="submit" value="Envoyer" />
             </div>
     </div>
-    </fieldset>
+</fieldset>
 </form>
-    <?php
-    try {
 
-        echo $nom ;
-        echo $prenom;
-        echo $date;
-        echo $email ;
-        echo $mdp;
-        echo $statut;
-        echo $adresse;
-    $sql = "INSERT INTO membre(nom,prenom,date,email,mdp,statut,adresse) 
-VALUES ('$nom','$prenom','$date','$email','$mdp','$statut','$adresse')";
 
-    $bdd->exec($sql);
-}
-catch(PDOException $e){
-    echo $sql."<br>".$e->getMessage();
-
-}
-?>
 </body>
 </html>
