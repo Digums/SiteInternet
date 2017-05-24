@@ -14,10 +14,6 @@
     ?>
 </header>
 
-<?php
-require ("Menu_user.php");
-?>
-
 <form>
     <div id="formulaire">
         <fieldset>
