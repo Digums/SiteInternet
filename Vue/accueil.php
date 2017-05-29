@@ -13,7 +13,19 @@ require ("Header.php");
 ?>
 </header>
 
-
+<div id="cadre">
+    <div id="connexion">
+        <form action="">
+            <label for="fname">Username</label>
+            <input type="text" id="fname" name=username" placeholder="Your username..">
+            <br>
+            <label for="lname">Password</label>
+            <input type="password" id="lname" name="password" placeholder="Your password..">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
 
 <footer>
     <?php

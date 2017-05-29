@@ -1,5 +1,5 @@
 body{
-    background: url(../../Autre/images/background2.png) no-repeat center fixed lavenderblush;
+    background: #ffffff;
     margin:0;
     padding:0;
     -webkit-background-size: cover;
@@ -13,59 +13,56 @@ header{
     position: fixed;
     top: 0;
 }
-div#menutop ul {
+
+div.menutop ul {
     list-style-type: none;
     position: fixed;
+    top: -1px;
     margin: 0;
-    padding: 0;
+    padding:0;
     overflow: hidden;
-    background-color: #8CAA8E;
+    background-color: white;
     width: 100%;
 }
 
-div#menutop li {
+div.menutop li {
     float: left;
 }
-#site {
-    font-family: "Arial Black",sans-serif;
-    padding-right: 20%;
+
+img#site {
+    width: 20%;
     padding-top: 5px;
-    padding-left: 5%;
-    float: left;
+    padding-left: 20%;
+}
+
+div.menutop li a {
+    display: block;
     color: grey;
     text-align: center;
-
-}
-#login{
-    float: right;
+    padding: 22px 20px;
+    text-decoration: none;
 }
 
-div#menutop li:last-child {
+div.menutop li a:hover, div.menutop a:active {
+    background-color: #d4d4d4;
+    color: green;
+}
+
+div.menutop li:last-child {
     border-right: none;
 }
 
 
-div#menutop li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 9px 30px;
-    text-decoration: none;
-}
-
-div#menutop li a:hover, div#menutop a:active{
-    background-color: #6BB0AF;
-}
-
 /* Footer --------------------------------------------------------------------------------------------------------------*/
 footer {
     color: white;
-    background-color: #8CAA8E;
+    background-color: black;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
 }
+
 div#copy {
     float: right;
     text-align: center;
@@ -76,8 +73,11 @@ div#copy a{
     color: lightslategrey;
     text-decoration: none;
 }
+div#flink {
+    margin-left: 25%;
+}
 div#flink a {
-    background-color: #8CAA8E;
+    background-color: black;
     color: white;
     padding:9px 30px;
     text-align: center;
@@ -166,7 +166,7 @@ div#menuleft .dropdown:hover .dropdown-content{
     margin-top:5%;
     margin-left: 15%;
     width: 70%;
-    border: 5px double #8CAA8E;
+    background-color: #c6c6c6;
 
 }
 #telephone{
@@ -290,7 +290,7 @@ input[type=text], input[type=password] {
 /* Center the image and position the close button */
 .imgcontainer {
     text-align: center;
-    margin: 24px 0 12px 0;
+    margin: 10px 0 10px 0;
     position: relative;
 }
 
@@ -326,9 +326,9 @@ span.psw {
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    margin: 15% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 50%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button (x) */
@@ -435,3 +435,5 @@ div#adm {
     margin-left: 15%;
     width: 70%;
 }
+
+

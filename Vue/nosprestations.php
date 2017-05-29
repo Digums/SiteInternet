@@ -1,7 +1,8 @@
 <!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel='stylesheet' href="CSS/style.css">
     <title>Nos prestations</title>
 </head>
 
@@ -9,7 +10,7 @@
 
 <header>
 <?php
-require ("Header.php");
+include ("Header.php");
 ?>
 </header>
 
