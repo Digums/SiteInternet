@@ -1,22 +1,19 @@
 <!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
+    <link rel='stylesheet' href="CSS/style.css">
     <title>Nos prestations</title>
-    <link rel="icon" type="image/png" href="../Autre/images/floticon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="images/floticon.ico" >
-    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
+
 <header>
 <?php
-require ("Header.php");
+include ("Header.php");
 ?>
 </header>
 
-<?php
-include ("Menu_user.php");
-?>
 
 <section>
 <div id="groscadre">
@@ -43,7 +40,8 @@ include ("Menu_user.php");
 
     <div class="souscadre">
         <h2>Maintenance</h2>
-        <p><img src="../Autre/images/maintenance.jpg" class="images" alt="template technicien" style="width: 200px;border: 3px solid #CFB294 ;" />Notre équipe de techniciens se tient prête à intervenir à n'importe quel moment lorsque vous rencontrez un souci technique avec votre système domotique.
+        <p><img src="../Autre/images/maintenance.jpg" class="images" alt="template technicien" style="width: 200px;border: 3px solid #CFB294 ;" />
+            Notre équipe de techniciens se tient prête à intervenir à n'importe quel moment lorsque vous rencontrez un souci technique avec votre système domotique.
             <!--<img src="Images/maintenance.jpg" class="images" alt="template technicien" style="width: 200px ; border: 3px solid #CF9442 ;" />-->
         </p>
     </div>

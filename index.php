@@ -11,7 +11,7 @@ include("Vue/footer.html");
 
 if(isset($_GET['cible'])) { // on regarde à quelle page la personne souhaite accéder
     if ($_GET['cible'] == "A propos de nous ?") {
-        include("Vue/quisommesnous.html");
+        include("Vue/quisommesnous.php");
     } else if ($_GET['cible'] == "Nos prestations") {
         include("Vue/nosprestations.php");
     } else if ($_GET['cible'] == "Contact") {

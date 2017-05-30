@@ -10,11 +10,7 @@
 
 </head>
 <body>
-<header>
 
-</header>
-
-<nav>
 <div id="menutop">
     <ul>
         <li><a                     title="A propos de nous ?"  href="">A propos de nous ?</a></li>
@@ -29,7 +25,7 @@
 
 <div id="id01" class="modal">
 
-    <form class="modal-content animate" action="/action_page.php">
+    <form method="post" class="modal-content animate" action="../Modele/TraitementConnexion.php">
         <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
             <img src="img_avatar2.png" alt="Avatar" class="avatar">
@@ -37,10 +33,10 @@
 
         <div class="container">
             <label><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
+            <input type="text" placeholder="Enter email" name="email" required>
 
             <label><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+            <input type="password" placeholder="Enter Password" name="mdp" required>
 
             <button type="submit">Login</button>
             <input type="checkbox" checked="checked"> Remember me
@@ -53,9 +49,6 @@
     </form>
 </div>
 </ul>
-
-</nav>
-
 
 
 </body>

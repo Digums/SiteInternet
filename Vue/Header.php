@@ -1,63 +1,88 @@
 <!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="../Autre/images/floticon.png">
     <link rel="shortcut icon" type="image/x-icon" href="../Autre/images/floticon.ico" >
-    <link rel='stylesheet' href="CSS/Header.css">
+    <link rel='stylesheet' href="CSS/style.css">
     <title>Header</title>
 </head>
 
-
 <body>
-<?php
-/**
- * Created by PhpStorm.
- * User: alexa
- * Date: 15/05/2017
- * Time: 11:19
- */ ?>
-
 <header>
-    <div id="menutop">
+<?php
+$admin = false;
+if ($admin == false){ ?>
+    <div class="menutop">
         <ul>
-            <li><a                     title="Accueil"             href="../Quentin/accueil.html">Domisep</a></li>
-            <li><a                     title="A propos de nous ?"  href="quisommesnous.html">A propos de nous ?</a></li>
+            <li><img src="../Autre/images/logo.png" id="site" ></li>
+            <li ><a ></a ></li >
+            <li ><a ></a ></li >
+            <li ><a ></a ></li >
+            <li ><a ></a ></li >
+            <li><a                     title="Accueil"             href="accueil.php">Accueil</a></li>
             <li><a                     title="Nos prestations"     href="nosprestations.php">Nos prestations</a></li>
-            <li><a                     title="Contact"             href="contact.php">Contact</a></li>
-            <li><a                     title="Aide"                href="aide.html">Aide</a></li>
-            <!--<li><a   class="active"    title="Login"               href="">Login</a></li>-->
-            <li><button onclick="document.getElementById('id01').style.display='block'" style="width:100%;">Login</button></li>
-
-        </ul>
+            <li><a                     title="Contact"             href="contact.php">Contact </a></li>
+            <li><a                     title="Aide"                href="aide.php">Aide</a></li>
+            <!--<li style="float: right"><button   onclick="document.getElementById('id01').style.display='block'">Se connecter</button></li>-->
     </div>
+    <hr>
+<?php }
 
-    <div id="id01" class="modal">
+else { ?>
 
-        <form class="modal-content animate" action="/action_page.php">
+    <div class="menutop" >
+        <ul >
+            <li ><img src = "../Autre/images/logo.png" id = "site" ></li >
+            <li ><a ></a ></li >
+            <li ><a ></a ></li >
+            <li ><a ></a ></li >
+            <li ><a ></a ></li >
+            <li ><a                     title = "Accueil"             href = "accueil_user.php" >Accueil</a ></li >
+            <li class="dropdown"><a href="capteur2.php" class="dropbtn">Capteurs</a>
+                <div class="dropdown-content">
+                    <a title="Température" href="">Température</a>
+                    <a title="Humidité"    href="">Humidité</a>
+                    <a title="Caméra "     href="">Caméra</a>
+                    <a title="Porte "      href="">Porte</a>
+                    <a title="Fumée "      href="">Fumée</a>
+                </div> </li>
+            <li ><a                     title = "Mes maisons"         href = "" > Mes maisons </a ></li >
+            <li ><a                     title = "Profil"              href = ""   >Profil</a ></li >
+            <li ><a                     title = "Aide"                href = "aide.php" > Aide </a ></li >
+        </ul >
+    </div >
+
+    <?php }
+    ?>
+
+    <!--<div id="id01" class="modal">
+
+        <form class="modal-content animate" action="">
             <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <img src="img_avatar2.png" alt="Avatar" class="avatar">
+                <img src="../Images/user.png" alt="Avatar" class="avatar">
             </div>
 
             <div class="container">
-                <label><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
+                <label><b>E-mail</b></label>
+                <input type="text" placeholder="Entrer votre email" name="uname" required>
 
-                <label><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                <label><b>Mot de passe</b></label>
+                <input type="password" placeholder="Entrer votrre mot de passe" name="psw" required>
 
-                <button type="submit">Login</button>
-                <input type="checkbox" checked="checked"> Remember me
+                <button type="submit">Se connecter</button>
+                <input type="checkbox" checked="checked"> Se souvenir de moi
             </div>
 
             <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
+                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Inscription</button>
+                <span class="psw">Mot de passe <a href="#">oublié ?</a></span>
             </div>
         </form>
-    </div>
-    </ul>
+    </div>-->
 </header>
 
-
 </body>
+
+</html>

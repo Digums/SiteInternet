@@ -10,7 +10,7 @@
 
 <div id="menuleft">
     <ul>
-        <li><a title="Menu"         href="">Menu</a></li>
+        <li><a title="Accueil"         href="accueil_user.php">Accueil</a></li>
         <li><a title="Profil "      href="">Profil</a></li>
         <li><a title="Maison "      href="">Maison</a></li>
         <li><a title="Statistique " href="">Statistique</a></li>
