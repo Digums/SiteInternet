@@ -1,6 +1,8 @@
 
 <?php
 require ("../Modele/connexion M.php");
+session_start();
+
 ?>
 
 <!DOCTYPE HTML>

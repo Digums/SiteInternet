@@ -21,7 +21,14 @@ $donnees = $verifemail->fetch();
 if($donnees!=null){
     echo 'le mail est bon: '.$donnees['email'];
     if($donnees['mdp']==$mdp){
-    echo  ' Bon mot de Passe: ' . $donnees['mdp'] . '<br />';
+        /*header('Location: http://localhost/SiteInternet/index.php');*/
+        $idUtilisateur= $bdd->query("SELECT id FROM membre WHERE mdp='$mdp'");
+        $donnees2=$idUtilisateur->fetch();
+        $_SESSION['id']=$donnees2['id'];
+        echo ' Id du membre: '.$_SESSION['id'];
+        header("Location: ../Vue/accueil_user.php ");
+
+
     }
     else{
         echo' mauvais mot de passe';
@@ -29,8 +36,8 @@ if($donnees!=null){
 }
 else{
     echo 'mauvaise adresse email';
-    /*header('http://localhost/SiteInternet/Modele/TraitementConnexion.php');*/
-    include ("../Quentin/acceuil_popup.php");
+    /*header ("Location: $_SERVER[HTTP_REFERER]" );*/
+
 }
 
 ?>

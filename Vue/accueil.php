@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -15,12 +18,12 @@ require ("Header.php");
 
 <div id="cadre">
     <div id="connexion">
-        <form action="">
-            <label for="fname">Username</label>
-            <input type="text" id="fname" name=username" placeholder="Your username..">
+        <form method="post" action="../Modele/TraitementConnexion.php">
+            <label for="email">Username</label>
+            <input type="text" id="email" name="email" placeholder="Your username..">
             <br>
-            <label for="lname">Password</label>
-            <input type="password" id="lname" name="password" placeholder="Your password..">
+            <label for="mdp">Password</label>
+            <input type="password" id="mdp" name="mdp" placeholder="Your password..">
             <br>
             <input type="submit" value="Submit">
         </form>

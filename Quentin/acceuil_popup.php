@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +13,6 @@
 
 </head>
 <body>
-
 <div id="menutop">
     <ul>
         <li><a                     title="A propos de nous ?"  href="">A propos de nous ?</a></li>
@@ -25,7 +26,6 @@
 </div>
 
 <div id="id01" class="modal">
-
     <form method="post" class="modal-content animate" action="../Modele/TraitementConnexion.php">
         <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
