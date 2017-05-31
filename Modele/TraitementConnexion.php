@@ -1,4 +1,5 @@
 <?php
+session_start();
 try
 {
     $bdd = new PDO('mysql:host=localhost;dbname=app;charset=utf8', 'root', '',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
@@ -25,18 +26,22 @@ if($donnees!=null){
         $idUtilisateur= $bdd->query("SELECT id FROM membre WHERE mdp='$mdp'");
         $donnees2=$idUtilisateur->fetch();
         $_SESSION['id']=$donnees2['id'];
-        echo ' Id du membre: '.$_SESSION['id'];
         header("Location: ../Vue/accueil_user.php ");
 
 
     }
     else{
-        echo' mauvais mot de passe';
+        $_SESSION['verif']=2;
+        echo $_SESSION['verif'];
+        header ("Location: $_SERVER[HTTP_REFERER]");
     }
 }
 else{
-    echo 'mauvaise adresse email';
-    /*header ("Location: $_SERVER[HTTP_REFERER]" );*/
+
+    $_SESSION['verif']=3;
+    echo $_SESSION['verif'];
+   header ("Location: $_SERVER[HTTP_REFERER]" );
+
 
 }
 
