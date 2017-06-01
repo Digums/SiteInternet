@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['verif'])) {
+    $_SESSION['verif'] = 1;
+    echo $_SESSION['verif'];
+}
+
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -15,18 +24,32 @@ require ("Header.php");
 
 <div id="cadre">
     <div id="connexion">
-        <form action="">
-            <label for="fname">Username</label>
-            <input type="text" id="fname" name=username" placeholder="Your username..">
+        <form method="post" action="../Modele/TraitementConnexion.php">
+            <label for="email">Username</label>
+            <input type="text" id="email" name="email" placeholder="Your username..">
             <br>
-            <label for="lname">Password</label>
-            <input type="password" id="lname" name="password" placeholder="Your password..">
+            <label for="mdp">Password</label>
+            <input type="password" id="mdp" name="mdp" placeholder="Your password..">
             <br>
             <input type="submit" value="Submit">
+            <?php
+
+            if($_SESSION['verif']==2){
+
+            ?>
+                <p style="color: red">Le Mot de passe est incorrect.</p>
+
+                <?php }
+            elseif($_SESSION['verif']==3){
+                ?> <p style="color: red"> Email invalide.</p>
+            <?php
+            }
+            ?>
+
         </form>
+
     </div>
 </div>
-
 <footer>
     <?php
 require ("footer.html");

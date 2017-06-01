@@ -43,6 +43,7 @@ VALUES (:nom,:prenom,:date,:email,:mdp,:statut,:adresse,:nbrapp,:nom)" );
 
 $req->execute();
 
+
   /*  $sql = "INSERT INTO membre(nom,prenom,date,email,mdp,statut,adresse)
 VALUES ('$nom','$prenom','$date','$email','$mdp','$statut','$adresse')";
 
