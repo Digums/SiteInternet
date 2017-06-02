@@ -124,7 +124,8 @@ div#flink a {
     display: inline-block;
 }
 div#flink a:hover, div#flink a:active {
-    background-color: #6BB0AF;
+    background-color: #d4d4d4;
+    color: green;
 }
 
 /*Menu_user ------------------------------------------------------------------------------------------------------------*/
@@ -270,9 +271,9 @@ cadre form {
 .cadre{
     background-color: rgba(140,170,0,0.4);
     text-align: justify;
-    margin-top: 10%;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-top: 8%;
+    margin-left: 5%;
+    margin-right: 75%;
     padding: 5px;
     border-radius: 5px;
 }
@@ -349,6 +350,7 @@ img.avatar {
 
 .container {
     padding: 16px;
+    text-align: left;
 }
 
 span.psw {

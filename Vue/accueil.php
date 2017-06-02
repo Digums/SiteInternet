@@ -27,13 +27,13 @@ require ("Header.php");
 
         <div class="container">
             <label><b>Email</b></label>
-            <input type="email" placeholder="Enter Email" name="email" required>
+            <input type="email" placeholder="Entrer Email" name="email" required>
             <br>
-            <label><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+            <label><b>Mot de passe</b></label>
+            <input type="password" placeholder="Entrer Mot de passe" name="psw" required>
 
-            <button type="submit">Login</button>
-            <input type="checkbox" cheked="checked"> Remember me
+            <button type="submit">Connexion</button>
+            <input type="checkbox" cheked="checked"> Se souvenir de moi
         </div>
 
         <!--<div class="container" style="background-color:#f1f1f1">
