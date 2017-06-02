@@ -15,7 +15,7 @@ function addmaison($bdd, $adresse, $complement, $cp, $ville, $superficie, $nbrpi
     try{
         //echo $adresse, $complement, $cp;
         $req = $bdd->prepare("INSERT INTO maison(addresse, complement, cp, ville, superficie, nbrpiece, id_membre) 
-                                   VALUES(:adresse, :complement, :cp, :ville, :superficie, :nbrpiece, 1)");
+                                   VALUES(:adresse, :complement, :cp, :ville, :superficie, :nbrpiece, 4)");
         $req->bindParam(':adresse',$adresse);
         $req->bindParam(':complement',$complement);
         $req->bindParam(':cp',$cp);

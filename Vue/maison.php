@@ -13,8 +13,8 @@ require("Menu_user.php");
     <p> Votre maison :</p>
 
     <?php
-    $piece = listepiece($bdd, 4);
-    $capteur = listecapteur($bdd, 4);
+    $piece = listepiece($bdd, 3);
+    $capteur = listecapteur($bdd, 3);
     $nbcapt = 0;
     $nbpiece = 0;
     while($donnees = $piece->fetch()){ ?>

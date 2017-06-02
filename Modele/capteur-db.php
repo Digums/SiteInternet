@@ -13,10 +13,8 @@ require ("../Modele/connexion M.php");
 
 function addcapteur($bdd, $name, $typecapteur, $etat, $piece){
     try {
-        if ($_SESSION['id']==4){
-            $idmaison=7;
-        }
-        $req = $bdd->prepare("INSERT INTO capteur(nom_capteur, type_capteur, etat,nom_pièce,idmaison) VALUES(:nom, :typecapteur,:etat,:piece, $idmaison)");
+        $idmaison=1;
+        $req = $bdd->prepare("INSERT INTO capteur(nom_capteur, type_capteur, etat,nom_piece,id_maison) VALUES(:nom, :typecapteur,:etat,:piece, $idmaison)");
         $req->bindParam(':nom', $name);
         $req->bindParam(':typecapteur', $typecapteur);
         $req->bindParam(':etat', $etat);
