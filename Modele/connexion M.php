@@ -10,7 +10,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname ="athom";
+$dbname ="app";
 
 try {
     $bdd = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -21,7 +21,7 @@ try {
 }
 catch(PDOException $e)
 {
-    echo "Connection failed:" . $e ->gerMessage();
+    echo "Connection failed:" . $e ->getMessage();
 }
 
 ?>
