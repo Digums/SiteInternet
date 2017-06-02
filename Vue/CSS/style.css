@@ -1,10 +1,15 @@
 body{
-    background: #ffffff;
-    margin:0;
-    padding:0;
-    -webkit-background-size: cover;
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+    height: 100%;
+    background-attachment: fixed;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
     font-family: Arial,sans-serif;
+    background-image: url("../../Autre/images/Fondecran.jpeg");
 }
 
 
@@ -12,14 +17,18 @@ body{
 header{
     position: fixed;
     top: 0;
+    width: 100%;
 }
 
 div.menutop img#site {
-    width: 20%;
+    width: 25%;
     padding-top: 5px;
-    padding-left: 20%;
+    padding-left: 10%;
+    float: left;
 }
-
+.menudroite{
+    float: right;
+}
 div.menutop ul {
     list-style-type: none;
     /*position: fixed;*/
@@ -27,8 +36,8 @@ div.menutop ul {
     margin: 0;
     padding:0;
     overflow: hidden;
-    background-color: white;
-    width: 100%
+    background-color: rgba(0,0,0,0.4);
+    width: 100%;
 }
 div.menutop li{
     float: left;
@@ -43,7 +52,7 @@ div.menutop li a, .dropbtn{
 
 div.menutop li a {
     display: block;
-    color: grey;
+    color: white;
     text-align: center;
     padding: 22px 20px;
     text-decoration: none;
@@ -84,7 +93,7 @@ div.menutop .dropdown:hover .dropdown-content{
 /* Footer --------------------------------------------------------------------------------------------------------------*/
 footer {
     color: white;
-    background-color: black;
+    background-color: rgba(0,0,0,0.4);
     position: fixed;
     bottom: 0;
     left: 0;
@@ -98,14 +107,14 @@ div#copy {
 
 }
 div#copy a{
-    color: lightslategrey;
+    color: black;
     text-decoration: none;
 }
 div#flink {
     margin-left: 25%;
 }
 div#flink a {
-    background-color: black;
+    /*background-color: black;*/
     color: white;
     padding:9px 30px;
     text-align: center;
@@ -249,30 +258,14 @@ h1{
 }
 
 
-div.cadre form {
-    border: 3px solid #f1f1f1;
-    margin-top: 15%;
-    width: 20%;
-    margin-left: 65%;
-}
-
-div.cadre input[type=email], div.cadre input[type=password]{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-div.cadre button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
+#cadre{
+    background-color: rgba(140,170,0,0.4);
+    text-align: justify;
+    margin-top: 10%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .images{
@@ -484,6 +477,5 @@ div#adm {
 .erreur {
     color: red;
 }
-
 
 

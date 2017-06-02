@@ -9,7 +9,7 @@
 <body>
 
 
-<form>
+
 
 <form method="post" action="../Modele/TraitementInscription.php">
 
@@ -63,8 +63,9 @@
                 <input type="submit" value="Envoyer" />
 
             </div>
+        </fieldset>
     </div>
-</fieldset>
+
 </form>
 
 
