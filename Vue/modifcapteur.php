@@ -6,27 +6,20 @@ require ("../Modele/connexion M.php");
 <html>
 
 <head>
-<!--<link rel="stylesheet" href="CSS/ajout_capteur.css">-->
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
 
-<header>
-    <?php
-    require ("Header.php");
-    ?>
-</header>
-
-
 <?php
-require ("../Controleur/test_ajout_capteur.php");
+require ("Menu_user.php");
 ?>
+
 
 <div class="test">
 <div class="newcapteur">
     <fieldset id="formulaire">
         <legend>Ajouter un capteur</legend>
-        <form method="post" action="../Modele/creationcapteur.php">
+        <form method="post" action="../Controleur/capteur-controleur.php">
             <p><label>Nom du capteur: </label><input type="text" name="name" required></p>
 
             <p><label>Type de capteur: </label><select name="typecapteur" id="type_capteur" required>
@@ -43,14 +36,16 @@ require ("../Controleur/test_ajout_capteur.php");
                 <select name="piece" id="piece">
                 <option value="">--Faites votre choix--</option>
                 <?php
-                $piece = $bdd->query("SELECT * FROM piece");
+
+
+                $piece = $bdd->query("SELECT nom_piece FROM piece WHERE id_maison = 1");
                 while ($info = $piece->fetch()){ ?>
                 <option value="<?php echo $info['nom_piece']?>"><?php echo $info['nom_piece'] ?></option>
-                <?php }?>
+                <?php } ?>
 
                 </select>
                 </p>
-            <input type="submit" id="sent" value="Ajouter">
+            <input type="submit" id="sent" value="Ajouter" name="btnAddCapteur">
         </form>
     </fieldset>
 </div>
@@ -59,9 +54,9 @@ require ("../Controleur/test_ajout_capteur.php");
         <p><span class="sousligne">Tous vos capteurs</span></p>
         <div class="listecapteur">
             <?php
-            $capteurs = $bdd->query("SELECT * FROM capteur WHERE idmaison=1");
+            $capteurs = $bdd->query("SELECT * FROM capteur WHERE idmaison=7");
             while($donnees = $capteurs->fetch()){ ?>
-                <p>Il y a un capteur <?php echo $donnees['type_capteur'] ?> (nom :<?php echo $donnees['nom_capteur']?>) dans : <?php echo $donnees['nom_pièce']?>  <button onclick="document.getElementById('id03').style.display='block'">Supprimer</button>
+                <p>Il y a un capteur <?php echo $donnees['type_capteur'] ?> dans <?php echo $donnees['nom_pièce']?> (nom :<?php echo $donnees['nom_capteur']?>) <button onclick="document.getElementById('id03').style.display='block'">Supprimer</button>
                 </p>
 
 
@@ -72,10 +67,9 @@ require ("../Controleur/test_ajout_capteur.php");
                         </div>
 
                         <div class="container">
-                            <form method="post" action="../Modele/delete_bdd.php" class="delete_form">
-                                <input type="hidden" name="id" value="<?php echo $donnees['id'] ?>"/>
+                            <form method="post" action="../Controleur/capteur-controleur.php" class="delete_form">
                                 <p> Voulez-vous vraiment supprimer ce capteur ?</p>
-                                <button type="submit"> Supprimer</button>
+                                <button type="submit" name="btnDelCapteur" value="<?php echo "".$donnees['id'] ?>"> Supprimer</button>
                             </form><br><br>
                         </div>
                     </div>

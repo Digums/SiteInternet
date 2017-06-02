@@ -10,7 +10,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname ="app";
+$dbname ="athom";
 
 try {
     $bdd = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

@@ -16,10 +16,11 @@ function addpiece($bdd, $nom, $taille, $nbrcapteur){
     try{
         echo $nom, $taille, $nbrcapteur;
         $req = $bdd->prepare("INSERT INTO piece(nom_piece, mesure, nbr_capteur, id_maison) 
-                              VALUES(:nom, :mesure, :nbr_capteur, 1)");
+                              VALUES(:nom, :mesure, :nbr_capteur, :id_maison)");
         $req->bindParam(':nom',$nom);
         $req->bindParam(':mesure',$taille);
         $req->bindParam(':nbr_capteur',$nbrcapteur);
+        $req->bindParam(':id_maison', $_SESSION['id']);
         $req->execute();
         $req->closeCursor();
     }catch(Exception $e){
@@ -27,6 +28,21 @@ function addpiece($bdd, $nom, $taille, $nbrcapteur){
         //print_r($params);
         die('<br>Requete Erreur !: '.$e->getMessage());
 
+    }
+}
+
+function listepiece($bdd, $id){
+    try{
+        $req = $bdd->query("SELECT nom_piece, mesure, nbr_capteur
+                            FROM piece p  
+                            INNER JOIN maison m 
+                            ON m.id = p.id_maison
+                            WHERE m.id_membre = $id");
+        return $req;
+    }catch(Exception $e){
+        echo "<br>-------------------<br> ERREUR ! <br>";
+        //print_r($params);
+        die('<br>Requete Erreur !: '.$e->getMessage());
     }
 }
 
