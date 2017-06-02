@@ -27,7 +27,7 @@ catch (Exception $e)
 
 
 try {
-    echo $nbrapp, $mdp,$adresse;
+
 $req= $bdd->prepare("INSERT INTO membre(nom,prenom,date,email,mdp,statut,adresse,nbrapp,nomloca) 
 VALUES (:nom,:prenom,:date,:email,:mdp,:statut,:adresse,:nbrapp,:nom)" );
     $req->bindParam(":nom",$nom);

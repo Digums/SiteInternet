@@ -30,9 +30,10 @@ while ($donnees = $reponse->fetch())
 
         ?>
 
-        <form method="post" action="../Modele/TraitementGestionUtilisateur.php" style=" margin-left: 20%;">
 
-        <div style="display: flex">
+
+        <div style="display: flex ">
+            <form method="post" action="../Modele/TraitementGestionUtilisateur.php" style=" margin-left: 20%; display: flex">
             <div >
                 <input type="text" readonly name="id"  value="<?php  echo $donnees['id']?>"  placeholder="<?php  echo $donnees['id']?>" >
             </div>
@@ -52,11 +53,17 @@ while ($donnees = $reponse->fetch())
             <input type="text" name="administrateur" value="<?php  echo $donnees['nbrapp']?>" placeholder="<?php  echo $donnees['nbrapp']?>" >
             <input type="submit" value="Envoyer" />
             </div>
+        </form>
+
+            <a href="http://localhost/SiteInternet/Modele/TraitementModificationUtilisateur.php?id=<?php echo $donnees['id']; ?>">
+                <button>Modification </button>
+            </a>
+
 
         </div>
 
 
-    </form>
+
         <?php
 
 
@@ -64,9 +71,10 @@ while ($donnees = $reponse->fetch())
     else{
 
         ?>
-        <form method="post" action="../Modele/TraitementGestionUtilisateur.php" style=" margin-left: 20%;">
 
         <div style="display: flex">
+            <form method="post" action="../Modele/TraitementGestionUtilisateur.php" style=" margin-left: 20%; display: flex">
+
             <div >
                 <label>id</label></br>
                 <input type="text" readonly name="id" value="<?php  echo $donnees['id']?>"  placeholder="<?php  echo $donnees['id']?>" >
@@ -92,11 +100,17 @@ while ($donnees = $reponse->fetch())
                 <input type="text" name="administrateur" value="<?php  echo $donnees['nbrapp']?>" placeholder="<?php  echo $donnees['nbrapp']?>" >
                 <input type="submit" value="Envoyer" />
             </div>
-
+            </form>
+            <div>
+                </br>
+            <a href="http://localhost/SiteInternet/Modele/TraitementModificationUtilisateur.php?id=<?php echo $donnees['id']; ?>">
+                <button>Modification </button>
+            </a>
+            </div>
         </div>
 
 
-    </form>
+
     <?php
 
 
