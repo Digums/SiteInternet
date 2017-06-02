@@ -28,7 +28,7 @@ require ("Header.php");
         <div class="container">
             <label><b>Email</b></label>
             <input type="email" placeholder="Enter Email" name="email" required>
-
+            <br>
             <label><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
 
