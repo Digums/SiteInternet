@@ -70,13 +70,11 @@ require ("../Controleur/test_ajout_capteur.php");
                         <div class="imgcontainer">
                             <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
                         </div>
-
                         <div class="container">
-                            <form method="post" action="../Modele/delete_bdd.php" class="delete_form">
-                                <input type="hidden" name="id" value="<?php echo $donnees['id'] ?>"/>
-                                <p> Voulez-vous vraiment supprimer ce capteur ?</p>
-                                <button type="submit"> Supprimer</button>
-                            </form><br><br>
+                            <p> Voulez-vous vraiment supprimer ce capteur ?</p>
+                            <a href="../Modele/delete_bdd.php?id=<?php echo $donnees['id'];  ?>" class="delete_form">
+                                <button> Supprimer</button>
+                            </a><br><br>
                         </div>
                     </div>
 

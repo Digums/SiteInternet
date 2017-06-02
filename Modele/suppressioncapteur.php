@@ -7,7 +7,7 @@ catch (Exception $e)
 {
     die('Erreur : ' . $e->getMessage());
 }
-$choix = $_POST['choixcapteur'];
+$choix = $_POST['id'];
 
 try{
     /*$sql = "DELETE FROM capteur WHERE nom_capteur=':choix'";

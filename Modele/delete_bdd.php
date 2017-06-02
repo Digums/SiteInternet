@@ -8,10 +8,10 @@ catch (Exception $e){
     die('Erreur : ' . $e->getMessage());
     }
 
-$id_el = $_POST['id'];
+$id_el = $_GET['id'];
+$var = "DELETE FROM capteur WHERE id= $id_el";
+$bdd->query($var);   //suppression dans bdd
 
-$bdd->query("delete  FROM capteur  where id= $id_el");   //suppression dans bdd
+/*header ("Location: $_SERVER[HTTP_REFERER]" );*/
 
-header ("Location: $_SERVER[HTTP_REFERER]" );
-
-exit();
+/*exit();*/
