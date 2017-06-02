@@ -9,9 +9,10 @@
 </head>
 
 <body>
+
 <header>
 <?php
-$admin = false;
+$admin = true;
 if ($admin == false){ ?>
     <div class="menutop">
         <ul>
@@ -25,6 +26,7 @@ if ($admin == false){ ?>
             <li><a                     title="Contact"             href="contact.php">Contact </a></li>
             <li><a                     title="Aide"                href="aide.php">Aide</a></li>
             <!--<li style="float: right"><button   onclick="document.getElementById('id01').style.display='block'">Se connecter</button></li>-->
+        </ul>
     </div>
     <hr>
 <?php }

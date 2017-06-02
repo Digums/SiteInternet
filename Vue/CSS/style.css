@@ -49,9 +49,12 @@ div.menutop li a {
     text-decoration: none;
 }
 
-div.menutop li a:hover, .dropdown:hover .dropbtn{
+div.menutop li a:hover {
     background-color: #d4d4d4;
     color: green;
+}
+div.menutop.dropdown:hover .dropbtn {
+    color: lightgray;
 }
 div.menutop li.dropdown{
     /*display: inline-block;*//*Empecher le vert plein quand on metter la souris*/
@@ -72,7 +75,7 @@ div.menutop .dropdown-content a{
     text-align: left;
 }
 div.menutop .dropdown-content a:hover {
-    background-color: aquamarine;
+    background-color: lightgray;
 }
 div.menutop .dropdown:hover .dropdown-content{
     display: block;
@@ -139,7 +142,7 @@ div#menuleft li a {
     text-decoration: none;
 }
 
-div#menuleft li a:hover, .dropdown:hover .dropbtn{
+div#menuleft li a:hover {
     background-color: #104E1B;
     color: black;
 }
