@@ -21,12 +21,14 @@ header{
 }
 
 div.menutop img#site {
-    width: 12%;
+    width: 25%;
     padding-top: 5px;
     padding-left: 10%;
+    float: left;
+}
+.menudroite{
     float: right;
 }
-
 div.menutop ul {
     list-style-type: none;
     /*position: fixed;*/
@@ -35,7 +37,7 @@ div.menutop ul {
     padding:0;
     overflow: hidden;
     background-color: rgba(0,0,0,0.4);
-    width: 100%
+    width: 100%;
 }
 div.menutop li{
     float: left;
