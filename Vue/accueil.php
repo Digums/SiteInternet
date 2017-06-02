@@ -36,9 +36,9 @@ require ("Header.php");
             <input type="checkbox" cheked="checked"> Remember me
         </div>
 
-        <div class="container" style="background-color:#f1f1f1">
-            <!-- <button type="button" class="cancelbtn">Cancel</button> -->
-        </div>
+        <!--<div class="container" style="background-color:#f1f1f1">
+            <!-- <button type="button" class="cancelbtn">Cancel</button>
+        </div>-->
         <?php
 
         if($_SESSION['verif']==2){

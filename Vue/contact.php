@@ -2,6 +2,7 @@
 require ("../Modele/connexion M.php")
 ?>
 
+<
 <html>
 <head>
     <meta charset="UTF-8">
