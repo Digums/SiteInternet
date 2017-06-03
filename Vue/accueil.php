@@ -11,9 +11,12 @@ if (!isset($_SESSION['verif'])) {
 <html>
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../Autre/images/floticon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../Autre/images/floticon.ico" >
     <link rel='stylesheet' href="CSS/style.css">
     <title>Accueil</title>
 </head>
+<div id="bodyaccueil">
 <body>
 
 <header>
@@ -62,4 +65,5 @@ require ("footer.html");
 </footer>
 
 </body>
+</div>
 </html>

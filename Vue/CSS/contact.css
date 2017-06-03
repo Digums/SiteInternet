@@ -1,13 +1,13 @@
 div.grande{
-    margin-left: 25%;
-    margin-top: 15%;
+    margin-left: 20%;
+    margin-top: 10%;
     width: 60%;
-    border: 1px solid black;
 
 }
 #telephone{
     width: 20%;
     margin-left: 5%;
+    margin-top: 2%;
 }
 
 #commentaire{
@@ -17,6 +17,16 @@ div.grande{
     border: 1px solid black;
 
 }
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10.5px 20px;
+    /*margin: 8px 0;*/
+    border: none;
+    cursor: pointer;
+    margin-left: 82.25%;
+}
+/*width: 100%;*/
 
 #principale #gauche{
     float: left;

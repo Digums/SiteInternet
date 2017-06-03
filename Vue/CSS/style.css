@@ -3,6 +3,17 @@ body{
     padding: 0px;
     outline: 0px;
     height: 100%;
+    background-size: cover;
+    width: 100%;
+    font-family: Arial,sans-serif;
+    background: white;
+}
+
+#bodyaccueil{
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+    height: 100%;
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -202,11 +213,12 @@ div#menuleft .dropdown:hover .dropdown-content{
     width:30%;
 }
 
-#grande{
-    margin-top:5%;
+.grande{
+    margin-top:15%;
     margin-left: 15%;
     width: 70%;
-    background-color: #c6c6c6;
+    background-color: rgba(140,170,0,0.4);
+    border-radius: 5px;
 
 }
 #telephone{

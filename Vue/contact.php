@@ -2,7 +2,7 @@
 require ("../Modele/connexion M.php")
 ?>
 
-<
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -34,9 +34,8 @@ if ($admin == false){ ?>
                         <p><label>Mail*</label><br/><input type="text" name="mail" placeholder="Votre mail..." required></p>
                     </div>
                     <div id="droite">
-                        <p><label for="commentaire" id="commentaire">Commentaire*</label>
-                            <textarea name="commentaire" id="commentaire" placeholder="Pas de commentaire..."></textarea> </p>
-                        <input type="submit" id="sent" value="envoyer" />
+                        <p> <textarea name="commentaire" id="commentaire" placeholder="Pas de commentaire..."></textarea> </p>
+                        <button type="submit">Envoyer</button>
                     </div>
                 </form>
             </fieldset>
