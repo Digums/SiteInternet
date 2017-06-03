@@ -7,7 +7,7 @@
 
 </head>
 
-<body>
+<body id="bodyaide">
 
 <header>
     <?php
