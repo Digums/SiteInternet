@@ -16,8 +16,7 @@ if (!isset($_SESSION['verif'])) {
     <link rel='stylesheet' href="CSS/style.css">
     <title>Accueil</title>
 </head>
-<div id="bodyaccueil">
-<body>
+<body id="bodyaccueil">
 
 <header>
 <?php
@@ -65,5 +64,4 @@ require ("footer.html");
 </footer>
 
 </body>
-</div>
 </html>
