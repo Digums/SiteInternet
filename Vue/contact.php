@@ -6,7 +6,7 @@ require ("../Modele/connexion M.php")
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel='stylesheet' href="CSS/contact.css">
+    <link rel='stylesheet' href="CSS/style.css">
     <title>Contact</title>
 </head>
 
