@@ -58,9 +58,9 @@ require ("Menu_user.php");
         <p><span class="sousligne">Tous vos capteurs</span></p>
         <div class="listecapteur">
             <?php
-            $capteurs = $bdd->query("SELECT * FROM capteur WHERE idmaison=7");
+            $capteurs = $bdd->query("SELECT * FROM capteur WHERE id_maison=1");
             while($donnees = $capteurs->fetch()){ ?>
-                <p>Il y a un capteur <?php echo $donnees['type_capteur'] ?> dans <?php echo $donnees['nom_pièce']?> (nom :<?php echo $donnees['nom_capteur']?>) <button onclick="document.getElementById('id03').style.display='block'">Supprimer</button>
+                <p>Il y a un capteur <?php echo $donnees['type_capteur'] ?> dans <?php echo $donnees['nom_piece']?> (nom :<?php echo $donnees['nom_capteur']?>) <button onclick="document.getElementById('id03').style.display='block'">Supprimer</button>
                 </p>
 
 
@@ -83,21 +83,6 @@ require ("Menu_user.php");
             ?>
 
         </div><br />
-
-        <!-- <div class="suppression">
-            <p><span class="sousligne">Vous voulez supprimez l'un de vos capteurs?</span></p>
-            <form method="post" action="../Modele/suppressioncapteur.php">
-                <p><label>Lequel? </label>
-                    <select name="choixcapteur" id="choixcapteur">
-                        <option value="">--Faites votre choix--</option>
-                        <?php
-        $capteurs = $bdd->query("SELECT * FROM capteur WHERE idmaison=1");
-        while ($donnees = $capteurs->fetch()){ ?>
-                            <option value="<?php echo $donnees['nom_capteur']?>"><?php echo $donnees['nom_capteur'] ?></option>
-                        <?php }?></select>   <input type="submit" id="sent2" value="Supprimer" /></p>
-
-            </form>
-        </div>-->
     </div>
 </div>
 

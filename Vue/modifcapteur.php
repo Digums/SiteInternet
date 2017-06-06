@@ -65,12 +65,18 @@ require ("Menu_user.php");
                         <div class="imgcontainer">
                             <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
                         </div>
-
                         <div class="container">
+<<<<<<< HEAD
                             <form method="post" action="../Controleur/capteur-controleur.php" class="delete_form">
                                 <p> Voulez-vous vraiment supprimer ce capteur ?</p>
                                 <button type="submit" name="btnDelCapteur" value="<?php echo "".$donnees['id'] ?>"> Supprimer</button>
                             </form><br><br>
+=======
+                            <p> Voulez-vous vraiment supprimer ce capteur ?</p>
+                            <a href="../Modele/delete_bdd.php?id=<?php echo $donnees['id'];  ?>" class="delete_form">
+                                <button> Supprimer</button>
+                            </a><br><br>
+>>>>>>> 5d198c7e4e1b79747da491b935cd011b3863ecc1
                         </div>
                     </div>
 

@@ -1,22 +1,89 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html lang="FR">
 <head>
-    <title>Aide</title>
     <meta charset="UTF-8">
-    <link rel='stylesheet' href="CSS/style.css">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="../Vue/CSS/aide.css"/>
+
 </head>
 
-<body>
+<body id="bodyaide">
+
 <header>
     <?php
     require ("Header.php");
     ?>
 </header>
 
+<div id="title"> FAQ </div>
+
+
+<div id="bloc1">
+    <div id="bloc1Title">
+        Comment puis-je m'inscrire ?
+    </div>
+    <br>
+    <div id="inscription">
+        Pour vous inscrire, rendez-vous <a id="lien1" href="">ici</a>.</br> <br>
+        Cliquez sur l'onglet inscription </br> <br>
+        Remplissez le formulaire avec les informations suivantes : </br> <br>
+
+    </div>
+</div>
+<br><br>
+
+<div id="bloc2">
+    <div id="bloc2Title">
+        Comment puis-je me connecter ?
+    </div>
+    <div id="connexion">
+
+        Pour vous connecter, rendez vous <a id="lien2" href="">ici</a>.</br> <br>
+
+        Remplissez le formulaire avec les informations demandées</br> <br>
+    </div>
+</div>
+
+<br><br>
+
+<div id="bloc3">
+    <div id="bloc3Title">
+        Comment puis-je ajouter une maison ?
+    </div>
+
+    <div id="ajoutmaison">
+
+        Pour ajouter une maison, cliquez <a id="lien3" href="">ici</a>.</br> <br>
+
+        Cliquez ensuite sur "ajouter une maison"</br> <br>
+
+        Remplissez alors le formulaire en remplissant les champs requis.
+    </div>
+</div>
+
+<br><br>
+
+<div id="bloc4">
+    <div id="bloc4Title">
+        Comment puis-je gérer mes paramètres de compte ?
+    </div>
+
+    <div id="compte">
+
+        Pour accéder a vos informations, cliquez <a id="lien4" href="">ici</a>.</br> <br>
+
+    </div>
+</div>
+
+<br><br>
+
+
 <footer>
     <?php
     require ("footer.html");
     ?>
 </footer>
+
 </body>
+
 </html>

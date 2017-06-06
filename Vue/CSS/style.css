@@ -1,10 +1,27 @@
 body{
-    background: #ffffff;
-    margin:0;
-    padding:0;
-    -webkit-background-size: cover;
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+    height: 100%;
     background-size: cover;
+    width: 100%;
     font-family: Arial,sans-serif;
+    background: white;
+
+}
+
+#bodyaccueil{
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+    height: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    font-family: Arial,sans-serif;
+    background-image: url("../../Autre/images/Fondecran.jpeg");
 }
 
 
@@ -12,51 +29,85 @@ body{
 header{
     position: fixed;
     top: 0;
+    width: 100%;
+}
+
+div.menutop img#site {
+    width: 25%;
+    padding-top: 5px;
+    padding-left: 10%;
+    float: left;
+}
+
+.menudroite{
+    float: right;
 }
 
 div.menutop ul {
     list-style-type: none;
-    position: fixed;
+    /*position: fixed;*/
     top: -1px;
     margin: 0;
     padding:0;
     overflow: hidden;
-    background-color: white;
+    background-color: rgba(0,0,0,0.4);
     width: 100%;
 }
-
-div.menutop li {
+div.menutop li{
     float: left;
 }
-
-img#site {
-    width: 20%;
-    padding-top: 5px;
-    padding-left: 20%;
+div.menutop li a, .dropbtn{
+    display: inline-block;
+    color: white;
+    /*text-align: center;*/
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 div.menutop li a {
     display: block;
-    color: grey;
+    color: white;
     text-align: center;
     padding: 22px 20px;
     text-decoration: none;
 }
 
-div.menutop li a:hover, div.menutop a:active {
+div.menutop li a:hover {
     background-color: #d4d4d4;
     color: green;
 }
-
-div.menutop li:last-child {
-    border-right: none;
+div.menutop.dropdown:hover .dropbtn {
+    color: lightgray;
 }
-
+div.menutop li.dropdown{
+    /*display: inline-block;*//*Empecher le vert plein quand on metter la souris*/
+}
+div.menutop .dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px; /*Permet de faire en sorte que le dropbown ai la bonne taille*/
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+div.menutop .dropdown-content a{
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+div.menutop .dropdown-content a:hover {
+    background-color: lightgray;
+}
+div.menutop .dropdown:hover .dropdown-content{
+    display: block;
+}
 
 /* Footer --------------------------------------------------------------------------------------------------------------*/
 footer {
     color: white;
-    background-color: black;
+    background-color: rgba(0,0,0,0.4);
     position: fixed;
     bottom: 0;
     left: 0;
@@ -70,14 +121,14 @@ div#copy {
 
 }
 div#copy a{
-    color: lightslategrey;
+    color: black;
     text-decoration: none;
 }
 div#flink {
     margin-left: 25%;
 }
 div#flink a {
-    background-color: black;
+    /*background-color: black;*/
     color: white;
     padding:9px 30px;
     text-align: center;
@@ -85,7 +136,8 @@ div#flink a {
     display: inline-block;
 }
 div#flink a:hover, div#flink a:active {
-    background-color: #6BB0AF;
+    background-color: #d4d4d4;
+    color: green;
 }
 
 /*Menu_user ------------------------------------------------------------------------------------------------------------*/
@@ -114,7 +166,7 @@ div#menuleft li a {
     text-decoration: none;
 }
 
-div#menuleft li a:hover, .dropdown:hover .dropbtn{
+div#menuleft li a:hover {
     background-color: #104E1B;
     color: black;
 }
@@ -162,11 +214,12 @@ div#menuleft .dropdown:hover .dropdown-content{
     width:30%;
 }
 
-#grande{
-    margin-top:5%;
+.grande{
+    margin-top:15%;
     margin-left: 15%;
     width: 70%;
-    background-color: #c6c6c6;
+    background-color: rgba(140,170,0,0.4);
+    border-radius: 5px;
 
 }
 #telephone{
@@ -220,13 +273,22 @@ h1{
     padding: 5px;
 }
 
-#cadre{
-    border: 5px double #8CAA8E;
+cadre form {
+    border: 3px solid #f1f1f1;
+    margin-top: 15%;
+    width: 20%;
+    margin-left: 65%;
+}
+
+
+.cadre{
+    background-color: rgba(140,170,0,0.4);
     text-align: justify;
-    margin-top: 5%;
+    margin-top: 8%;
     margin-left: 5%;
-    margin-right: 5%;
+    margin-right: 75%;
     padding: 5px;
+    border-radius: 5px;
 }
 
 .images{
@@ -271,7 +333,7 @@ button:hover {
 }
 
 /* Full-width input fields */
-input[type=text], input[type=password] {
+input[type=email], input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -301,6 +363,7 @@ img.avatar {
 
 .container {
     padding: 16px;
+    text-align: left;
 }
 
 span.psw {

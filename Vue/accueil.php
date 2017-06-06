@@ -11,10 +11,12 @@ if (!isset($_SESSION['verif'])) {
 <html>
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../Autre/images/floticon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../Autre/images/floticon.ico" >
     <link rel='stylesheet' href="CSS/style.css">
     <title>Accueil</title>
 </head>
-<body>
+<body id="bodyaccueil">
 
 <header>
 <?php
@@ -22,33 +24,38 @@ require ("Header.php");
 ?>
 </header>
 
-<div id="cadre">
-    <div id="connexion">
-        <form method="post" action="../Modele/TraitementConnexion.php">
-            <label for="email">Username</label>
-            <input type="text" id="email" name="email" placeholder="Your username..">
-            <br>
-            <label for="mdp">Password</label>
-            <input type="password" id="mdp" name="mdp" placeholder="Your password..">
-            <br>
-            <input type="submit" value="Submit">
-            <?php
+<div class="cadre">
+    <form method="post" action="../Modele/TraitementConnexion.php">
 
-            if($_SESSION['verif']==2){
+        <div class="container">
+            <label><b>Email</b></label>
+            <input type="email" placeholder="Entrer Email" name="email" required>
+            <br>
+            <label><b>Mot de passe</b></label>
+            <input type="password" placeholder="Entrer Mot de passe" name="psw" required>
+
+            <button type="submit">Connexion</button>
+            <input type="checkbox" cheked="checked"> Se souvenir de moi
+        </div>
+
+        <!--<div class="container" style="background-color:#f1f1f1">
+            <!-- <button type="button" class="cancelbtn">Cancel</button>
+        </div>-->
+        <?php
+
+        if($_SESSION['verif']==2){
 
             ?>
-                <p style="color: red">Le Mot de passe est incorrect.</p>
+            <p style="color: red">Le Mot de passe est incorrect.</p>
 
-                <?php }
-            elseif($_SESSION['verif']==3){
-                ?> <p style="color: red"> Email invalide.</p>
+        <?php }
+        elseif($_SESSION['verif']==3){
+            ?> <p style="color: red"> Email invalide.</p>
             <?php
-            }
-            ?>
+        }
+        ?>
+    </form>
 
-        </form>
-
-    </div>
 </div>
 <footer>
     <?php

@@ -38,7 +38,7 @@ function listecapteur($bdd, $id){
         $req = $bdd->query("SELECT *
                             FROM capteur c  
                             INNER JOIN maison m 
-                            ON m.id = c.idmaison
+                            ON m.id = c.id_maison
                             WHERE m.id_membre = $id");
         return $req;
     }catch(Exception $e){

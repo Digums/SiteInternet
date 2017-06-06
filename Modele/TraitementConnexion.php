@@ -1,9 +1,21 @@
 <?php
+<<<<<<< HEAD
 
 require('../Modele/connexion M.php');
 
 ?>
 <?php
+=======
+session_start();
+try
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=athom;charset=utf8', 'root', '',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+}
+catch (Exception $e)
+{
+    die('Erreur : ' . $e->getMessage());
+}
+>>>>>>> 5d198c7e4e1b79747da491b935cd011b3863ecc1
 
 $email = $_POST['email'];
 $mdp = $_POST['mdp'];
