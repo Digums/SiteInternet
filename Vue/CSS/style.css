@@ -1,7 +1,7 @@
 body{
-    margin: 0px;
-    padding: 0px;
-    outline: 0px;
+    margin: 0;
+    padding: 0;
+    outline: 0;
     height: 100%;
     background-size: cover;
     width: 100%;
@@ -11,9 +11,9 @@ body{
 }
 
 #bodyaccueil{
-    margin: 0px;
-    padding: 0px;
-    outline: 0px;
+    margin: 0;
+    padding: 0;
+    outline: 0;
     height: 100%;
     background-attachment: fixed;
     background-size: cover;
@@ -214,14 +214,7 @@ div#menuleft .dropdown:hover .dropdown-content{
     width:30%;
 }
 
-.grande{
-    margin-top:15%;
-    margin-left: 15%;
-    width: 70%;
-    background-color: rgba(140,170,0,0.4);
-    border-radius: 5px;
 
-}
 #telephone{
     width: 20%;
     height: 200px;
@@ -394,48 +387,6 @@ span.psw {
     width: 50%; /* Could be more or less, depending on screen size */
 }
 
-/* The Close Button (x) */
-.close {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: red;
-    cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)}
-    to {-webkit-transform: scale(1)}
-}
-
-@keyframes animatezoom {
-    from {transform: scale(0)}
-    to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-        display: block;
-        float: none;
-    }
-    .cancelbtn {
-        width: 100%;
-    }
-}
 
 /*-------------------------------------------------*/
 
@@ -501,5 +452,75 @@ div#adm {
 .erreur {
     color: red;
 }
+/*-------------------------------------Nous Contacter---------------------------------------------------------------*/
+.grande{
+    margin-top:15%;
+    margin-left: 15%;
+    width: 70%;
+    background-color: rgba(140,170,0,0.4);
+    border-radius: 5px;
+}
+#telephone{
+    width: 20%;
+    margin-left: 5%;
+    margin-top: 2%;
+}
 
+#commentaire{
+    margin-left: 19.5%;
+    margin-top:5%;
+    width: 50%;
+    border: 1px solid black;
 
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10.5px 20px;
+    /*margin: 8px 0;*/
+    border: none;
+    cursor: pointer;
+    margin-left: 82.25%;
+}
+/*width: 100%;*/
+
+#principale #gauche{
+    float: left;
+    width:25%;
+    margin-left: 5%;
+}
+#principale #droite{
+    margin-left: 10%;
+}
+
+#sent {
+    margin-left: 5%;
+}
+
+/*partie admin*/
+
+div.affichage_commentaire{
+    width: 60%;
+    margin-top: 7%;
+    margin-left: 20%;
+}
+div.message{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #717171;
+    border-bottom: 0px;
+}
+/*#reponse{
+    float: right;
+}*/
+
+span{
+    color: #1F2596;
+    text-decoration: underline;
+}
+
+#sent_reponse{
+    margin-left: 30%;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
