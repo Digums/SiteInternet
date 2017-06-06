@@ -2,7 +2,7 @@
 include("../Controleur/piece-controleur.php");
 include("../Controleur/capteur-controleur.php");
 require("../Modele/connexion M.php");
-require("Menu_user.php");
+require("Header.php ");
  ?>
 <html>
 <head>

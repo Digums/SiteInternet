@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-=======
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="../Autre/images/floticon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../Autre/images/floticon.ico" >
-    <link rel='stylesheet' href="CSS/style.css">
-    <title>Header</title>
-</head>
-
-<body>
-
->>>>>>> 5d198c7e4e1b79747da491b935cd011b3863ecc1
-<header>
 <?php
 $admin = true;
 if ($admin == false){ ?>
@@ -82,4 +66,3 @@ else { ?>
             </div>
         </form>
     </div>-->
-</header>

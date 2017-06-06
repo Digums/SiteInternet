@@ -6,6 +6,7 @@ session_start();
 ?>
 
 <!DOCTYPE HTML>
+<html>
 <head>
     <title> accueil user</title>
     <meta charset="UTF-8">
@@ -93,3 +94,4 @@ require ("Menu_user.php");
     ?>
 </footer>
 </body>
+</html>
