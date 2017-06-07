@@ -14,15 +14,6 @@ session_start();
 </head>
 
 <body>
-<?php
-require ("../Controleur/test_ajout_capteur.php")
-?>
-
-<header>
-    <?php
-    require ("Header.php");
-    ?>
-</header>
 
 <?php
 require ("Menu_user.php");
