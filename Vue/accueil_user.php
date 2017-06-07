@@ -29,9 +29,9 @@ require ("Menu_user.php");
 
 <section id="gestion_cap">
 <?php
-$capteurs = $bdd->query("SELECT * FROM capteur WHERE idmaison=1");
+$capteurs = $bdd->query("SELECT * FROM capteur WHERE id_maison=1");
 while($donnees = $capteurs->fetch()){ ?>
-    <p>Il y a un capteur <?php echo $donnees['type_capteur'] ?> dans la pièce : <?php echo $donnees['nom_pièce']?></p>
+    <p>Il y a un capteur <?php echo $donnees['type_capteur'] ?> dans la pièce : <?php echo $donnees['nom_piece']?></p>
 <?php }
 ?>
 </section>

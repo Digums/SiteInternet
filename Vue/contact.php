@@ -35,7 +35,7 @@ if ($admin == false){ ?>
                     </div>
                     <div id="droite">
                         <p> <textarea name="commentaire" id="commentaire" placeholder="Pas de commentaire..."></textarea> </p>
-                        <button type="submit">Envoyer</button>
+                        <button type="submit" id="buttoncontact">Envoyer</button>
                     </div>
                 </form>
             </fieldset>
