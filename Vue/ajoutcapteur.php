@@ -8,7 +8,6 @@
  require ("../Modele/connexion M.php");
 ?>
 
-<!DOCTYPE HTML>
 <html>
 
 <head>

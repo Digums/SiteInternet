@@ -17,7 +17,6 @@ try{
     $req = $bdd->prepare("DELETE FROM capteur WHERE nom_capteur = :choix");
     $req->bindParam(':choix',$choix);
     $req->execute();
-
     $req->closeCursor();
     header ("Location: $_SERVER[HTTP_REFERER]" );
 }catch(Exception $e){

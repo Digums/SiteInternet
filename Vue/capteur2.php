@@ -1,23 +1,19 @@
 <?php
-try
-{
-    $bdd = new PDO("mysql:host=localhost;dbname=test;charset=utf8", 'user', '',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-}
-catch (Exception $e)
-{
-    die('Erreur : ' . $e->getMessage());
-}
+
+require ("../Modele/connexion M.php");
 ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" type="image/png" href="../Autre/images/floticon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../Autre/images/floticon.ico" >
+    <link rel='stylesheet' href="CSS/style.css">
     <title>Capteur</title>
 </head>
 <body>
-
     <header>
         <?php require("Header.php"); ?>
     </header>

@@ -19,9 +19,9 @@ if (!isset($_SESSION['verif'])) {
 <body id="bodyaccueil">
 
 <header>
-<?php
-require ("Header.php");
-?>
+    <?php
+    require ("Header.php");
+    ?>
 </header>
 
 <div class="cadre">
@@ -32,7 +32,7 @@ require ("Header.php");
             <input type="email" placeholder="Entrer Email" name="email" required>
             <br>
             <label><b>Mot de passe</b></label>
-            <input type="password" placeholder="Entrer Mot de passe" name="psw" required>
+            <input type="password" placeholder="Entrer Mot de passe" name="mdp" required>
 
             <button type="submit" id="buttonaccueil">Connexion</button>
             <input type="checkbox" cheked="checked"> Se souvenir de moi
@@ -59,8 +59,8 @@ require ("Header.php");
 </div>
 <footer>
     <?php
-require ("footer.html");
-?>
+    require ("footer.html");
+    ?>
 </footer>
 
 </body>

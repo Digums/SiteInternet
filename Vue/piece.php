@@ -34,7 +34,7 @@
     </ul>
 </div>
 
-<form>
+<form action="../Controleur/piece-controleur.php" method="post">
     <div id="groscadre">
         <h1>Gestion des pièces</h1>
 
@@ -47,7 +47,7 @@
         <br>
 
         <label> Nombre de capteurs</label>
-        <select id="capteur" name="capteur">
+        <select id="capteur" name="nbrcapteur">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -62,7 +62,7 @@
         </select>
         <br>
 
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" name="btnAddPiece">
     </div>
 </form>
 
