@@ -529,7 +529,13 @@ span{
 
 #conteneurpolitique{
     margin: 10%;
+    margin-top: 0%;
     padding: 2%;
     background-color: rgba(140,170,0,0.4);
+}
+#titrepolitique{
+    color: green;
+    margin-top: 5%;
+    margin-left: 35%;
 }
 /*--------------------------------------------------------------------------------------------------------------*/

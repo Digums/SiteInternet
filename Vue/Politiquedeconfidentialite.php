@@ -15,6 +15,8 @@
     ?>
 </header>
 
+<h1 id="titrepolitique">Politique de Confidentialité</h1>
+
 <div id="conteneurpolitique">
     <h2>1.Collecte de l’information</h2>
 
