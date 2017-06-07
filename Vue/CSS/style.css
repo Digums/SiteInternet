@@ -7,7 +7,7 @@ body{
     width: 100%;
     font-family: Arial,sans-serif;
     background: white;
-
+    background-attachment: fixed;
 }
 
 #bodyaccueil{
@@ -311,7 +311,7 @@ cadre form {
 }
 /* ________________________________________________________________________________________________*/
 /* Set a style for all buttons */
-button {
+#buttonaccueil {
     background-color: #4CAF50;
     color: white;
     padding: 10.5px 20px;
@@ -319,6 +319,7 @@ button {
     border: none;
     cursor: pointer;
     /*width: 100%;*/
+    margin-left: 63%;
 }
 
 button:hover {
@@ -473,14 +474,14 @@ div#adm {
     border: 1px solid black;
 
 }
-button {
+#buttoncontact {
     background-color: #4CAF50;
     color: white;
     padding: 10.5px 20px;
     /*margin: 8px 0;*/
     border: none;
     cursor: pointer;
-    margin-left: 82.25%;
+    margin-left: 82.5%;
 }
 /*width: 100%;*/
 
@@ -524,3 +525,18 @@ span{
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------politique de confidentialite------------------------------------------------*/
+
+#conteneurpolitique{
+    margin: 10%;
+    margin-top: 0%;
+    padding: 2%;
+    background-color: rgba(140,170,0,0.4);
+    border-radius: 5px;
+}
+#titrepolitique{
+    color: green;
+    margin-top: 5%;
+    margin-left: 35%;
+}
+/*--------------------------------------------------------------------------------------------------------------*/
