@@ -16,10 +16,12 @@ if($donnees!=null){
     echo 'le mail est bon: '.$donnees['email'];
     if($donnees['mdp']==$mdp){
         /*header('Location: http://localhost/SiteInternet/index.php');*/
-        $idUtilisateur= $bdd->query("SELECT id FROM membre WHERE mdp='$mdp'");
-        $donnees2=$idUtilisateur->fetch();
-        $_SESSION['id']=$donnees2['id'];
+        $idUtilisateur= $bdd->query("SELECT * FROM membre WHERE mdp='$mdp'");
+        $ligne=$idUtilisateur->fetch();
+        $_SESSION['id']=$ligne['id'];
+
         header("Location: ../Vue/accueil_user.php ");
+
 
 
     }
