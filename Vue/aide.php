@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>FAQ</title>
-    <link rel="stylesheet" href="../Vue/CSS/aide.css"/>
+    <link rel="stylesheet" href="../Vue/CSS/style.css"/>
 
 </head>
 
@@ -15,9 +15,9 @@
     ?>
 </header>
 
-<div id="title"> FAQ </div>
+<h1 id="title"> FAQ </h1>
 
-
+<div id="conteneuraide">
 <div id="bloc1">
     <div id="bloc1Title">
         Comment puis-je m'inscrire ?
@@ -74,8 +74,7 @@
 
     </div>
 </div>
-
-<br><br>
+</div>
 
 
 <footer>

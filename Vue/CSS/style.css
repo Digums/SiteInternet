@@ -554,3 +554,112 @@ span{
     margin-left: 35%;
 }
 /*--------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------aide------------------------------------------------------------*/
+#title {
+    color: green;
+    margin-top: 5%;
+    margin-left: 35%;
+
+}
+
+#conteneuraide{
+    margin: 10%;
+    margin-top: 0%;
+    padding: 2%;
+    background-color: rgba(140,170,0,0.4);
+    border-radius: 5px;
+}
+
+#ban{
+    margin-left: -38%;
+}
+
+#bloc1{
+    color: #fff;
+    margin-top: 10%;
+    font-size: medium;
+    margin-left: 5%;
+    padding-bottom: 10%;
+}
+#bloc2{
+    color: #fff;
+    /*margin-top: 10%;*/
+    font-size: medium;
+    margin-left: 5%;
+    padding-bottom: 10%;
+}
+#bloc3{
+    color: #fff;
+    /*margin-top: 10%;*/
+    font-size: medium;
+    margin-left: 5%;
+    padding-bottom: 10%;
+}
+#bloc4{
+    color: #fff;
+    /*margin-top: 10%;*/
+    font-size: medium;
+    margin-left: 5%;
+    padding-bottom: 10%;
+}
+
+#bloc1Title{
+    font-size: large;
+    font-weight: bold;
+}
+
+#lien1{
+    color: green;
+}
+
+#inscription {
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+#bloc2Title{
+    font-size: large;
+    font-weight: bold;
+}
+
+#connexion {
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+#lien2{
+    color: green;
+}
+
+#bloc3Title{
+    font-size: large;
+    font-weight: bold;
+}
+
+#ajoutmaison {
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+#lien3{
+    color: green;
+}
+
+#bloc4Title{
+    font-size: large;
+    font-weight: bold;
+}
+
+#compte {
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+#lien4{
+    color: green;
+}
+
+#lien5{
+    color: green;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
