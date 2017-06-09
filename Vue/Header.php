@@ -22,7 +22,7 @@ else { ?>
         <ul >
             <li ><img src = "../Autre/images/newlogo.png" id = "site" ></li >
             <div class="menudroite">
-            <li ><a                     title = "Accueil"             href = "accueil.php" >Accueil</a ></li >
+            <li ><a                     title = "Accueil"             href = "accueil_user.php" >Accueil</a ></li >
             <li class="dropdown"><a href="capteur2.php" class="dropbtn">Capteurs</a>
                 <div class="dropdown-content">
                     <a title="Température" href="">Température</a>
