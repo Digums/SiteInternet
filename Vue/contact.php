@@ -16,7 +16,7 @@ require ("../Modele/connexion M.php")
     require("Header.php");
     ?>
 </header>
-
+<h1 id="titrecontact">Nous Contacter</h1>
 <?php
 $admin = false;
 if ($admin == false){ ?>
