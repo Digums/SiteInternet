@@ -3,7 +3,7 @@ require ("../Modele/Connexion T.php");
 session_start();
 if (!isset($_SESSION['verif'])) {
     $_SESSION['verif'] = 1;
-    echo $_SESSION['verif'];
+    echo $_SESSION['verif'];}
 
     $_SESSION['id'];
     $idUtilisateur=$_SESSION['id'];
@@ -15,7 +15,7 @@ if (!isset($_SESSION['verif'])) {
     $_SESSION['email']=$ligne['email'];
     $_SESSION['mdp']=$ligne['mdp'];
     $_SESSION['adresse']=$ligne['adresse'];
-}
+
 
 ?>
 <!DOCTYPE html>
@@ -39,7 +39,7 @@ if (!isset($_SESSION['verif'])) {
             <div id="gauche">
                 <p><label>Nom</label></br>
                     <?php  echo $_SESSION['nom']?></p>
-                <p> <label>Prénom*</label>
+                <p> <label>Prénom</label>
                     </br><?php  echo $_SESSION['prenom']?></p>
                 <p><label>Date de naissance</label>
                     </br><?php  echo $_SESSION['date']?></p>
@@ -58,8 +58,8 @@ if (!isset($_SESSION['verif'])) {
                 <p>Adresse actuelle:
                     </br>
                     <?php  echo $_SESSION['adresse']?></p>
-                <p><label>Adresse</label></br><input type="text" name="adresse"  value= "" required></p>
-                <p><label>Code postal</label></br><input type="text" name="codepostal" value= placeholder="" required></p>
+                <p><label>Adresse</label></br><input type="text" name="adresse"   required></p>
+                <p><label>Code postal</label></br><input type="text" name="codepostal"  required></p>
                 <p><label>Ville</label></br>
                     <select name="ville" id="ville" required>
                         <option value="Paris">Paris</option>
