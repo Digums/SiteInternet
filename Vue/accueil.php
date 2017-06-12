@@ -24,6 +24,7 @@ if (!isset($_SESSION['verif'])) {
     ?>
 </header>
 
+
 <div class="cadre">
     <form method="post" action="../Modele/TraitementConnexion.php">
 
