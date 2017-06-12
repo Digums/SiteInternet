@@ -32,8 +32,8 @@ while ($donnees = $reponse->fetch())
 
 
 
-        <div style="display: flex ">
-            <form method="post" action="../Modele/TraitementGestionUtilisateur.php" style=" margin-left: 20%; display: flex">
+        <div style=" display: flex ">
+            <form method="post" action="../Modele/TraitementGestionUtilisateur.php" style=" margin-left: 15%; display: flex">
             <div >
                 <input type="text" readonly name="id"  value="<?php  echo $donnees['id']?>"  placeholder="<?php  echo $donnees['id']?>" >
             </div>
@@ -50,7 +50,12 @@ while ($donnees = $reponse->fetch())
             <input type="password" name="mdp" value="<?php  echo $donnees['mdp']?>" placeholder="<?php  echo $donnees['mdp']?>">
             </div>
             <div>
-            <input type="text" name="administrateur" value="<?php  echo $donnees['nbrapp']?>" placeholder="<?php  echo $donnees['nbrapp']?>" >
+            <input type="text" name="statut" value="<?php  echo $donnees['statut']?>" placeholder="<?php  echo $donnees['statut']?>" >
+            </div>
+            <div>
+                <input type="text" name="nombreappart" value="<?php  echo $donnees['nbrapp']?>" placeholder="<?php  echo $donnees['nbrapp']?>">
+            </div>
+            <div>
             <input type="submit" value="Envoyer" />
             </div>
         </form>
@@ -73,7 +78,7 @@ while ($donnees = $reponse->fetch())
         ?>
 
         <div style="display: flex">
-            <form method="post" action="../Modele/TraitementGestionUtilisateur.php" style=" margin-left: 20%; display: flex">
+            <form method="post" action="../Modele/TraitementGestionUtilisateur.php" style=" margin-left: 15%; display: flex">
 
             <div >
                 <label>id</label></br>
@@ -95,9 +100,13 @@ while ($donnees = $reponse->fetch())
                 <label>mot de passe</label></br>
                 <input type="password" name="mdp" value="<?php  echo $donnees['mdp']?>" placeholder="<?php  echo $donnees['mdp']?>">
             </div>
+                <div>
+                    <label>statut</label></br>
+                    <input type="text" name="statut" value="<?php  echo $donnees['statut']?>" placeholder="<?php  echo $donnees['statut']?>">
+                </div>
             <div>
-                <label>administrateur</label></br>
-                <input type="text" name="administrateur" value="<?php  echo $donnees['nbrapp']?>" placeholder="<?php  echo $donnees['nbrapp']?>" >
+                <label>nombreappart</label></br>
+                <input type="text" name="nombreappart" value="<?php  echo $donnees['nbrapp']?>" placeholder="<?php  echo $donnees['nbrapp']?>" >
                 <input type="submit" value="Envoyer" />
             </div>
             </form>
