@@ -1,11 +1,17 @@
 <?php
 require ("../Modele/Connexion T.php");
 session_start();
+
 if (!isset($_SESSION['verif'])) {
     $_SESSION['verif'] = 1;
-    echo $_SESSION['verif'];}
-
-    $_SESSION['id'];
+    }
+if (!isset($_SESSION['checkmdp'])) {
+    $_SESSION['changement']=1;
+    $_SESSION['checkmdp'] = 1;
+    $_SESSION['checkemail']=1;
+    $_SESSION['checkadresse']=1;
+}
+ $_SESSION['id'];
     $idUtilisateur=$_SESSION['id'];
     $reponse= $bdd->query("SELECT * FROM membre WHERE id='$idUtilisateur' ");
     $ligne=$reponse->fetch();
@@ -15,8 +21,6 @@ if (!isset($_SESSION['verif'])) {
     $_SESSION['email']=$ligne['email'];
     $_SESSION['mdp']=$ligne['mdp'];
     $_SESSION['adresse']=$ligne['adresse'];
-
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,18 +28,24 @@ if (!isset($_SESSION['verif'])) {
     <meta charset="UTF-8">
     <link rel='stylesheet' href="Quentin/styles/index_main.css">
     <link rel='stylesheet' href="CSS/inscription.css">
-    <title>Inscription</title>
+    <title>Profil</title>
 </head>
 <body>
+<header>
+    <?php
+
+    ?>
+</header>
 
 
 
 
-<form method="post" action="../Modele/TraitementProfilUtilisateur.php">
+
 
     <div id="formulaire">
-
+        <form method="post" action="../Modele/TraitementProfilUtilisateur.php">
             <legend>Vos coordonnées</legend>
+            <fieldset>
             <div id="gauche">
                 <p><label>Nom</label></br>
                     <?php  echo $_SESSION['nom']?></p>
@@ -44,22 +54,20 @@ if (!isset($_SESSION['verif'])) {
                 <p><label>Date de naissance</label>
                     </br><?php  echo $_SESSION['date']?></p>
                 <p><label>E-mail</label>
-                    </br><?php  echo $_SESSION['email']?></p>
+                    </br> <input type="email" name="email" value="<?php  echo $_SESSION['email']?>" required> <?php if($_SESSION['checkemail']==2){ echo 'email déja utilisé'; } ?></p>
                 <p><label>Mot de passe</label>
-                    </br><input type="password" name="mdp" value="<?php  echo $_SESSION['mdp']?>" placeholder="" required></p>
+                    </br><input type="password" name="mdp" value="<?php  echo $_SESSION['mdp']?>"  required></p>
                 <p><label>Ressaisie du mot de passe</label>
-                    </br><input type="password" name="mdp2" value="<?php  echo $_SESSION['mdp']?>" placeholder="" required></p>
-                <input type="submit" value="modifier mot de passe">
+                    </br><input type="password" name="mdp2" value="<?php echo $_SESSION['mdp'];?>" required> <?php  if($_SESSION['checkmdp']==2){ echo 'Les mdp ne sont pas équivalent';} ?></p>
             </div>
 
-    </form>
-            <form method="post" action="../Modele/TraitementProfilUtilisateur.php">
+
             <div id="droite">
                 <p>Adresse actuelle:
                     </br>
                     <?php  echo $_SESSION['adresse']?></p>
-                <p><label>Adresse</label></br><input type="text" name="adresse"   required></p>
-                <p><label>Code postal</label></br><input type="text" name="codepostal"  required></p>
+                <p><label>Numéro, rue</label></br><input type="text" name="adresse"   ></p>
+                <p><label>Code postal</label></br><input type="text" name="codepostal" > <?php if ($_SESSION['checkadresse']==2){ echo 'Champ manquant pour adresse';}?></p>
                 <p><label>Ville</label></br>
                     <select name="ville" id="ville" required>
                         <option value="Paris">Paris</option>
@@ -86,12 +94,13 @@ if (!isset($_SESSION['verif'])) {
                 </p>
 
 
-                <input type="submit" value="Modifier Adresse" />
-                </form>
+                <input type="submit" value="Modifier" />
+                <p><?php if ($_SESSION['changement']==2){ echo 'Changements enregistrés';} ?></p>
             </div>
 
-            </div>
 
+            </fieldset>
+        </form>
     </div>
 
 

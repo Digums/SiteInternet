@@ -1,4 +1,3 @@
-
 <?php
 /**
  * Created by PhpStorm.
@@ -26,5 +25,4 @@ catch(PDOException $e)
 echo "Connection failed:" . $e ->gerMessage();
 
 }
-
 ?>

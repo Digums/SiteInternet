@@ -2,6 +2,8 @@
 session_start();
 require ("../Modele/Connexion T.php");
 $email=$_POST['email'];
+$mdp=$_POST['mdp'];
+
 $idmembre=$_SESSION['id'];
 $_SESSION['checkmdp']=1;
 $_SESSION['checkemail']=1;
@@ -10,9 +12,9 @@ $_SESSION['changement']=1;
 $checkemail = $bdd->query("SELECT * FROM membre WHERE email= '$email' ");
 $checkemail2= $checkemail->fetch();
 if ($checkemail2==null) {
-    if ($_SESSION['email'] != $email) {
-        $_SESSION['changement'] = 2;
-    }
+
+    $_SESSION['changement'] = 2;
+
 
 
     $bdd->exec("UPDATE membre SET email = '$email' WHERE id = $idmembre ");
@@ -25,7 +27,7 @@ else if ($_SESSION['email']!=$_POST['email']){
 
 if($_POST['mdp']==$_POST['mdp2']){
     $mdp=$_POST['mdp'];
-    if ($_SESSION['mdp']!=$mpd){
+    if ($_SESSION['mdp'] != $mdp){
         $_SESSION['changement']=2;
     }
     $bdd->exec("UPDATE membre SET mdp = '$mdp' WHERE id = $idmembre ");
