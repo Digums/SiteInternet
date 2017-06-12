@@ -3,7 +3,9 @@ $admin = true;
 if ($admin == false){ ?>
     <div class="menutop">
         <ul>
+
             <li><img src="../Autre/images/newlogo.png" id="site" ></li>
+            <div class="menudroite">
             <li><a                     title="Accueil"             href="accueil.php">Accueil</a></li>
             <li><a                     title="Nos prestations"     href="nosprestations.php">Nos prestations</a></li>
             <li><a                     title="Contact"             href="contact.php">Contact </a></li>
@@ -11,6 +13,7 @@ if ($admin == false){ ?>
             <!--<li style="float: right"><button   onclick="document.getElementById('id01').style.display='block'">Se connecter</button></li>-->
 
                 <!--<li style="float: right"><button   onclick="document.getElementById('id01').style.display='block'">Se connecter</button></li>-->
+            </div>
         </ul>
     </div>
 
@@ -23,16 +26,12 @@ else { ?>
             <li ><img src = "../Autre/images/newlogo.png" id = "site" ></li >
             <div class="menudroite">
             <li ><a                     title = "Accueil"             href = "accueil_user.php" >Accueil</a ></li >
-            <li class="dropdown"><a href="capteur2.php" class="dropbtn">Capteurs</a>
+            <li class="dropdown"><a title="Mes maisons" href="maison.php" class="dropbtn">Mes maisons</a>
                 <div class="dropdown-content">
-                    <a title="Température" href="">Température</a>
-                    <a title="Humidité"    href="">Humidité</a>
-                    <a title="Caméra "     href="">Caméra</a>
-                    <a title="Porte "      href="">Porte</a>
-                    <a title="Fumée "      href="">Fumée</a>
+                    <a title="pièce"    href="piece.php">Pièce</a>
+                    <a title="capteur" href="capteur2.php">Capteurs</a>
                 </div> </li>
-            <li ><a                     title = "Mes maisons"         href = "" > Mes maisons </a ></li >
-            <li ><a                     title = "Profil"              href = ""   >Profil</a ></li >
+            <li ><a                     title = "Profil"              href = "profilUtilisateur.php"   >Profil</a ></li >
             <li ><a                     title = "Aide"                href = "aide.php" > Aide </a ></li >
             </div>
         </ul >
