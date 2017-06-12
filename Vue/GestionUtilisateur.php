@@ -10,13 +10,13 @@ require ("../Modele/Connexion T.php");
 <html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <!--<link rel='stylesheet' href="CSS/style.css"> -->
+    <link rel="stylesheet" href="CSS/style.css">
     <title>Gestion Utilisateur</title>
 </head>
 <body>
 <header>
     <?php
-    //require ("Header.php");
+    require ("Header.php");
     ?>
 </header>
 <div class="gestionutilsateur">
@@ -33,8 +33,8 @@ while ($donnees = $reponse->fetch())
 
 
         <div style=" display: flex ">
-            <form method="post" action="../Modele/TraitementGestionUtilisateur.php" style=" margin-left: 15%; display: flex">
-            <div >
+            <form method="post" action="../Modele/TraitementGestionUtilisateur.php" style=" display: flex">
+            <div class="idgestionU">
                 <input type="text" readonly name="id"  value="<?php  echo $donnees['id']?>"  placeholder="<?php  echo $donnees['id']?>" >
             </div>
             <div >
@@ -43,16 +43,16 @@ while ($donnees = $reponse->fetch())
             <div>
             <input type="text" name="prenom" value="<?php  echo $donnees['prenom']?>"  placeholder="<?php  echo $donnees['prenom']?>">
             </div>
-            <div>
-            <input type="email" name="email" value="<?php  echo $donnees['email']?>" placeholder="<?php  echo $donnees['email']?>">
+            <div >
+            <input class="mailgestionU" type="email" name="email" value="<?php  echo $donnees['email']?>" placeholder="<?php  echo $donnees['email']?>">
             </div>
-            <div>
-            <input type="password" name="mdp" value="<?php  echo $donnees['mdp']?>" placeholder="<?php  echo $donnees['mdp']?>">
+            <div >
+            <input class="pwdgestionU" type="password" name="mdp" value="<?php  echo $donnees['mdp']?>" placeholder="<?php  echo $donnees['mdp']?>">
             </div>
-            <div>
+            <div class="statutgestionU">
             <input type="text" name="statut" value="<?php  echo $donnees['statut']?>" placeholder="<?php  echo $donnees['statut']?>" >
             </div>
-            <div>
+            <div class="appartgestionU">
                 <input type="text" name="nombreappart" value="<?php  echo $donnees['nbrapp']?>" placeholder="<?php  echo $donnees['nbrapp']?>">
             </div>
             <div>
@@ -78,11 +78,11 @@ while ($donnees = $reponse->fetch())
         ?>
 
         <div style="display: flex">
-            <form method="post" action="../Modele/TraitementGestionUtilisateur.php" style=" margin-left: 15%; display: flex">
+            <form method="post" action="../Modele/TraitementGestionUtilisateur.php" style="display: flex">
 
-            <div >
+            <div class="idgestionU">
                 <label>id</label></br>
-                <input type="text" readonly name="id" value="<?php  echo $donnees['id']?>"  placeholder="<?php  echo $donnees['id']?>" >
+                <input  type="text" readonly name="id" value="<?php  echo $donnees['id']?>"  placeholder="<?php  echo $donnees['id']?>"  >
             </div>
             <div >
                 <label>nom</label></br>
@@ -92,19 +92,19 @@ while ($donnees = $reponse->fetch())
                 <label>prenom</label></br>
                 <input type="text" name="prenom" value="<?php  echo $donnees['prenom']?>" placeholder="<?php  echo $donnees['prenom']?>"  >
             </div>
-            <div>
+            <div >
                 <label>email</label></br>
-                <input type="email" name="email" value="<?php  echo $donnees['email']?>" placeholder="<?php  echo $donnees['email']?>">
+                <input class="mailgestionU" type="email" name="email" value="<?php  echo $donnees['email']?>" placeholder="<?php  echo $donnees['email']?>">
             </div>
-            <div>
-                <label>mot de passe</label></br>
-                <input type="password" name="mdp" value="<?php  echo $donnees['mdp']?>" placeholder="<?php  echo $donnees['mdp']?>">
+            <div >
+                <label>mdp</label></br>
+                <input class="pwdgestionU" type="password" name="mdp" value="<?php  echo $donnees['mdp']?>" placeholder="<?php  echo $donnees['mdp']?>">
             </div>
-                <div>
+                <div class="statutgestionU">
                     <label>statut</label></br>
                     <input type="text" name="statut" value="<?php  echo $donnees['statut']?>" placeholder="<?php  echo $donnees['statut']?>">
                 </div>
-            <div>
+            <div class="appartgestionU">
                 <label>nombreappart</label></br>
                 <input type="text" name="nombreappart" value="<?php  echo $donnees['nbrapp']?>" placeholder="<?php  echo $donnees['nbrapp']?>" >
                 <input type="submit" value="Envoyer" />
@@ -134,7 +134,7 @@ while ($donnees = $reponse->fetch())
 
 <footer>
     <?php
-    //require ("footer.html"); probleme au niveau du css à corriger
+    require ("footer.html");
     ?>
 </footer>
 
