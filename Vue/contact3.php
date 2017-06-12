@@ -24,7 +24,7 @@ catch (Exception $e)
 </header>
 
 <?php
-$admin = true;
+$admin = false;
 if ($admin == false){ ?>
 <section>
     <div class="grande">
