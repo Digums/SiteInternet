@@ -668,3 +668,33 @@ span{
     color: green;
 }
 /*--------------------------------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------GestionUtilisateur-----------------------------------------------*/
+.gestionutilsateur{
+    margin: 10%;
+    padding: 2%;
+    background-color: rgba(30,0,170,0.4);
+    border-radius: 5px;
+
+}
+.idgestionU{
+    width: 2%;
+}
+
+.statutgestionU{
+    width: 10%;
+}
+
+.appartgestionU{
+    width: 10%;
+}
+
+.mailgestionU{
+    margin: 0%;
+    margin-bottom: 8px;
+}
+
+.pwdgestionU{
+    margin: 0%;
+    margin-bottom: 8px;
+}
