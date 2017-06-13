@@ -48,8 +48,20 @@ function listecapteur($bdd, $id){
     }
 }
 
-function etatcapteur(){
-    $req = $bdd->query();
+function getCapteurSalle($bdd, $piece){
+    try{
+        $req = $bdd->prepare('SELECT capteur.nom_capteur, donnees.donnee
+                              FROM capteur
+                              JOIN donnees ON capteur.id = donnees.id_capteur
+                              WHERE capteur.id_piece = :piece');
+        $req->bindParam(':piece', $piece);
+        $req->execute();
+        return $req;
+    }catch(Exception $e){
+        echo "<br>-------------------<br> ERREUR ! <br>";
+        //print_r($params);
+        die('<br>Requete Erreur !: '.$e->getMessage());
+    }
 }
 
 

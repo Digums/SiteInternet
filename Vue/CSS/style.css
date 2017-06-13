@@ -698,3 +698,9 @@ span{
     margin: 0%;
     margin-bottom: 8px;
 }
+
+/* Acceuil user */
+
+.pieceacceuil div{
+    border: 1px solid black;
+}
