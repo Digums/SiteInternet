@@ -39,7 +39,7 @@ require ("Header.php");
     <?php
     $req = $bdd->query('SELECT id, nom_piece FROM piece WHERE id_maison = 1');
     while ($pieces = $req->fetch()){ ?>
-        <div class="<?php echo $pieces['nom_piece'] ?>">
+        <div>
             <h2><?php echo $pieces['nom_piece']?></h2>
             <?php
             $req2 = getCapteurSalle($bdd, $pieces['id']);
