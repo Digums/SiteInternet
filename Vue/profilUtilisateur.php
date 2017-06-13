@@ -26,14 +26,13 @@ if (!isset($_SESSION['checkmdp'])) {
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel='stylesheet' href="Quentin/styles/index_main.css">
-    <link rel='stylesheet' href="CSS/inscription.css">
-    <title>Profil</title>
+    <link rel='stylesheet' href="CSS/style.css"
+    <title></title>
 </head>
 <body>
 <header>
     <?php
-
+    require ("Header.php");
     ?>
 </header>
 
@@ -41,7 +40,7 @@ if (!isset($_SESSION['checkmdp'])) {
 
 
 
-
+    <div id="conteneurprofil">
     <div id="formulaire">
         <form method="post" action="../Modele/TraitementProfilUtilisateur.php">
             <legend>Vos coordonnées</legend>
@@ -102,9 +101,13 @@ if (!isset($_SESSION['checkmdp'])) {
             </fieldset>
         </form>
     </div>
+    </div>
 
 
-
-
+<footer>
+    <?php
+    require ("footer.html");
+    ?>
+</footer>
 </body>
 </html>

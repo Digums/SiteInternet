@@ -44,10 +44,10 @@ while ($donnees = $reponse->fetch())
             <input type="text" name="prenom" value="<?php  echo $donnees['prenom']?>"  placeholder="<?php  echo $donnees['prenom']?>">
             </div>
             <div >
-            <input class="mailgestionU" type="email" name="email" value="<?php  echo $donnees['email']?>" placeholder="<?php  echo $donnees['email']?>">
+            <input type="email" name="email" value="<?php  echo $donnees['email']?>" placeholder="<?php  echo $donnees['email']?>">
             </div>
             <div >
-            <input class="pwdgestionU" type="password" name="mdp" value="<?php  echo $donnees['mdp']?>" placeholder="<?php  echo $donnees['mdp']?>">
+            <input type="password" name="mdp" value="<?php  echo $donnees['mdp']?>" placeholder="<?php  echo $donnees['mdp']?>">
             </div>
             <div class="statutgestionU">
             <input type="text" name="statut" value="<?php  echo $donnees['statut']?>" placeholder="<?php  echo $donnees['statut']?>" >
@@ -94,11 +94,11 @@ while ($donnees = $reponse->fetch())
             </div>
             <div >
                 <label>email</label></br>
-                <input class="mailgestionU" type="email" name="email" value="<?php  echo $donnees['email']?>" placeholder="<?php  echo $donnees['email']?>">
+                <input type="email" name="email" value="<?php  echo $donnees['email']?>" placeholder="<?php  echo $donnees['email']?>">
             </div>
             <div >
                 <label>mdp</label></br>
-                <input class="pwdgestionU" type="password" name="mdp" value="<?php  echo $donnees['mdp']?>" placeholder="<?php  echo $donnees['mdp']?>">
+                <input type="password" name="mdp" value="<?php  echo $donnees['mdp']?>" placeholder="<?php  echo $donnees['mdp']?>">
             </div>
                 <div class="statutgestionU">
                     <label>statut</label></br>
@@ -107,6 +107,9 @@ while ($donnees = $reponse->fetch())
             <div class="appartgestionU">
                 <label>nombreappart</label></br>
                 <input type="text" name="nombreappart" value="<?php  echo $donnees['nbrapp']?>" placeholder="<?php  echo $donnees['nbrapp']?>" >
+            </div>
+                <div>
+                <br>
                 <input type="submit" value="Envoyer" />
             </div>
             </form>
