@@ -1,6 +1,7 @@
 <?php
 require ("../Modele/connexion M.php");
 include("../Modele/capteur-db.php");
+include("../Modele/messagerie-db.php");
 session_start();
 ?>
 
@@ -26,14 +27,12 @@ require ("Header.php");
 <div class="center">
     <div class="derniermsg">
         <h1>Vos derniers messages :</h1>
-        <?php $derniers_messages = $bdd->query('SELECT mail, commentaire FROM commentaire 
-                                                         JOIN membre ON membre.id = commentaire.id_membre
-                                                         WHERE reponse=0 AND id_membre = 3');
+        <?php $derniers_messages =  getListeMessageUser($bdd);
         while ($donnees = $derniers_messages->fetch()){?>
             <p><?php echo $donnees['commentaire'] ?></p>
         <?php }
         ?>
-        <a href="contact3.php">Vous voulez renvoyez un mail?</a>
+        <a href="contact.php">Vous voulez renvoyez un mail?</a>
     </div>
     <div class="pieceacceuil">
     <?php
