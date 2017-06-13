@@ -718,3 +718,20 @@ span{
     margin-top: 0%;
 }
 /*--------------------------------------------------------------------------------------------------------------------*/
+
+/* acceuil user */
+
+.pieceacceuil div{
+    border: 1px solid black;
+    margin: 7px;
+    width: 31%;
+
+}
+
+.pieceacceuil{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 57%;
+    border: 1px solid black;
+}

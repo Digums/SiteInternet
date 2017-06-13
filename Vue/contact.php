@@ -1,22 +1,21 @@
 <?php
-require ("../Modele/connexion M.php")
+require("../Modele/connexion M.php")
 ?>
 
-
-<html>
+<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <link rel='stylesheet' href="CSS/style.css">
-    <title>Contact</title>
+    <link rel='stylesheet' href="CSS/contact.css">
+    <title>Title</title>
 </head>
-
 <body>
+
 <header>
     <?php
     require("Header.php");
     ?>
 </header>
-<h1 id="titrecontact">Nous Contacter</h1>
+
 <?php
 $admin = false;
 if ($admin == false){ ?>
@@ -27,24 +26,24 @@ if ($admin == false){ ?>
             </p>
             <fieldset id="principale">
                 <legend>Votre message</legend>
-                <form method="post" action="../Modele/traitement.php">
+                <form method="post" action="../Controleur/messagerie-controleur.php">
                     <div id="gauche">
                         <p><label>Nom*</label><br /><input type="text" name="nom" placeholder="Votre nom..." required/></p>
                         <p><label>Prenom*</label><br/><input type="text" name="prenom" placeholder="Votre prenom..." required></p>
                         <p><label>Mail*</label><br/><input type="text" name="mail" placeholder="Votre mail..." required></p>
                     </div>
                     <div id="droite">
-                        <p> <textarea name="commentaire" id="commentaire" placeholder="Pas de commentaire..."></textarea> </p>
-                        <button type="submit" id="buttoncontact">Envoyer</button>
+                        <p><label for="commentaire" id="commentaire">Commentaire*</label>
+                            <textarea name="commentaire" id="commentaire" placeholder="Pas de commentaire..."></textarea> </p>
+                        <input type="submit" id="sent" name="btnSendMsg" value="envoyer" />
                     </div>
                 </form>
             </fieldset>
         </div>
     </section>
 <?php }
-
 else {
-    $derniers_messages = $bdd->query('SELECT * FROM commentaire WHERE reponse=0');?>
+    $derniers_messages = getListeMessageAdmin($bdd); ?>
     <div class  ="affichage_commentaire">
     <?php while ($donnees = $derniers_messages->fetch()){?>
         <div class="message">
