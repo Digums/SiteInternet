@@ -19,6 +19,7 @@ if($donnees!=null){
         $idUtilisateur= $bdd->query("SELECT * FROM membre WHERE mdp='$mdp'");
         $ligne=$idUtilisateur->fetch();
         $_SESSION['id']=$ligne['id'];
+        $_SESSION['prenom']=$ligne['prenom'];
 
         header("Location: ../Vue/accueil_user.php ");
 
