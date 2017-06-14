@@ -14,8 +14,6 @@
 <form method="post" action="../Modele/TraitementInscription.php">
 
     <div id="formulaire">
-        <fieldset>
-            <legend>Vos coordonnées</legend>
             <div id="gauche">
                 <p><label>Nom*</label></br>
                     <input type="text" name="nom" placeholder="" required></p>
