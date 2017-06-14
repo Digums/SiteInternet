@@ -22,7 +22,7 @@ if ($admin == false){ ?>
     <section>
         <div class="grande">
             <p>
-                <img src="../Autre/images/bonhommetel.jpg" id="telephone">
+                <img src="../Autre/images/telephone.png" id="telephone">
             </p>
             <fieldset id="principale">
                 <legend>Votre message</legend>

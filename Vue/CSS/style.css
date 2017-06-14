@@ -6,8 +6,10 @@ body{
     background-size: cover;
     width: 100%;
     font-family: Arial,sans-serif;
-    background: white;
+    background-image: url("../../Autre/images/floor-BLURED.jpg");
     background-attachment: fixed;
+    color: white;
+    position: fixed;
 }
 
 #bodyaccueil{
@@ -458,11 +460,11 @@ div#adm {
     margin: 10%;
     margin-top: 0%;
     padding: 2%;
-    background-color: rgba(140,170,0,0.4);
+    background-color: rgba(0,0,0,0.5);
     border-radius: 5px;
 }
 #titrecontact{
-    color: green;
+    color: white ;
     margin-top: 5%;
     margin-left: 35%;
 }
@@ -476,7 +478,7 @@ div#adm {
     margin-left: 19.5%;
     margin-top:5%;
     width: 50%;
-    border: 1px solid black;
+    border-radius: 5px;
 
 }
 #buttoncontact {
@@ -536,11 +538,16 @@ span{
     margin: 10%;
     margin-top: 0%;
     padding: 2%;
-    background-color: rgba(140,170,0,0.4);
+    background-color: rgba(0,0,0,0.4);
     border-radius: 5px;
+    width: 1150px;
+    height: 500px;
+    overflow: scroll;
+    overflow-x: hidden;
 }
+
 #titrepolitique{
-    color: green;
+    color: white;
     margin-top: 5%;
     margin-left: 35%;
 }
@@ -550,18 +557,22 @@ span{
     margin: 10%;
     margin-top: 0%;
     padding: 2%;
-    background-color: rgba(140,170,0,0.4);
+    background-color: rgba(0,0,0,0.4);
     border-radius: 5px;
+    width: 1150px;
+    height: 500px;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 #titrecondition{
-    color: green;
+    color: white;
     margin-top: 5%;
     margin-left: 35%;
 }
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------aide------------------------------------------------------------*/
 #title {
-    color: green;
+    color: white;
     margin-top: 5%;
     margin-left: 35%;
 
@@ -571,8 +582,13 @@ span{
     margin: 10%;
     margin-top: 0%;
     padding: 2%;
-    background-color: rgba(140,170,0,0.4);
+    background-color: rgba(0,0,0,0.4);
     border-radius: 5px;
+    width: 1150px;
+    height: 500px;
+    overflow: scroll;
+    overflow-x: hidden;
+
 }
 
 #ban{
@@ -695,7 +711,7 @@ span{
     margin: 10%;
     margin-top: 8%;
     padding: 2%;
-    background-color: rgba(140,170,0,0.4);
+    background-color: rgba(0,0,0,0.4);
     border-radius: 5px;
 }
 #formulaire{
