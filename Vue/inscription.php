@@ -11,7 +11,7 @@
 
 
 
-<form method="post" action="../Controleur/general-controleur.php">
+<form method="post" action="../Modele/TraitementInscription.php">
 
     <div id="formulaire">
         <fieldset>
@@ -58,9 +58,9 @@
                         <option value="japon">Japon</option>
                     </select>
                 </p>
-                <p><label>Telephone</label></br><input type="tel" name="tel" placeholder=""></p>
+                <p><label>Téléphone</label></br><input type="tel" name="tel" placeholder=""></p>
 
-                <input type="submit" value="Envoyer" name="btnInscription"/>
+                <input type="submit" value="Envoyer" />
 
             </div>
         </fieldset>
