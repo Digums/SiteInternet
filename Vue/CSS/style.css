@@ -26,6 +26,19 @@ body{
     background-image: url("../../Autre/images/Fondecran.jpeg");
 }
 
+.cadre a{
+    color: white;
+    margin-left: 43%;
+}
+.cadre a:hover{
+    color: #4caf50;
+}
+
+#buttonaccueil{
+    margin-right: 20%;
+}
+
+
 
 /*Header -------------------------------------------------------------------------------------------------------------*/
 header{
@@ -321,7 +334,7 @@ cadre form {
     border: none;
     cursor: pointer;
     /*width: 100%;*/
-    margin-left: 63%;
+    /*margin-left: 63%;*/
 }
 
 button:hover {
@@ -722,6 +735,7 @@ span{
 /* acceuil user */
 
 .pieceacceuil div{
+    color: black;
     border: 1px solid black;
     margin: 7px;
     width: 31%;
@@ -738,6 +752,7 @@ span{
 }
 
 .derniermsg{
+    color: black;
     width: 20%;
     position: relative;
     margin-top: 3%;
@@ -755,6 +770,7 @@ span{
     margin-bottom: 10%;
     margin-left: 5%;
 }
+
 .center{
     display: flex;
     height: auto;
