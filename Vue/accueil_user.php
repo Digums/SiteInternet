@@ -30,6 +30,7 @@ else {
 ?>
 
 <!-- A remplacer par l'acceuil -->
+<div class="acceuil">
 <div class="center">
     <div class="bonjour">
         <p>Bonjour <?php echo $prenom ?>,</p>
@@ -37,7 +38,8 @@ else {
     </div>
     <div class="pieceacceuil">
         <?php
-        $req = $bdd->query('SELECT id, nom_piece FROM piece WHERE id_maison = 1');
+        $idmaison = $_SESSION['idmaison'];
+        $req = $bdd->query("SELECT id, nom_piece FROM piece WHERE id_maison = $idmaison ");
         while ($pieces = $req->fetch()){ ?>
             <div>
                 <h2><?php echo $pieces['nom_piece']?></h2>
@@ -62,6 +64,7 @@ else {
         ?>
         <a href="contact.php">Vous voulez renvoyez un mail?</a>
     </div>
+</div>
 </div>
 
 <footer>
