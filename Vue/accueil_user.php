@@ -25,11 +25,9 @@ $_SESSION['prenom'] = 'matthieu';
 ?>
 
 <!-- A remplacer par l'acceuil -->
-<div class="center">
-    <div class="bonjour">
-        <p>Bonjour <?php echo $_SESSION['prenom'] ?>,</p>
-        <p>Ravi de vous revoir !</p>
-    </div>
+<div class="accueil">
+<div class="accueildroite">
+
     <div class="pieceacceuil">
         <?php
         $req = $bdd->query('SELECT id, nom_piece FROM piece WHERE id_maison = 1');
@@ -46,6 +44,12 @@ $_SESSION['prenom'] = 'matthieu';
             </div>
         <?php } ?>
     </div>
+</div>
+<div class="accueilgauche">
+    <div class="bonjour">
+    <p>Bonjour <?php echo $_SESSION['prenom'] ?>,</p>
+    <p>Ravi de vous revoir !</p>
+    </div>
     <div class="derniermsg">
         <h1>Vos derniers messages :</h1>
         <?php $derniers_messages =  getListeMessageUser($bdd);
@@ -56,7 +60,7 @@ $_SESSION['prenom'] = 'matthieu';
         <a href="contact.php">Vous voulez renvoyez un mail?</a>
     </div>
 </div>
-
+</div>
 <footer>
     <?php
     require ("footer.html");
