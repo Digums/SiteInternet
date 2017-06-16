@@ -661,10 +661,11 @@ span{
 .bonjour{
     background-color: rgba(255,255,255,0.4);
     border-radius: 5px;
-    width: 25%;
+    width: 30%;
     padding-left: 7px;
     margin-left: 25%;
     color: black;
+    font-family: Impact;
     font-size: 2em;
     font-weight: bold;
     margin-top: 10%;
@@ -675,7 +676,7 @@ span{
     width: 45%;
     height: 225px;
     padding-left: 7px;
-    margin-left: 15%;
+    margin-left: 17%;
     color: black;
     margin-top: 5%;
     overflow: scroll;
@@ -698,4 +699,6 @@ span{
     margin: 7px;
     color: black;
 }
+
+
 /*--------------------------------------------------------------------------------------------------------------------*/
