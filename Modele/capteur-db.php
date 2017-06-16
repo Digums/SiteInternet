@@ -14,11 +14,12 @@ require ("../Modele/connexion M.php");
 function addcapteur($bdd, $name, $typecapteur, $etat, $piece){
     try {
         $idmaison=1;
-        $req = $bdd->prepare("INSERT INTO capteur(nom_capteur, type_capteur, etat,nom_piece,id_maison) VALUES(:nom, :typecapteur,:etat,:piece, $idmaison)");
+        $req = $bdd->prepare("INSERT INTO capteur(nom_capteur, type_capteur, etat,nom_piece,id_maison) VALUES(:nom, :typecapteur,:etat,:piece, :idmaison)");
         $req->bindParam(':nom', $name);
         $req->bindParam(':typecapteur', $typecapteur);
         $req->bindParam(':etat', $etat);
         $req->bindParam(':piece', $piece);
+        $req->bindParam(':idmaison', $_SESSION['idmaison']);
         $req->execute();
     }catch(Exception $e){
         echo "<br>-------------------<br> ERREUR ! <br>";

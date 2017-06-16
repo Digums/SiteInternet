@@ -6,8 +6,8 @@ require("../Modele/connexion M.php");
 
 function inscription($bdd, $nom, $prenom, $date, $email, $mdp, $statut, $adresse, $nbrapp){
     try {
-        $req = $bdd->prepare("INSERT INTO membre(nom,prenom, date,email,mdp,statut,adresse,nbrapp,nomloca) 
-                          VALUES (:nom,:prenom,:date,:email,:mdp,:statut,:adresse,:nbrapp,:nom)");
+        $req = $bdd->prepare("INSERT INTO membre(nom,prenom, date,email,mdp,statut,adresse,nbrapp) 
+                          VALUES (:nom,:prenom,:date,:email,:mdp,:statut,:adresse,:nbrapp)");
         $req->bindParam(":nom", $nom);
         $req->bindParam(":prenom", $prenom);
         $req->bindParam(":date", $date);
