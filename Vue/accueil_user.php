@@ -30,6 +30,7 @@ else {
 ?>
 
 <!-- A remplacer par l'acceuil -->
+<div class="accueil">
 <div class="center">
     <div class="bonjour">
         <p>Bonjour <?php echo $prenom ?>,</p>
@@ -62,6 +63,7 @@ else {
         ?>
         <a href="contact.php">Vous voulez renvoyez un mail?</a>
     </div>
+</div>
 </div>
 
 <footer>
