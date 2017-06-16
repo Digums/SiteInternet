@@ -644,43 +644,58 @@ span{
 
 /*-----------------------------------------------acceuil user---------------------------------------------------------*/
 
-.pieceacceuil div{
-    background-color: rgba(255,255,255,0.4);
-    border-radius: 5px;
-    margin: 7px;
-    color: #000;
-}
+
 .pieceacceuil{
     background-color: rgba(0,0,0,0.4);
     border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
-    width: 40%;
+    width: 42%;
+    height: 600px;
+    margin-top: 2.5%;
+    margin-right: 2.5%;
+    overflow: scroll;
+    overflow-x: hidden;
+
 }
 .bonjour{
     background-color: rgba(255,255,255,0.4);
     border-radius: 5px;
-    width: 19%;
+    width: 25%;
     padding-left: 7px;
-    margin-left: 5%;
+    margin-left: 25%;
     color: black;
     font-size: 2em;
     font-weight: bold;
+    margin-top: 10%;
 }
 .derniermsg{
     background-color: rgba(255,255,255,0.4);
     border-radius: 5px;
-    width: 40%;
+    width: 45%;
+    height: 225px;
     padding-left: 7px;
-    margin-left: 5%;
+    margin-left: 15%;
     color: black;
+    margin-top: 5%;
+    overflow: scroll;
+    overflow-x: hidden;
 }
-.accueildroite{
-    margin-left: 50%;
+.accueil{
+    display: flex;
+    justify-content: space-around;
 }
-.accueilgauche{
-    float: left;
-    width: 50%;
+.center{
+    display: flex;
+    flex-direction: column;
 }
 
+.pieces{
+    width: 47.75%;
+    height: 45%;
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 5px;
+    margin: 7px;
+    color: black;
+}
 /*--------------------------------------------------------------------------------------------------------------------*/
