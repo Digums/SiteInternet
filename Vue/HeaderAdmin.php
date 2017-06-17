@@ -1,6 +1,6 @@
 <?php
-require ("../Modele/connexion M.php");
-    ?>
+require("../Modele/connexion_M.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,7 +41,7 @@ $derniers_messages = $bdd->query('SELECT * FROM commentaire WHERE reponse=0');?>
     <div class="message">
         <p> Un message a été envoyé par <span><?php echo $donnees['prenom'],' ', $donnees['nom']; ?>!</span><p>
             <?php echo $donnees['commentaire']; ?>
-            <form method="post" action="../Modele/traitement_reponse.php">
+            <form method="post" action="../a%20jeter/traitement_reponse.php">
                 <div id="reponse">
         <p  ><!--<label for="reponse" id="reponse">Une réponse à ce message?</label>-->
             <textarea name="reponse" id="reponse" placeholder="Votre réponse..."></textarea></p>

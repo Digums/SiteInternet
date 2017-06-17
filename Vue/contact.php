@@ -1,5 +1,5 @@
 <?php
-require("../Modele/connexion M.php");
+require("../Modele/connexion_M.php");
 include("../Modele/messagerie-db.php");
 ?>
 
