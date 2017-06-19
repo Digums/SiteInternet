@@ -6,7 +6,7 @@ include("../Modele/messagerie-db.php");
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <link rel='stylesheet' href="CSS/contact.css">
+    <link rel='stylesheet' href="CSS/style.css">
     <title>Title</title>
 </head>
 <body>
@@ -18,8 +18,9 @@ include("../Modele/messagerie-db.php");
 </header>
 
 <?php
-$admin = true;
+$admin = false  ;
 if ($admin == false){ ?>
+    <h1 id="titrecontact">Nous contacter</h1>
     <section>
         <div class="grande">
             <p>
@@ -36,7 +37,7 @@ if ($admin == false){ ?>
                     <div id="droite">
                         <p><label for="commentaire" id="commentaire">Commentaire*</label>
                             <textarea name="commentaire" id="commentaire" placeholder="Pas de commentaire..."></textarea> </p>
-                        <input type="submit" id="sent" name="btnSendMsgUser" value="envoyer" />
+                        <button type="submit" id="buttoncontact">Envoyer</button>
                     </div>
                 </form>
             </fieldset>

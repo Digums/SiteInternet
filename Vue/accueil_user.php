@@ -31,16 +31,27 @@ else {
 
 <!-- A remplacer par l'acceuil -->
 <div class="accueil">
-<div class="center">
-    <div class="bonjour">
-        <p>Bonjour <?php echo $prenom ?>,</p>
-        <p>Ravi de vous revoir !</p>
+    <div class="center">
+        <div class="bonjour">
+            <p>Bonjour <?php echo $prenom ?>,</p>
+            <p>Ravi de vous revoir !</p>
+        </div>
+        <div class="derniermsg">
+            <h1>Vos derniers messages :</h1>
+            <?php $derniers_messages =  getListeMessageFromAdmin($bdd);
+            while ($donnees = $derniers_messages->fetch()){?>
+                <p><?php echo $donnees['commentaire'] ?></p>
+                <p><?php echo $donnees['message'] ?></p>
+            <?php }
+            ?>
+            <a href="contact.php">Vous voulez renvoyez un mail?</a>
+        </div>
     </div>
     <div class="pieceacceuil">
         <?php
         $req = $bdd->query('SELECT id, nom_piece FROM piece WHERE id_maison = 1');
         while ($pieces = $req->fetch()){ ?>
-            <div>
+            <div class="pieces">
                 <h2><?php echo $pieces['nom_piece']?></h2>
                 <?php
                 $req2 = getCapteurSalle($bdd, $pieces['id']);
@@ -53,17 +64,7 @@ else {
             </div>
         <?php } ?>
     </div>
-    <div class="derniermsg">
-        <h1>Vos derniers messages :</h1>
-        <?php $derniers_messages =  getListeMessageFromAdmin($bdd);
-        while ($donnees = $derniers_messages->fetch()){?>
-            <p><?php echo $donnees['commentaire'] ?></p>
-            <p><?php echo $donnees['message'] ?></p>
-        <?php }
-        ?>
-        <a href="contact.php">Vous voulez renvoyez un mail?</a>
-    </div>
-</div>
+
 </div>
 
 <footer>
