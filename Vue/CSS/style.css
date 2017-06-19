@@ -692,10 +692,12 @@ span{
 /*-------------------------------------------------------piece--------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------------*/
 div.listepiece {
+    margin-top: 5%;
     margin-left: 15%;
     margin-right: 15%;
-    background-color: #4CAF50;
+    background-color: rgba(0,0,0,0.4);
 }
+
 
 section.add {
     background-color: lightgreen;
@@ -706,7 +708,7 @@ Section #addelmt {
 
 section #pop1 {
     margin-left: 15%;
-    color : black;
+    color: black;
 }
 
 
