@@ -36,11 +36,11 @@ function deletecapteur($bdd, $id){
 
 function listecapteur($bdd, $id){
     try{
-        $req = $bdd->query("SELECT *
-                            FROM capteur c  
-                            INNER JOIN maison m 
-                            ON m.id = c.id_maison
-                            WHERE m.id_membre = $id");
+        $req = $bdd->prepare("SELECT * FROM capteur c 
+                              INNER JOIN maison m ON m.id = c.id_maison 
+                              WHERE m.id_membre = :id");
+        $req -> bindParam(':id', $id);
+        $req->execute();
         return $req;
     }catch(Exception $e){
         echo "<br>-------------------<br> ERREUR ! <br>";
