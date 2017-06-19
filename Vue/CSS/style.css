@@ -248,6 +248,7 @@ button {
     /*margin: 8px 0;*/
     border: none;
     cursor: pointer;
+    border-radius: 5px;
     /*width: 100%;*/
 }
 
@@ -392,17 +393,7 @@ div.test{
     display: flex;
 }
 /* -----------------------------------------------------------------------------*/
-div.affichage_commentaire{
-    width: 60%;
-    margin-top: 7%;
-    margin-left: 20%;
-}
-div.message{
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #717171;
-    border-bottom: 0px;
-}
+
 /*#reponse{
     float: right;
 }*/
@@ -444,11 +435,18 @@ div#adm {
 
 #commentaire{
     margin-left: 19.5%;
-    margin-top:5%;
+    margin-top:2%;
     width: 50%;
+    height: 100px;
     border-radius: 5px;
-
 }
+#commentaire2{
+    margin-left: 19.5%;
+}
+.info{
+    border-radius: 5px;
+}
+
 #buttoncontact {
     background-color: #4CAF50;
     color: white;
@@ -460,43 +458,38 @@ div#adm {
     border-radius: 5px;
 }
 /*width: 100%;*/
-
-#principale #gauche{
+#gauchecontact{
     float: left;
     width:25%;
     margin-left: 5%;
 }
-#principale #droite{
+#droitecontact{
     margin-left: 10%;
-
 }
 
 
 
 /*partie admin*/
 
-div.affichage_commentaire{
+div.affichage_commentaire {
+    background-color: rgba(0, 0, 0, 0.4);
     width: 60%;
     margin-top: 7%;
     margin-left: 20%;
+    border: none;
+    border-radius: 5px;
+    padding: 2%;
 }
-div.message{
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #717171;
-    border-bottom: 0px;
+#couleurmsg{
+    font-weight: bold;
 }
-/*#reponse{
-    float: right;
-}*/
-
-span{
-    color: #1F2596;
-    text-decoration: underline;
+#nomprenom{
+    color: red;
+    text-decoration: none;
 }
 
-#sent_reponse{
-    margin-left: 30%;
+#reponse{
+    border-radius: 5px;
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/

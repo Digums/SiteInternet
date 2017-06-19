@@ -33,11 +33,13 @@ function addpiece($bdd, $nom, $taille, $nbrcapteur){
 
 function listepiece($bdd, $id){
     try{
-        $req = $bdd->query("SELECT nom_piece, mesure, nbr_capteur
+        $req = $bdd->prepare("SELECT nom_piece, mesure, nbr_capteur
                             FROM piece p  
                             INNER JOIN maison m 
                             ON m.id = p.id_maison
-                            WHERE m.id_membre = $id");
+                            WHERE m.id_membre = :id");
+        $req -> bindParam(':id', $id);
+        $req->execute();
         return $req;
     }catch(Exception $e){
         echo "<br>-------------------<br> ERREUR ! <br>";

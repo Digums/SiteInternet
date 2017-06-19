@@ -12,16 +12,22 @@ $mdp = $_POST['mdp'];
 
 $verifemail = verifConnexion($bdd, $email);
 $donnees = $verifemail->fetch();
+session_start();
 if($donnees!=null){
-    session_start();
+
     echo 'le mail est bon: '.$donnees['email'];
     if($donnees['mdp']==$mdp){
         /*header('Location: http://localhost/SiteInternet/index.php');*/
         $idUtilisateur= infoUsers($bdd, $mdp);
         $ligne=$idUtilisateur->fetch();
-        $_SESSION['id']=$ligne['membre.id'];
-        $_SESSION['idmaison']= $ligne['idmaison'];
-        $_SESSION['prenom']=$ligne['membre.prenom'];
+        $_SESSION['id']=$ligne['id'];
+
+        $_SESSION['prenom']=$ligne['prenom'];
+        $idUtilisateur=$_SESSION['id'];
+        $idmaison1=idmaison($bdd, $idUtilisateur);
+        $idmaison2=$idmaison1->fetch();
+        $idmaison=$idmaison2['id'];
+        $_SESSION[$idmaison]=$idmaison;
 
         header("Location: ../Vue/accueil_user.php ");
 
