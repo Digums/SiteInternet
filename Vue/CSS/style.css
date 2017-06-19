@@ -241,6 +241,16 @@ div#flink a:hover, div#flink a:active {
 
 }
 
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10.5px 20px;
+    /*margin: 8px 0;*/
+    border: none;
+    cursor: pointer;
+    /*width: 100%;*/
+}
+
 button:hover {
     opacity: 0.8;
 }
@@ -694,6 +704,7 @@ Section #addelmt {
 
 section #pop1 {
     margin-left: 15%;
+    color : black;
 }
 
 

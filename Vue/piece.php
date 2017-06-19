@@ -74,4 +74,10 @@ require("Header.php ");
     ?>
     <p>Vous disposez de <?php echo $nbpiece ?> pièces et <?php echo $nbcapt ?> capteurs !</p>
 </div>
+
+<footer>
+    <?php
+    include ("footer.html");
+?>
+</footer>
 </html>
