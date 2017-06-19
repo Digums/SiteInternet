@@ -1,37 +1,35 @@
 <div class="test">
-<div class="newcapteur">
-    <fieldset id="formulaire">
-        <legend>Ajouter un capteur</legend>
-        <form method="post" action="../Controleur/capteur-controleur.php">
-            <p><label>Nom du capteur: </label><input type="text" name="name" required></p>
+    <div class="newcapteur">
+        <fieldset id="formulaire">
+            <legend>Ajouter un capteur</legend>
+            <form method="post" action="../Controleur/capteur-controleur.php">
+                <p><label>Nom du capteur: </label><input type="text" name="name" required></p>
 
-            <p><label>Type de capteur: </label><select name="typecapteur" id="type_capteur" required>
-                <option value="">--Faites votre choix--</option>
-                <option value="temperature">Temperature</option>
-                <option value="humidite">Humidité</option>
-                <option value="camera">Caméra</option>
-                <option value="fumee">Détection de fumée</option>
-                <option value="Position de porte">Position de porte</option></select></p>
-            <p><label>Etat du capteur: </label>
-                <input type="radio" name="etat" value="On">Allumé
-                <input type="radio" name="etat" value="Off">Eteint</p>
-            <p><label>Nom de la pièce: </label>
-                <select name="piece" id="piece">
-                <option value="">--Faites votre choix--</option>
-                <?php
+                <p><label>Type de capteur: </label><select name="typecapteur" id="type_capteur" required>
+                        <option value="">--Faites votre choix--</option>
+                        <option value="temperature">Temperature</option>
+                        <option value="humidite">Humidité</option>
+                        <option value="camera">Caméra</option>
+                        <option value="fumee">Détection de fumée</option>
+                        <option value="Position de porte">Position de porte</option></select></p>
+                <p><label>Etat du capteur: </label>
+                    <input type="radio" name="etat" value="On">Allumé
+                    <input type="radio" name="etat" value="Off">Eteint</p>
+                <p><label>Nom de la pièce: </label>
+                    <select name="piece" id="piece">
+                        <option value="">--Faites votre choix--</option>
+                        <?php
+                        $piece = $bdd->query("SELECT nom_piece FROM piece WHERE id_maison = 1");
+                        while ($info = $piece->fetch()){ ?>
+                            <option value="<?php echo $info['nom_piece']?>"><?php echo $info['nom_piece'] ?></option>
+                        <?php } ?>
 
-
-                $piece = $bdd->query("SELECT nom_piece FROM piece WHERE id_maison = 1");
-                while ($info = $piece->fetch()){ ?>
-                <option value="<?php echo $info['nom_piece']?>"><?php echo $info['nom_piece'] ?></option>
-                <?php } ?>
-
-                </select>
+                    </select>
                 </p>
-            <input type="submit" id="sent" value="Ajouter" name="btnAddCapteur">
-        </form>
-    </fieldset>
-</div>
+                <input type="submit" id="sent" value="Ajouter" name="btnAddCapteur">
+            </form>
+        </fieldset>
+    </div>
 
     <div class="delcapteur">
         <p><span class="sousligne">Tous vos capteurs</span></p>
