@@ -1,5 +1,7 @@
 <?php
-require ("../Modele/connexion M.php");
+require("../Modele/connexion_M.php");
+include("../Modele/capteur-db.php");
+include("../Modele/messagerie-db.php");
 session_start();
 ?>
 
@@ -14,77 +16,55 @@ session_start();
 <body>
 
 <?php
-require ("Menu_user.php");
+require ("Header.php");
+?>
+
+<?php
+//$id = $_SESSION['id'];
+if (isset($_SESSION['prenom'])){
+    $prenom = $_SESSION['prenom'];
+}
+else {
+    $prenom =  'matthieu';
+}
 ?>
 
 <!-- A remplacer par l'acceuil -->
-<div class="test">
-    <div class="newcapteur">
-        <fieldset id="formulaire">
-            <legend>Ajouter un capteur</legend>
-            <form method="post" action="../Controleur/capteur-controleur.php">
-                <p><label>Nom du capteur: </label><input type="text" name="name" required></p>
-
-                <p><label>Type de capteur: </label><select name="typecapteur" id="type_capteur" required>
-                        <option value="">--Faites votre choix--</option>
-                        <option value="temperature">Temperature</option>
-                        <option value="humidite">Humidité</option>
-                        <option value="camera">Caméra</option>
-                        <option value="fumee">Détection de fumée</option>
-                        <option value="Sdb">Position de porte</option></select></p>
-                <p><label>Etat du capteur: </label>
-                    <input type="radio" name="etat" value="On">Allumé
-                    <input type="radio" name="etat" value="Off">Eteint</p>
-                <p><label>Nom de la pièce: </label>
-                    <select name="piece" id="piece">
-                        <option value="">--Faites votre choix--</option>
-                        <?php
-
-
-                        $piece = $bdd->query("SELECT nom_piece FROM piece WHERE id_maison = 1");
-                        while ($info = $piece->fetch()){ ?>
-                            <option value="<?php echo $info['nom_piece']?>"><?php echo $info['nom_piece'] ?></option>
-                        <?php } ?>
-
-                    </select>
-                </p>
-                <input type="submit" id="sent" value="Ajouter" name="btnAddCapteur">
-            </form>
-        </fieldset>
+<div class="accueil">
+<div class="center">
+    <div class="bonjour">
+        <p>Bonjour <?php echo $prenom ?>,</p>
+        <p>Ravi de vous revoir !</p>
     </div>
-
-    <div class="delcapteur">
-        <p><span class="sousligne">Tous vos capteurs</span></p>
-        <div class="listecapteur">
-            <?php
-            $capteurs = $bdd->query("SELECT * FROM capteur WHERE id_maison=1");
-            while($donnees = $capteurs->fetch()){ ?>
-                <p>Il y a un capteur <?php echo $donnees['type_capteur'] ?> dans <?php echo $donnees['nom_piece']?> (nom :<?php echo $donnees['nom_capteur']?>) <button onclick="document.getElementById('id03').style.display='block'">Supprimer</button>
-                </p>
-
-
-                <div id="id03" class="modal">
-                    <div class="modal-content animate">
-                        <div class="imgcontainer">
-                            <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
-                        </div>
-
-                        <div class="container">
-                            <form method="post" action="../Controleur/capteur-controleur.php" class="delete_form">
-                                <p> Voulez-vous vraiment supprimer ce capteur ?</p>
-                                <button type="submit" name="btnDelCapteur" value="<?php echo "".$donnees['id'] ?>"> Supprimer</button>
-                            </form><br><br>
-                        </div>
-                    </div>
-
-                </div>
-            <?php }
-            ?>
-
-        </div><br />
+    <div class="pieceacceuil">
+        <?php
+        $req = $bdd->query('SELECT id, nom_piece FROM piece WHERE id_maison = 1');
+        while ($pieces = $req->fetch()){ ?>
+            <div>
+                <h2><?php echo $pieces['nom_piece']?></h2>
+                <?php
+                $req2 = getCapteurSalle($bdd, $pieces['id']);
+                while ($donnees = $req2->fetch()){ ?>
+                    <p><?php echo $donnees['nom_capteur'] ?> : <?php echo $donnees['donnee'] ?></p>
+                    <ul>
+                        <li><?php echo $donnees['nom_capteur'] ?> : <?php echo $donnees['donnee'] ?></li>
+                    </ul>
+                <?php } ?>
+            </div>
+        <?php } ?>
+    </div>
+    <div class="derniermsg">
+        <h1>Vos derniers messages :</h1>
+        <?php $derniers_messages =  getListeMessageFromAdmin($bdd);
+        while ($donnees = $derniers_messages->fetch()){?>
+            <p><?php echo $donnees['commentaire'] ?></p>
+            <p><?php echo $donnees['message'] ?></p>
+        <?php }
+        ?>
+        <a href="contact.php">Vous voulez renvoyez un mail?</a>
     </div>
 </div>
-
+</div>
 
 <footer>
     <?php

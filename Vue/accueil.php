@@ -23,10 +23,8 @@ if (!isset($_SESSION['verif'])) {
     require ("Header.php");
     ?>
 </header>
-
-
-<div class="cadre">
-    <form method="post" action="../Modele/TraitementConnexion.php">
+    <div id="cadreconnexion">
+        <form method="post" action="../Modele/TraitementConnexion.php">
 
         <div class="container">
             <label><b>Email</b></label>
@@ -35,9 +33,12 @@ if (!isset($_SESSION['verif'])) {
             <label><b>Mot de passe</b></label>
             <input type="password" placeholder="Entrer Mot de passe" name="mdp" required>
 
-            <button type="submit" id="buttonaccueil">Connexion</button>
-            <input type="checkbox" cheked="checked"> Se souvenir de moi
+            <button type="submit" id="buttonaccueil">Se Connecter</button>
+            <input class="checkbox" type="checkbox" cheked="checked">Se souvenir de moi<br><br>
+            <a id="pasencoreinscrit" href="inscription.php">Pas encore inscrit ?</a>
         </div>
+
+
 
         <!--<div class="container" style="background-color:#f1f1f1">
             <!-- <button type="button" class="cancelbtn">Cancel</button>
@@ -55,9 +56,10 @@ if (!isset($_SESSION['verif'])) {
             <?php
         }
         ?>
-    </form>
+        </form>
 
-</div>
+    </div>
+
 <footer>
     <?php
     require ("footer.html");

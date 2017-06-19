@@ -11,7 +11,8 @@ include('../Modele/maison-db.php');
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     session_start();
     if (isset($_POST['btnAddMaison'])) {
-        addmaison($bdd, $_POST['adresse'], $_POST['complement'], $_POST['codep'], $_POST['ville'], $_POST['superficie'], $_POST['nbrpiece']);
+        addmaison($bdd, $_POST['adresse'], $_POST['complement'], $_POST['codep'], $_POST['ville'], $_POST['superficie'],
+                  $_POST['nbrpiece'], $_SESSION['id']);
     }
     header("Location: $_SERVER[HTTP_REFERER]");
 }

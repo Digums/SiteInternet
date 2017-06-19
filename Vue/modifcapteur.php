@@ -48,7 +48,7 @@
                         </div>
                         <div class="container">
                             <p> Voulez-vous vraiment supprimer ce capteur ?</p>
-                            <a href="../Modele/delete_bdd.php?id=<?php echo $donnees['id'];  ?>" class="delete_form">
+                            <a href="../a%20jeter/delete_bdd.php?id=<?php echo $donnees['id'];  ?>" class="delete_form">
                                 <button class="btnDelCapteur"> Supprimer</button>
                             </a><br><br>
                         </div>

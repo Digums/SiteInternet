@@ -1,6 +1,6 @@
 <?php
 
-require ("../Modele/connexion M.php");
+require("../Modele/connexion_M.php");
 ?>
 
 <?php
@@ -14,11 +14,12 @@ require ("../Modele/connexion M.php");
 function addcapteur($bdd, $name, $typecapteur, $etat, $piece){
     try {
         $idmaison=1;
-        $req = $bdd->prepare("INSERT INTO capteur(nom_capteur, type_capteur, etat,nom_piece,id_maison) VALUES(:nom, :typecapteur,:etat,:piece, $idmaison)");
+        $req = $bdd->prepare("INSERT INTO capteur(nom_capteur, type_capteur, etat,nom_piece,id_maison) VALUES(:nom, :typecapteur,:etat,:piece, :idmaison)");
         $req->bindParam(':nom', $name);
         $req->bindParam(':typecapteur', $typecapteur);
         $req->bindParam(':etat', $etat);
         $req->bindParam(':piece', $piece);
+        $req->bindParam(':idmaison', $_SESSION['idmaison']);
         $req->execute();
     }catch(Exception $e){
         echo "<br>-------------------<br> ERREUR ! <br>";
@@ -48,8 +49,20 @@ function listecapteur($bdd, $id){
     }
 }
 
-function etatcapteur(){
-    $req = $bdd->query();
+function getCapteurSalle($bdd, $piece){
+    try{
+        $req = $bdd->prepare('SELECT capteur.nom_capteur, donnees.donnee
+                              FROM capteur
+                              JOIN donnees ON capteur.id = donnees.id_capteur
+                              WHERE capteur.id_piece = :piece');
+        $req->bindParam(':piece', $piece);
+        $req->execute();
+        return $req;
+    }catch(Exception $e){
+        echo "<br>-------------------<br> ERREUR ! <br>";
+        //print_r($params);
+        die('<br>Requete Erreur !: '.$e->getMessage());
+    }
 }
 
 

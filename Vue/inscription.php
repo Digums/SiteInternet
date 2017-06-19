@@ -2,8 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel='stylesheet' href="Quentin/styles/index_main.css">
-    <link rel='stylesheet' href="CSS/inscription.css">
+    <link rel='stylesheet' href="CSS/style.css">
     <title>Inscription</title>
 </head>
 <body>
@@ -11,7 +10,7 @@
 
 
 
-<form method="post" action="../Modele/TraitementInscription.php">
+<form method="post" action="../Controleur/general-controleur.php">
 
     <div id="formulaire">
         <fieldset>

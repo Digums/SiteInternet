@@ -1,6 +1,6 @@
 <?php
 
-require('../Modele/connexion M.php');
+require('../Modele/connexion_M.php');
 
 ?>
 
@@ -11,17 +11,18 @@ require('../Modele/connexion M.php');
  * Date: 29/05/2017
  * Time: 23:35
  */
-function addmaison($bdd, $adresse, $complement, $cp, $ville, $superficie, $nbrpiece){
+function addmaison($bdd, $adresse, $complement, $cp, $ville, $superficie, $nbrpiece, $id_membre){
     try{
         //echo $adresse, $complement, $cp;
         $req = $bdd->prepare("INSERT INTO maison(addresse, complement, cp, ville, superficie, nbrpiece, id_membre) 
-                                   VALUES(:adresse, :complement, :cp, :ville, :superficie, :nbrpiece, 4)");
+                                   VALUES(:adresse, :complement, :cp, :ville, :superficie, :nbrpiece, :id_membre)");
         $req->bindParam(':adresse',$adresse);
         $req->bindParam(':complement',$complement);
         $req->bindParam(':cp',$cp);
         $req->bindParam(':ville',$ville);
         $req->bindParam(':superficie',$superficie);
         $req->bindParam(':nbrpiece',$nbrpiece);
+        $req->bindParam(':id_membre', $id_membre);
         $req->execute();
         $req->closeCursor();
     }catch(Exception $e){
