@@ -12,7 +12,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         addNewMsgAdmin($bdd, $_POST['iddestinataire'], $_POST['idreponse'], $_POST['reponse']);
     }
     header("Location: $_SERVER[HTTP_REFERER]");
-
 }
 
 ?>

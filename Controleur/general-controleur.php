@@ -1,5 +1,5 @@
 <?php
-include("../Modele/inscription-db.php");
+include("../Modele/membre-db.php");
 ?>
 
 <?php

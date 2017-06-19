@@ -1,12 +1,11 @@
 <?php
+
+require("../Modele/Connexion_T.php");
 session_start();
 //$_SESSION['verif']=1;
 ?>
 <!DOCTYPE HTML>
-<?php
 
-require ("../Modele/Connexion T.php");
-?>
 <html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">

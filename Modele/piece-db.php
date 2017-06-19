@@ -1,6 +1,6 @@
 <?php
 
-require('../Modele/connexion M.php');
+require('../Modele/connexion_M.php');
 
 ?>
 
@@ -20,7 +20,7 @@ function addpiece($bdd, $nom, $taille, $nbrcapteur){
         $req->bindParam(':nom',$nom);
         $req->bindParam(':mesure',$taille);
         $req->bindParam(':nbr_capteur',$nbrcapteur);
-        $req->bindParam(':id_maison', $_SESSION['id']);
+        $req->bindParam(':id_maison', $_SESSION['idmaison']);
         $req->execute();
         $req->closeCursor();
     }catch(Exception $e){

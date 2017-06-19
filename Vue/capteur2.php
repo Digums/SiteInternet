@@ -1,6 +1,6 @@
 <?php
 
-require ("../Modele/connexion M.php");
+require("../Modele/connexion_M.php");
 ?>
 
 

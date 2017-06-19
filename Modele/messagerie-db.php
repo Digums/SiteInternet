@@ -1,6 +1,6 @@
 <?php
 
-require('../Modele/connexion M.php');
+require('../Modele/connexion_M.php');
 
 ?>
 
@@ -67,6 +67,10 @@ function addNewMsgAdmin($bdd, $iddestinataire, $idreponse, $reponse){
         $req->bindParam(':idreponse', $idreponse);
         $req->bindParam(':reponse', $reponse);
         $req->execute();
+        $req2 = $bdd->prepare('UPDATE messageuser SET reponse = 1
+                               WHERE id = :idreponse');
+        $req2->bindParam(':idreponse', $idreponse);
+        $req2->execute();
     }catch(Exception $e){
         echo "<br>-------------------<br> ERREUR ! <br>";
         die('<br>Requete Erreur !: '.$e->getMessage());

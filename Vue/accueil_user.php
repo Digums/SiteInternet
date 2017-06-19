@@ -1,5 +1,5 @@
 <?php
-require ("../Modele/connexion M.php");
+require("../Modele/connexion_M.php");
 include("../Modele/capteur-db.php");
 include("../Modele/messagerie-db.php");
 session_start();
@@ -21,13 +21,19 @@ require ("Header.php");
 
 <?php
 //$id = $_SESSION['id'];
-$_SESSION['prenom'] = 'matthieu';
+if (isset($_SESSION['prenom'])){
+    $prenom = $_SESSION['prenom'];
+}
+else {
+    $prenom =  'matthieu';
+}
 ?>
 
 <!-- A remplacer par l'acceuil -->
+<div class="accueil">
 <div class="center">
     <div class="bonjour">
-        <p>Bonjour <?php echo $_SESSION['prenom'] ?>,</p>
+        <p>Bonjour <?php echo $prenom ?>,</p>
         <p>Ravi de vous revoir !</p>
     </div>
     <div class="pieceacceuil">
@@ -39,6 +45,7 @@ $_SESSION['prenom'] = 'matthieu';
                 <?php
                 $req2 = getCapteurSalle($bdd, $pieces['id']);
                 while ($donnees = $req2->fetch()){ ?>
+                    <p><?php echo $donnees['nom_capteur'] ?> : <?php echo $donnees['donnee'] ?></p>
                     <ul>
                         <li><?php echo $donnees['nom_capteur'] ?> : <?php echo $donnees['donnee'] ?></li>
                     </ul>
@@ -48,13 +55,15 @@ $_SESSION['prenom'] = 'matthieu';
     </div>
     <div class="derniermsg">
         <h1>Vos derniers messages :</h1>
-        <?php $derniers_messages =  getListeMessageUser($bdd);
+        <?php $derniers_messages =  getListeMessageFromAdmin($bdd);
         while ($donnees = $derniers_messages->fetch()){?>
             <p><?php echo $donnees['commentaire'] ?></p>
+            <p><?php echo $donnees['message'] ?></p>
         <?php }
         ?>
         <a href="contact.php">Vous voulez renvoyez un mail?</a>
     </div>
+</div>
 </div>
 
 <footer>

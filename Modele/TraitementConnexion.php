@@ -1,5 +1,6 @@
 <?php
-require('../Modele/connexion M.php');
+require('../Modele/connexion_M.php');
+include('../Modele/membre-db.php');
 
 $email = $_POST['email'];
 $mdp = $_POST['mdp'];
@@ -9,17 +10,18 @@ $mdp = $_POST['mdp'];
 /*echo $mdp,$email;*/
 
 
-$verifemail = $bdd->query("SELECT email,mdp FROM membre WHERE email='$email' ");
+$verifemail = verifConnexion($bdd, $email);
 $donnees = $verifemail->fetch();
 if($donnees!=null){
     session_start();
     echo 'le mail est bon: '.$donnees['email'];
     if($donnees['mdp']==$mdp){
         /*header('Location: http://localhost/SiteInternet/index.php');*/
-        $idUtilisateur= $bdd->query("SELECT * FROM membre WHERE mdp='$mdp'");
+        $idUtilisateur= infoUsers($bdd, $mdp);
         $ligne=$idUtilisateur->fetch();
-        $_SESSION['id']=$ligne['id'];
-        $_SESSION['prenom']=$ligne['prenom'];
+        $_SESSION['id']=$ligne['membre.id'];
+        $_SESSION['idmaison']= $ligne['idmaison'];
+        $_SESSION['prenom']=$ligne['membre.prenom'];
 
         header("Location: ../Vue/accueil_user.php ");
 
