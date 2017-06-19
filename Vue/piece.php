@@ -10,25 +10,25 @@ require("Header.php ");
 </head>
 
 <section class="add">
-    <button onclick="document.getElementById('id04').style.display='block'">Ajouter capteur</button>
+    <button id="addelmt" onclick="document.getElementById('id04').style.display='block'">Ajouter une pièce</button>
 
     <div id="id04" class="modal">
         <div class="modal-content animate">
             <div class="imgcontainer">
-                <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
             </div>
 
             <div class="container">
                 <form action="../Controleur/piece-controleur.php" method="post">
-                    <div id="groscadre">
-                        <h1>Gestion des pièces</h1>
+                    <div id="pop1">
+                        <h1>Ajouter une pièces</h1>
 
                         <label> Nom de la pièce</label>
-                        <input type="text" id="nom" name="nom" placeholder="">
+                        <input type="text" id="nom" name="nom" placeholder="nom">
                         <br>
 
                         <label> Taille de la pièce</label>
-                        <input type="int" id="taille" name="taille" placeholder="">
+                        <input type="int" id="taille" name="taille" placeholder="m²">
                         <br>
 
                         <label> Nombre de capteurs</label>
@@ -46,13 +46,13 @@ require("Header.php ");
 
                         </select>
                         <br>
-
-                        <input type="submit" value="Submit" name="btnAddPiece">
+                        <button type="submit" value="Submit" name="btnAddPiece">Ajouter</button>
                     </div>
-                </form><br><br>
+                </form><br>
             </div>
         </div>
 </section>
+
 <div class="listepiece">
     <p> Votre maison :</p>
 
