@@ -22,16 +22,22 @@ session_start();
 
             <div class="container">
                 <form action="../Controleur/piece-controleur.php" method="post">
-                    <div id="pop1">
+                    <div id="pop2">
                         <h1>Vous voulez ajouter une maison?</h1>
                         <form method="post" action="../Controleur/maison-controleur.php">
                             <p>L'addresse de votre nouveau logement :</p>
-                            <p><label>Adresse </label><input type="text" name="adresse"></p>
-                            <p><label>Complement d'addresse </label><input type="text" name="complement"></p>
-                            <p><label>Code Postal </label><input type="text" name="codep"></p>
-                            <p><label>Ville </label><input type="text" name="ville"></p>
-                            <p><label>Superficie de votre maison </label><input type="text" name="superficie"></p>
-                            <p><label>Nombre de pièce </label><input type="text" name="nbrpiece"></p>
+                            <p><label>Adresse </label>
+                                <input type="text" name="adresse"></p>
+                            <p><label>Complement d'addresse </label>
+                                <input type="text" name="complement"></p>
+                            <p><label>Code Postal </label>
+                                <input type="text" name="codep"></p>
+                            <p><label>Ville </label>
+                                <input type="text" name="ville"></p>
+                            <p><label>Superficie de votre maison </label>
+                                <input type="text" name="superficie"></p>
+                            <p><label>Nombre de pièce </label>
+                                <input type="text" name="nbrpiece"></p>
                         <br>
                         <button type="submit" value="Submit" name="btnAddPiece">Ajouter</button>
                     </div>

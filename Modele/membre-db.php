@@ -39,10 +39,20 @@ function verifConnexion($bdd, $email){
 
 function infoUsers($bdd, $mdp){
     try {
-        $req = $bdd->prepare("SELECT membre.id, membre.prenom, maison.id AS idmaison FROM membre
-                                                  JOIN maison ON maison.id_membre = membre.id
+        $req = $bdd->prepare("SELECT membre.id, membre.prenom FROM membre
                                                   WHERE mdp= :mdp ");
         $req-> bindParam(":mdp",$mdp);
+        $req->execute();
+        return $req;
+    }catch (Exception $e) {
+        echo "<br>-------------------<br> ERREUR ! <br>";
+        die('<br>Requete Erreur !: ' ."info users". $e->getMessage());
+    }
+}
+function idmaison($bdd, $idmembre){
+    try {
+        $req = $bdd->prepare("SELECT id FROM maison WHERE id_membre=:idmembre");
+        $req-> bindParam(":idmembre", $idmembre);
         $req->execute();
         return $req;
     }catch (Exception $e) {
