@@ -18,7 +18,7 @@ include("../Modele/messagerie-db.php");
 </header>
 
 <?php
-$admin = false  ;
+$admin = true  ;
 if ($admin == false){ ?>
     <h1 id="titrecontact">Nous contacter</h1>
     <section>
@@ -30,9 +30,9 @@ if ($admin == false){ ?>
                 <legend>Votre message</legend>
                 <form method="post" action="../Controleur/messagerie-controleur.php">
                     <div id="gauchecontact">
-                        <p><label>Nom*</label><br /><input type="text" name="nom" placeholder="Votre nom..." required/></p>
-                        <p><label>Prenom*</label><br/><input type="text" name="prenom" placeholder="Votre prenom..." required></p>
-                        <p><label>Mail*</label><br/><input type="text" name="mail" placeholder="Votre mail..." required></p>
+                        <p><label>Nom*</label><br /><input type="text" name="nom" class="info" placeholder="Votre nom..." required/></p>
+                        <p><label>Prenom*</label><br/><input type="text" name="prenom" class="info" placeholder="Votre prenom..." required></p>
+                        <p><label>Mail*</label><br/><input type="text" name="mail" class="info" placeholder="Votre mail..." required></p>
                     </div>
                     <div id="droitecontact">
                         <p><label for="commentaire" id="commentaire2">Commentaire*</label>
@@ -48,17 +48,18 @@ else {
     $derniers_messages = getListeMessageForAdmin($bdd); ?>
     <div class ="affichage_commentaire">
     <?php while ($donnees = $derniers_messages->fetch()){?>
-        <div class="message">
-            <p> Un message a été envoyé par <span><?php echo $donnees['prenom'],' ', $donnees['nom']; ?>!</span><p>
+        <div class="messagecom">
+            <p id="couleurmsg"> Un message a été envoyé par <span id="nomprenom"><?php echo $donnees['prenom'],' ', $donnees['nom']; ?>!</span><p>
             <?php echo $donnees['commentaire']; ?>
             <form method="post" action="../Controleur/messagerie-controleur.php">
                 <div id="reponse">
                     <textarea name="reponse" id="reponse" placeholder="Votre réponse..."></textarea>
                     <input type="hidden" name="iddestinataire" value="<?php echo $donnees['id_membre'] ?>">
                     <input type="hidden" name="idreponse" value="<?php echo $donnees['id'] ?>" />
-                    <input type="submit" id="sent_reponse" value="Envoyer" name="btnSendMsgAdmin"/>
+                    <button id="sent_reponse">Envoyer</button>
                 </div>
             </form>
+            <hr>
         </div>
     <?php } ?>
     </div>
