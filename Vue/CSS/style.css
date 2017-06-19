@@ -157,9 +157,9 @@ div#flink a:hover, div#flink a:active {
 }
 #animaccueil{
     background-color: rgba(0,0,0,0.4);
-    width: 30%;
+    width: 50%;
     height: 51.5%;
-    margin-left: 35%;
+    margin-left: 25%;
     margin-top: 10%;
     border-radius: 5px;
 }
@@ -182,7 +182,8 @@ div#flink a:hover, div#flink a:active {
 }
 #droite{
     float: right;
-    width:8%;
+    width: 10%;
+
 }
 
 #buttoninscrire {
@@ -200,6 +201,17 @@ div#flink a:hover, div#flink a:active {
 }
 
 /*-------------------------------------------Quisommesnous------------------------------------------------------------*/
+#cadre{
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 5px;
+    width: 70%;
+    margin-left: 15%;
+    padding: 1%;
+}
+#titlequisommesnous{
+    margin-top: 5%;
+    margin-left: 35%;
+}
 .images{
     float: left;
     padding: 1px;

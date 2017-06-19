@@ -11,11 +11,8 @@
     require("Header.php");
     ?>
 </header>
-
+<h1 id="titlequisommesnous">A propos de nous</h1>
 <div id="cadre">
-
-    <h1>A propos de nous</h1>
-
     <p>A l'heure actuelle, la domotique et l'informatique sont des domaines complémentaires. L'ensemble de ces activités a été réuni au sein même de notre société afin de répondre à vos besoins.
         <br>Domisep est une entreprise spécialisée dans la domotique connectée. Domisep propose ses services à des particuliers. Notre petite taille vous garantit une écoute experte et attentive au moindre problème rencontré lié à notre système domotique.
         <br />
