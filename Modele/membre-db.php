@@ -20,30 +20,34 @@ function inscription($bdd, $nom, $prenom, $date, $email, $mdp, $statut, $adresse
     }catch (Exception $e) {
         echo "<br>-------------------<br> ERREUR ! <br>";
         //print_r($params);
-        die('<br>Requete Erreur !: ' . $e->getMessage());
+        die('<br>Requete Erreur !: ' . "inscription". $e->getMessage());
 
     }
 }
 
 function verifConnexion($bdd, $email){
     try {
-        $req = $bdd->query("SELECT email,mdp FROM membre WHERE email=$email");
+        $req = $bdd->prepare("SELECT email,mdp FROM membre WHERE email=:email");
+        $req -> bindParam(":email",$email);
+        $req->execute();
         return $req;
     }catch (Exception $e) {
         echo "<br>-------------------<br> ERREUR ! <br>";
-        die('<br>Requete Erreur !: ' . $e->getMessage());
+        die('<br>Requete Erreur !: ' . "verif connexion " . $e->getMessage());
     }
 }
 
 function infoUsers($bdd, $mdp){
     try {
-        $req = $bdd->query("SELECT membre.id, membre.prenom, maison.id AS idmaison FROM membre
+        $req = $bdd->prepare("SELECT membre.id, membre.prenom, maison.id AS idmaison FROM membre
                                                   JOIN maison ON maison.id_membre = membre.id
-                                                  WHERE mdp= $mdp ");
+                                                  WHERE mdp= :mdp ");
+        $req-> bindParam(":mdp",$mdp);
+        $req->execute();
         return $req;
     }catch (Exception $e) {
         echo "<br>-------------------<br> ERREUR ! <br>";
-        die('<br>Requete Erreur !: ' . $e->getMessage());
+        die('<br>Requete Erreur !: ' ."info users". $e->getMessage());
     }
 }
 
@@ -58,7 +62,7 @@ function gestionUser($bdd, $nom, $prenom, $mdp, $email, $idmembre){
         $req->execute();
     }catch (Exception $e) {
         echo "<br>-------------------<br> ERREUR ! <br>";
-        die('<br>Requete Erreur !: ' . $e->getMessage());
+        die('<br>Requete Erreur !: ' . "Gestion User". $e->getMessage());
     }
 }
 
