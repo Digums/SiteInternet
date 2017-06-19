@@ -444,10 +444,13 @@ div#adm {
 
 #commentaire{
     margin-left: 19.5%;
-    margin-top:5%;
+    margin-top:2%;
     width: 50%;
+    height: 100px;
     border-radius: 5px;
-
+}
+#commentaire2{
+    margin-left: 19.5%;
 }
 #buttoncontact {
     background-color: #4CAF50;
@@ -460,13 +463,12 @@ div#adm {
     border-radius: 5px;
 }
 /*width: 100%;*/
-
-#principale #gauche{
+#gauchecontact{
     float: left;
     width:25%;
     margin-left: 5%;
 }
-#principale #droite{
+#droitecontact{
     margin-left: 10%;
 
 }

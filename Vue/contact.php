@@ -29,13 +29,13 @@ if ($admin == false){ ?>
             <fieldset id="principale">
                 <legend>Votre message</legend>
                 <form method="post" action="../Controleur/messagerie-controleur.php">
-                    <div id="gauche">
+                    <div id="gauchecontact">
                         <p><label>Nom*</label><br /><input type="text" name="nom" placeholder="Votre nom..." required/></p>
                         <p><label>Prenom*</label><br/><input type="text" name="prenom" placeholder="Votre prenom..." required></p>
                         <p><label>Mail*</label><br/><input type="text" name="mail" placeholder="Votre mail..." required></p>
                     </div>
-                    <div id="droite">
-                        <p><label for="commentaire" id="commentaire">Commentaire*</label>
+                    <div id="droitecontact">
+                        <p><label for="commentaire" id="commentaire2">Commentaire*</label>
                             <textarea name="commentaire" id="commentaire" placeholder="Pas de commentaire..."></textarea> </p>
                         <button type="submit" id="buttoncontact">Envoyer</button>
                     </div>
