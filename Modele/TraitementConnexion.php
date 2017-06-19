@@ -10,7 +10,7 @@ $mdp = $_POST['mdp'];
 /*echo $mdp,$email;*/
 
 
-$verifemail = verifConnexion($bdd, $email);
+$verifemail = verifConnexion($bdd, $_POST['email']);
 $donnees = $verifemail->fetch();
 if($donnees!=null){
     session_start();
