@@ -49,9 +49,10 @@ else {
     </div>
     <div class="pieceacceuil">
         <?php
-        $idmaison=$_SESSION['idmaison'];
+        echo $_SESSION['idmaison'];
+        echo $_SESSION['id'];
         $req = $bdd->prepare("SELECT id, nom_piece FROM piece WHERE id_maison=:idmaison ");
-        $req->bindParam(":idmaison",$idmaison);
+        $req->bindParam(":idmaison", $_SESSION['idmaison']);
         $req->execute();
         while ($pieces = $req->fetch()){ ?>
             <div class="pieces">
