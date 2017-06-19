@@ -18,7 +18,7 @@ include("../Modele/messagerie-db.php");
 </header>
 
 <?php
-$admin = true  ;
+$admin =false  ;
 if ($admin == false){ ?>
     <h1 id="titrecontact">Nous contacter</h1>
     <section>
