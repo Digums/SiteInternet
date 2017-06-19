@@ -5,18 +5,18 @@
  * Date: 17/05/2017
  * Time: 19:17
  */
- require ("../Modele/connexion M.php");
+ require("../Modele/connexion_M.php");
 ?>
 
 <html>
 
 <head>
-<link rel="stylesheet" href="CSS/style.css">
+<link rel="stylesheet" href="../Vue/CSS/style.css">
 </head>
 <body>
 
 <?php
-    require ("../Controleur/test_ajout_capteur.php");
+    require("../Controleur/test_ajout_capteur.php");
 ?>
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
