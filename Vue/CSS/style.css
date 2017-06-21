@@ -683,14 +683,32 @@ div.affichage_commentaire {
 #conteneurprofil{
     margin: 10%;
     margin-top: 8%;
+    margin-left: 22%;
     padding: 2%;
     background-color: rgba(0,0,0,0.4);
     border-radius: 5px;
+    width: 50%;
 }
 #formulaire{
     margin-top: 0%;
 }
-
+#formulaireprofilu{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+}
+#modif{
+    margin-left: 60%;
+}
+input[type=email]{
+    border-radius: 5px;
+}
+input[type=password]{
+    border-radius: 5px;
+}
+input[type=text]{
+    border-radius: 5px;
+}
 
 /*-------------------------------------------------------piece--------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------------*/
