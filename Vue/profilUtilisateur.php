@@ -42,10 +42,8 @@ if (!isset($_SESSION['checkmdp'])) {
 
     <div id="conteneurprofil">
     <div id="formulaire">
-        <form method="post" action="../Modele/TraitementProfilUtilisateur.php">
-            <legend>Vos coordonnées</legend>
-            <fieldset>
-            <div id="gauche">
+        <form method="post" id="formulaireprofilu"action="../Modele/TraitementProfilUtilisateur.php">
+            <div id="gaucheprofilu">
                 <p><label>Nom</label></br>
                     <?php  echo $_SESSION['nom']?></p>
                 <p> <label>Prénom</label>
@@ -61,7 +59,7 @@ if (!isset($_SESSION['checkmdp'])) {
             </div>
 
 
-            <div id="droite">
+            <div id="droiteprofilu">
                 <p>Adresse actuelle:
                     </br>
                     <?php  echo $_SESSION['adresse']?></p>
@@ -91,14 +89,16 @@ if (!isset($_SESSION['checkmdp'])) {
                         <option value="japon">Japon</option>
                     </select>
                 </p>
-
-
-                <input type="submit" value="Modifier" />
+                <br>
+                <br>
+                <br>
+                <br>
+                <button id="modif" >Modifier</button>
                 <p><?php if ($_SESSION['changement']==2){ echo 'Changements enregistrés';} ?></p>
             </div>
 
 
-            </fieldset>
+
         </form>
     </div>
     </div>
