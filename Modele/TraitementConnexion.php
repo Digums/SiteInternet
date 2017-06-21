@@ -1,9 +1,10 @@
 <?php
 require('../Modele/connexion_M.php');
 include('../Modele/membre-db.php');
-
 $email = $_POST['email'];
 $mdp = $_POST['mdp'];
+session_start();
+$_SESSION['idmaison']=-1;
 
 
 
@@ -12,7 +13,7 @@ $mdp = $_POST['mdp'];
 
 $verifemail = verifConnexion($bdd, $_POST['email']);
 $donnees = $verifemail->fetch();
-session_start();
+
 if($donnees!=null){
 
     echo 'le mail est bon: '.$donnees['email'];
@@ -27,7 +28,11 @@ if($donnees!=null){
         $idmaison1=idmaison($bdd, $idUtilisateur);
         $idmaison2=$idmaison1->fetch();
         $idmaison=$idmaison2['id'];
-        $_SESSION[$idmaison]=$idmaison;
+        $_SESSION['idmaison']=$idmaison;
+        echo $idmaison;
+        echo $idUtilisateur;
+        echo $_SESSION['id'];
+        echo $_SESSION['idmaison'];
 
         header("Location: ../Vue/accueil_user.php ");
 
