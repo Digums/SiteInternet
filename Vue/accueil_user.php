@@ -49,7 +49,7 @@ else {
     </div>
     <div class="pieceacceuil">
         <?php
-        
+
         $req = $bdd->prepare("SELECT id, nom_piece FROM piece WHERE id_maison=:idmaison ");
         $req->bindParam(":idmaison", $_SESSION['idmaison']);
         $req->execute();
