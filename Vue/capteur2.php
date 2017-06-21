@@ -1,6 +1,7 @@
 <?php
 
 require("../Modele/connexion_M.php");
+session_start();
 ?>
 
 

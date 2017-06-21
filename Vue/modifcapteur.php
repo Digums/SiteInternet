@@ -19,7 +19,8 @@
                     <select name="piece" id="piece">
                         <option value="">--Faites votre choix--</option>
                         <?php
-                        $piece = $bdd->query("SELECT nom_piece FROM piece WHERE id_maison = 1");
+                        $idmaison=$_SESSION['idmaison'];
+                        $piece = $bdd->query("SELECT nom_piece FROM piece WHERE id_maison =$idmaison");
                         while ($info = $piece->fetch()){ ?>
                             <option value="<?php echo $info['nom_piece']?>"><?php echo $info['nom_piece'] ?></option>
                         <?php } ?>
@@ -35,7 +36,8 @@
         <p><span class="sousligne">Tous vos capteurs</span></p>
         <div class="listecapteur">
             <?php
-            $capteurs = $bdd->query("SELECT * FROM capteur WHERE id_maison=1");
+            $idmaison=$_SESSION['idmaison'];
+            $capteurs = $bdd->query("SELECT * FROM capteur WHERE id_maison=$idmaison");
             while($donnees = $capteurs->fetch()){ ?>
                 <p>Il y a un capteur <?php echo $donnees['type_capteur'] ?> dans <?php echo $donnees['nom_piece']?>  <button onclick="document.getElementById('id03').style.display='block'">Supprimer</button>
                 </p>

@@ -3,6 +3,7 @@ include("../Controleur/piece-controleur.php");
 include("../Controleur/capteur-controleur.php");
 require("../Modele/connexion_M.php");
 require("Header.php ");
+session_start();
 ?>
 <html>
 <head>
@@ -57,8 +58,8 @@ require("Header.php ");
     <p> Votre maison :</p>
 
     <?php
-    $piece = listepiece($bdd, 3);
-    $capteur = listecapteur($bdd, 3);
+    $piece = listepiece($bdd, $_SESSION['id']);
+    $capteur = listecapteur($bdd, $_SESSION['id']);
     $nbcapt = 0;
     $nbpiece = 0;
     while($donnees = $piece->fetch()){ ?>
