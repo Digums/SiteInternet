@@ -3,6 +3,8 @@
     <meta charset="UTF-8">
     <title>Qui sommes nous ?</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" type="image/png" href="../Autre/images/floticon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../Autre/images/floticon.ico" >
 </head>
 
 <body>

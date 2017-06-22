@@ -7,7 +7,7 @@
 
 </head>
 
-<body id="bodyaide">
+<body>
 
 <header>
     <?php
@@ -24,13 +24,12 @@
     </div>
     <br>
     <div id="inscription">
-        Pour vous inscrire, rendez-vous <a id="lien1" href="">ici</a>.</br> <br>
+        Pour vous inscrire, rendez-vous <a id="lien1" href="inscription.php">ici</a>.</br> <br>
         Cliquez sur l'onglet inscription </br> <br>
         Remplissez le formulaire avec les informations suivantes : </br> <br>
 
     </div>
 </div>
-<br><br>
 
 <div id="bloc2">
     <div id="bloc2Title">
@@ -38,13 +37,11 @@
     </div>
     <div id="connexion">
 
-        Pour vous connecter, rendez vous <a id="lien2" href="">ici</a>.</br> <br>
+        Pour vous connecter, rendez vous <a id="lien2" href="accueil.php">ici</a>.</br> <br>
 
         Remplissez le formulaire avec les informations demandées</br> <br>
     </div>
 </div>
-
-<br><br>
 
 <div id="bloc3">
     <div id="bloc3Title">
@@ -53,7 +50,7 @@
 
     <div id="ajoutmaison">
 
-        Pour ajouter une maison, cliquez <a id="lien3" href="">ici</a>.</br> <br>
+        Pour ajouter une maison, cliquez <a id="lien3" href="maison.php">ici</a>.</br> <br>
 
         Cliquez ensuite sur "ajouter une maison"</br> <br>
 
@@ -61,7 +58,6 @@
     </div>
 </div>
 
-<br><br>
 
 <div id="bloc4">
     <div id="bloc4Title">
@@ -70,7 +66,7 @@
 
     <div id="compte">
 
-        Pour accéder a vos informations, cliquez <a id="lien4" href="">ici</a>.</br> <br>
+        Pour accéder a vos informations, cliquez <a id="lien4" href="profilUtilisateur.php">ici</a>.</br> <br>
 
     </div>
 </div>
