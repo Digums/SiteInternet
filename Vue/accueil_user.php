@@ -1,8 +1,9 @@
 <?php
+session_start();
 require("../Modele/connexion_M.php");
 include("../Modele/capteur-db.php");
 include("../Modele/messagerie-db.php");
-session_start();
+
 ?>
 
 <!DOCTYPE HTML>

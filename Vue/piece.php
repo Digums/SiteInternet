@@ -1,9 +1,10 @@
 <?php
+session_start();
 include("../Controleur/piece-controleur.php");
 include("../Controleur/capteur-controleur.php");
 require("../Modele/connexion_M.php");
 require("Header.php ");
-session_start();
+
 ?>
 <html>
 <head>

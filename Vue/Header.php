@@ -1,6 +1,11 @@
 <?php
-$admin = true;
-if ($admin == false){ ?>
+
+if (!isset($_SESSION['client'])) {
+    $_SESSION['client'] = false;
+}
+$client = $_SESSION['client'];
+
+if ($client == false){ ?>
     <div class="menutop">
         <ul>
 
@@ -19,7 +24,7 @@ if ($admin == false){ ?>
 
 <?php }
 
-else { ?>
+elseif ($client == true) { ?>
 
     <div class="menutop" >
         <ul >
