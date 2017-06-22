@@ -13,8 +13,8 @@
                         <option value="fumee">Détection de fumée</option>
                         <option value="Position de porte">Position de porte</option></select></p>
                 <p><label>Etat du capteur: </label>
-                    <input type="radio" name="etat" value="On">Allumé
-                    <input type="radio" name="etat" value="Off">Eteint</p>
+                    <input type="radio" name="etat" value="1">Allumé
+                    <input type="radio" name="etat" value="0">Eteint</p>
                 <p><label>Nom de la pièce: </label>
                     <select name="piece" id="piece">
                         <option value="">--Faites votre choix--</option>
