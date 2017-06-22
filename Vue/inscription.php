@@ -23,6 +23,7 @@ if (!isset($_SESSION['verif'])) {
 </header>
 <div id="animaccueil">
     <div id="cadreinscription">
+
         <div id="gauche">
             <p><label>Nom*</label></br>
                 <input type="text" name="nom" placeholder="" required></p>

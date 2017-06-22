@@ -39,7 +39,9 @@ else {
         </div>
         <div class="derniermsg">
             <h1>Vos derniers messages :</h1>
-            <?php $derniers_messages =  getListeMessageFromAdmin($bdd);
+            <?php
+            $idmembre=$_SESSION['id'];
+            $derniers_messages =  getListeMessageFromAdmin($bdd,$idmembre);
             while ($donnees = $derniers_messages->fetch()){?>
                 <p><?php echo $donnees['commentaire'] ?></p>
                 <p><?php echo $donnees['message'] ?></p>

@@ -19,11 +19,11 @@ function getListeMessageUser($bdd){
     }
 }
 
-function getListeMessageFromAdmin($bdd){
+function getListeMessageFromAdmin($bdd, $idmembre){
     try{
-        $req = $bdd->query('SELECT * FROM messageadmin
+        $req = $bdd->query("SELECT * FROM messageadmin
                             JOIN messageuser ON messageuser.id = messageadmin.idreponse
-                            WHERE iddestinataire = 3');
+                            WHERE iddestinataire = $idmembre ");
         return $req;
     }catch(Exception $e) {
         echo "<br>-------------------<br> ERREUR ! <br>";
