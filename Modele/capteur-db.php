@@ -13,14 +13,25 @@ require("../Modele/connexion_M.php");
 
 function addcapteur($bdd, $name, $typecapteur, $etat, $piece){
     try {
-        $idmaison=1;
-        $req = $bdd->prepare("INSERT INTO capteur(nom_capteur, type_capteur, etat,nom_piece,id_maison) VALUES(:nom, :typecapteur,:etat,:piece, :idmaison)");
+        //$idmaison=1;
+        $idpiece = $bdd->prepare("SELECT id FROM piece WHERE nom_piece = :piece AND id_maison = :idmaison");
+        $idpiece->bindParam(':piece', $piece);
+        $idpiece->bindParam(':idmaison', $_SESSION['idmaison']);
+        $idpiece->execute();
+        $pieceid = $idpiece->fetchColumn(0);
+        echo $pieceid;
+        $req = $bdd->prepare("INSERT INTO capteur(nom_capteur, type_capteur, etat,nom_piece,id_piece, id_maison) VALUES(:nom, :typecapteur,:etat,:piece, :idpiece, :idmaison)");
         $req->bindParam(':nom', $name);
         $req->bindParam(':typecapteur', $typecapteur);
         $req->bindParam(':etat', $etat);
         $req->bindParam(':piece', $piece);
+        $req->bindParam(':idpiece', $pieceid);
         $req->bindParam(':idmaison', $_SESSION['idmaison']);
         $req->execute();
+        $last_id = $bdd->lastInsertId();
+        $req2 = $bdd->prepare("INSERT INTO donnees(donnee, id_capteur) VALUES(0, :last_id)");
+        $req2->bindParam(':last_id', $last_id);
+        $req2->execute();
     }catch(Exception $e){
         echo "<br>-------------------<br> ERREUR ! <br>";
         //print_r($params);

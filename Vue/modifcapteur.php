@@ -14,7 +14,7 @@
                         <option value="Position de porte">Position de porte</option></select></p>
                 <p><label>Etat du capteur: </label>
                     <input type="radio" name="etat" value="1">Allumé
-                    <input type="radio" name="etat" value="0">Eteint</p>
+                    <input type="radio" name="etat" value="0 ">Eteint</p>
                 <p><label>Nom de la pièce: </label>
                     <select name="piece" id="piece">
                         <option value="">--Faites votre choix--</option>
@@ -22,7 +22,7 @@
                         $idmaison=$_SESSION['idmaison'];
                         $piece = $bdd->query("SELECT nom_piece FROM piece WHERE id_maison =$idmaison");
                         while ($info = $piece->fetch()){ ?>
-                            <option value="<?php echo $info['nom_piece']?>"><?php echo $info['nom_piece'] ?></option>
+                            <option value="<?php echo $info['nom_piece']?>" ><?php echo $info['nom_piece'] ?></option>
                         <?php } ?>
 
                     </select>

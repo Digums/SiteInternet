@@ -51,6 +51,7 @@ else {
         </div>
     </div>
     <div class="pieceacceuil">
+        <!--<P>Votre maison :</P>-->
         <?php
 
         $req = $bdd->prepare("SELECT id, nom_piece FROM piece WHERE id_maison=:idmaison ");

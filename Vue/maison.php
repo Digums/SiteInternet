@@ -22,9 +22,8 @@ require("Header.php");
             </div>
 
             <div class="container">
-                <form action="../Controleur/piece-controleur.php" method="post">
-                    <div id="pop2">
-                        <h1>Vous voulez ajouter une maison?</h1>
+                <div id="pop2">
+                    <h1>Vous voulez ajouter une maison?</h1>
                         <form method="post" action="../Controleur/maison-controleur.php">
                             <p>L'addresse de votre nouveau logement :</p>
                             <p><label>Adresse </label>
@@ -39,12 +38,13 @@ require("Header.php");
                                 <input type="text" name="superficie"></p>
                             <p><label>Nombre de pièce </label>
                                 <input type="text" name="nbrpiece"></p>
-                        <br>
-                        <button type="submit" value="Submit" name="btnAddPiece">Ajouter</button>
-                    </div>
-                </form><br>
+                            <br>
+                            <button type="submit" value="Submit" name="btnAddMaison">Ajouter</button>
+                        </form><br>
+                </div>
             </div>
         </div>
+    </div>
 </section>
 
 <div class="listepiece">
