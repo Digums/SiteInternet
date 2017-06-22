@@ -5,7 +5,7 @@ $email = $_POST['email'];
 $mdp = $_POST['mdp'];
 session_start();
 $_SESSION['idmaison']=-1;
-
+$_SESSION['client']=true;
 
 
 /*echo $mdp,$email;*/
@@ -22,6 +22,7 @@ if($donnees!=null){
         $idUtilisateur= infoUsers($bdd, $mdp);
         $ligne=$idUtilisateur->fetch();
         $_SESSION['id']=$ligne['id'];
+        $_SESSION["Admin"]="true";
 
         $_SESSION['prenom']=$ligne['prenom'];
         $idUtilisateur=$_SESSION['id'];
