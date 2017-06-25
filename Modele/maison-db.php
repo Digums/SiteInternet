@@ -25,6 +25,7 @@ function addmaison($bdd, $adresse, $complement, $cp, $ville, $superficie, $nbrpi
         $req->bindParam(':id_membre', $id_membre);
         $req->execute();
         $req->closeCursor();
+        $_SESSION['idmaison'] = $bdd->lastInsertId();
     }catch(Exception $e){
         echo "<br>-------------------<br> ERREUR ! <br>";
         //print_r($params);
