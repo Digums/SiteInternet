@@ -4,18 +4,21 @@ require("../Modele/connexion_M.php");
 
 <?php
 
-function inscription($bdd, $nom, $prenom, $date, $email, $mdp, $statut, $adresse, $nbrapp){
+function inscription($bdd, $nom, $prenom, $email, $mdp, $statut, $adresse, $nbrapp){
     try {
-        $req = $bdd->prepare("INSERT INTO membre(nom,prenom, date,email,mdp,statut,adresse,nbrapp) 
-                          VALUES (:nom,:prenom,:date,:email,:mdp,:statut,:adresse,:nbrapp)");
+        $nomloca="";
+        $datetime = date("Y-m-d H:i:s");
+        $req = $bdd->prepare("INSERT INTO membre(nom,prenom, date,email,mdp,statut,adresse,nbrapp,nomloca) 
+                          VALUES (:nom,:prenom,:date,:email,:mdp,:statut,:adresse,:nbrapp,:nomloca)");
         $req->bindParam(":nom", $nom);
         $req->bindParam(":prenom", $prenom);
-        $req->bindParam(":date", $date);
+        $req->bindParam(":date", $datetime);
         $req->bindParam(":email", $email);
         $req->bindParam(":mdp", $mdp);
         $req->bindParam(":statut", $statut);
         $req->bindParam(":adresse", $adresse);
         $req->bindParam(":nbrapp", $nbrapp);
+        $req->bindParam(":nomloca", $nomloca);
         $req->execute();
     }catch (Exception $e) {
         echo "<br>-------------------<br> ERREUR ! <br>";

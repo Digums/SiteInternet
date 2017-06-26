@@ -4,7 +4,7 @@ include('../Modele/membre-db.php');
 $email = $_POST['email'];
 $mdp = $_POST['mdp'];
 session_start();
-$_SESSION['idmaison']=-1;
+$_SESSION['idmaison']=1;
 $_SESSION['client']=true;
 
 

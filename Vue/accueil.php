@@ -34,7 +34,6 @@ if (!isset($_SESSION['verif'])) {
             <input type="password" placeholder="Entrer Mot de passe" name="mdp" required>
 
             <button type="submit" id="buttonaccueil">Se Connecter</button>
-            <input type="checkbox" cheked="checked">Se souvenir de moi<br><br>
             <a id="pasencoreinscrit"href="inscription.php">Pas encore inscrit ?</a>
         </div>
 

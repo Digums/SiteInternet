@@ -2,7 +2,9 @@
 session_start();
 if (!isset($_SESSION['verif'])) {
     $_SESSION['verif'] = 1;
-    echo $_SESSION['verif'];
+}
+if (!isset($_SESSION['checkinscription'])) {
+    $_SESSION['checkinscription'] = 0;
 }
 ?>
 <!DOCTYPE HTML>
@@ -22,7 +24,7 @@ if (!isset($_SESSION['verif'])) {
     ?>
 </header>
 <div id="animaccueil">
-    <div id="cadreinscription">
+        <form id="methodinscrpition" method="post" action="../Controleur/general-controleur.php">
         <div id="gauche">
             <p><label>Nom*</label></br>
                 <input type="text" name="nom" placeholder="" required></p>
@@ -62,10 +64,15 @@ if (!isset($_SESSION['verif'])) {
                     <option value="chine">Chine</option>
                     <option value="japon">Japon</option>
                 </select>
-            </p>
+            </p><br>
+            <div id="checkcgu">
+                <input type="checkbox"required><a id="acgu" href="CGU.php">J'accepte les CGU</a>
+            </div>
             <button type="submit" id="buttoninscrire">S'inscrire</button>
         </div>
-    </div>
+            <p><?php if ($_SESSION['checkinscription']==1){  echo "retaper mdp"; }   ?></p>
+        </form>
+        </div>
 </div>
 <footer>
     <?php

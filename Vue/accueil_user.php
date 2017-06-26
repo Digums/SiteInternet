@@ -39,16 +39,19 @@ else {
         </div>
         <div class="derniermsg">
             <h1>Vos derniers messages :</h1>
-            <?php $derniers_messages =  getListeMessageFromAdmin($bdd);
+            <?php
+            $idmembre=$_SESSION['id'];
+            $derniers_messages =  getListeMessageFromAdmin($bdd,$idmembre);
             while ($donnees = $derniers_messages->fetch()){?>
                 <p><?php echo $donnees['commentaire'] ?></p>
                 <p><?php echo $donnees['message'] ?></p>
             <?php }
             ?>
-            <a href="contact.php">Vous voulez renvoyez un mail?</a>
+            <a id="a_accueil" href="contact.php">Vous voulez renvoyez un mail?</a>
         </div>
     </div>
     <div class="pieceacceuil">
+        <!--<P>Votre maison :</P>-->
         <?php
 
         $req = $bdd->prepare("SELECT id, nom_piece FROM piece WHERE id_maison=:idmaison ");

@@ -1,10 +1,10 @@
 <div class="test">
     <div class="newcapteur">
-        <fieldset id="formulaire">
-            <legend>Ajouter un capteur</legend>
+        <h1>Ajouter un capteur</h1>
+        <div id="formulairecapteur">
             <form method="post" action="../Controleur/capteur-controleur.php">
                 <p><label>Nom du capteur: </label><input type="text" name="name" required></p>
-
+                <br>
                 <p><label>Type de capteur: </label><select name="typecapteur" id="type_capteur" required>
                         <option value="">--Faites votre choix--</option>
                         <option value="temperature">Temperature</option>
@@ -12,9 +12,19 @@
                         <option value="camera">Caméra</option>
                         <option value="fumee">Détection de fumée</option>
                         <option value="Position de porte">Position de porte</option></select></p>
-                <p><label>Etat du capteur: </label>
-                    <input type="radio" name="etat" value="On">Allumé
-                    <input type="radio" name="etat" value="Off">Eteint</p>
+                <br>
+                <p><label id="etat">Etat du capteur:</label>
+                    <input type="radio" name="etat" value="1">Allumé
+                    <input type="radio" name="etat" value="0 ">Eteint</p>
+                <!--<div class="onoffswitch">
+                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                    <label class="onoffswitch-label" for="myonoffswitch">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                    </label>
+                </div>-->
+                    </p>
+                <br>
                 <p><label>Nom de la pièce: </label>
                     <select name="piece" id="piece">
                         <option value="">--Faites votre choix--</option>
@@ -22,14 +32,14 @@
                         $idmaison=$_SESSION['idmaison'];
                         $piece = $bdd->query("SELECT nom_piece FROM piece WHERE id_maison =$idmaison");
                         while ($info = $piece->fetch()){ ?>
-                            <option value="<?php echo $info['nom_piece']?>"><?php echo $info['nom_piece'] ?></option>
+                            <option value="<?php echo $info['nom_piece']?>" ><?php echo $info['nom_piece'] ?></option>
                         <?php } ?>
 
                     </select>
                 </p>
-                <input type="submit" id="sent" value="Ajouter" name="btnAddCapteur">
+                <button type="submit" name="btnAddCapteur">Ajouter</button>
             </form>
-        </fieldset>
+        </div>
     </div>
 
     <div class="delcapteur">
@@ -51,7 +61,7 @@
                         <div class="container">
                             <p> Voulez-vous vraiment supprimer ce capteur ?</p>
                             <a href="../a%20jeter/delete_bdd.php?id=<?php echo $donnees['id'];  ?>" class="delete_form">
-                                <button class="btnDelCapteur"> Supprimer</button>
+                                <button class="btnDelCapteur">Supprimer</button>
                             </a><br><br>
                         </div>
                     </div>
