@@ -375,41 +375,6 @@ span.psw {
 
 /*-------------------------------------------------*/
 
-section#gestion_cap {
-    margin-top: 5%;
-    margin-left: 15%;
-    margin-bottom: 3%;
-    width: 80%;
-    border: 5px double #8CAA8E;
-}
-
-div.newcapteur{
-    width: 80%;
-    margin-left: 15%;
-    position: relative;
-}
-/*fieldset{
-border: none;
-}*/
-
-div.delcapteur{
-    width: 80%;
-//border: 1px solid black;
-    margin-right: auto;
-}
-/*div.sousligne{
-text-decoration: underline;
-}*/
-div.test{
-    margin-top: 10%;
-    display: flex;
-}
-/* -----------------------------------------------------------------------------*/
-
-/*#reponse{
-    float: right;
-}*/
-
 span{
     color: #1F2596;
     text-decoration: underline;
@@ -812,7 +777,30 @@ section #pop2 {
 
 }
 
-
-
-
 /*--------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------Capteur----------------------------------------------------------*/
+section#gestion_cap {
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-bottom: 3%;
+    width: 80%;
+}
+
+div.newcapteur{
+    width: 80%;
+    margin-left: 15%;
+    margin-top: 15%;
+    position: relative;
+}
+#conteneurmodifcapteur{
+
+}
+div.delcapteur{
+    width: 80%;
+    margin-right: auto;
+}
+
+div.test{
+    margin-top: 10%;
+    display: flex;
+}
