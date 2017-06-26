@@ -65,7 +65,7 @@ require("Header.php ");
     $nbpiece = 0;
     while($donnees = $piece->fetch()){ ?>
         <a href="">
-            <ul><input type="button"> <?php echo $donnees['nom_piece'] ?></ul></a><hr>
+            <ul><?php echo $donnees['nom_piece'] ?></ul></a><hr>
         <?php
         $nbpiece = $nbpiece + 1;
         $nbcapt = $nbcapt + $donnees['nbr_capteur'];

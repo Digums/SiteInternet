@@ -47,7 +47,7 @@ else {
                 <p><?php echo $donnees['message'] ?></p>
             <?php }
             ?>
-            <a href="contact.php">Vous voulez renvoyez un mail?</a>
+            <a id="a_accueil" href="contact.php">Vous voulez renvoyez un mail?</a>
         </div>
     </div>
     <div class="pieceacceuil">
