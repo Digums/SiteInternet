@@ -22,7 +22,6 @@ require("Header.php");
             </div>
 
             <div class="container">
-                <form action="../Controleur/piece-controleur.php" method="post">
                     <div id="pop2">
                         <h1>Vous voulez ajouter une maison?</h1>
                         <form method="post" action="../Controleur/maison-controleur.php">
@@ -40,7 +39,7 @@ require("Header.php");
                             <p><label>Nombre de pièce </label>
                                 <input type="text" name="nbrpiece"></p>
                         <br>
-                        <button type="submit" value="Submit" name="btnAddPiece">Ajouter</button>
+                        <button type="submit" value="Submit" name="btnAddMaison">Ajouter</button>
                     </div>
                 </form><br>
             </div>
