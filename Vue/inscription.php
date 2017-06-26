@@ -66,7 +66,7 @@ if (!isset($_SESSION['checkinscription'])) {
                 </select>
             </p><br>
             <div id="checkcgu">
-                <input type="checkbox"required><a href="CGU.php">J'accepte les CGU</a>
+                <input type="checkbox"required><a id="acgu" href="CGU.php">J'accepte les CGU</a>
             </div>
             <button type="submit" id="buttoninscrire">S'inscrire</button>
         </div>

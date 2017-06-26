@@ -168,6 +168,9 @@ div#flink a:hover, div#flink a:active {
     display: flex;
     justify-content: space-around;
 }
+#acgu{
+    text-decoration: underline;
+}
 /*#gauche{
     float:left;
     width:40%;
