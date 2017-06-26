@@ -17,7 +17,7 @@ session_start();
 <body>
 <header>
     <?php
-    require ("Header.php");
+    require ("HeaderAdmin.php");
     ?>
 </header>
 <div class="gestionutilsateur">
