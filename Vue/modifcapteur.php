@@ -37,7 +37,7 @@
 
                     </select>
                 </p>
-                <button type="submit" >Ajouter</button>
+                <button type="submit" name="btnAddCapteur">Ajouter</button>
             </form>
         </div>
     </div>

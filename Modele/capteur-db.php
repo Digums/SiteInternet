@@ -112,14 +112,15 @@ function trame($bdd, $trame){
     echo("<br />$t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec<br />");
 
     if($c == 3){
+        $i = 0.1;
         $id = $n;
-        $date = $year + "-" + $month + "-" + $day + " " + $hour + ":" + $min + ":" + $sec;
-        $donnee = $v * 0.001;
-
+        $date = "$year-$month-$day $hour:$min:$sec";
+        $donnee = $v * $i . " °C";
     }
-    if(empty($donnee)){
-        echo "non";
-    }
+    echo $c . "<br />";
+    echo $donnee . "<br />";
+    echo $v . "<br />";
+    echo $date;
 
     $req = $bdd->prepare("INSERT INTO donnees(donnee, id_capteur, date) VALUES (:donnee, :idcapteur, :date)");
     $req->bindParam(':donnee', $donnee);

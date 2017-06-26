@@ -17,6 +17,6 @@ $req=donneesTrame();
 
 //}
 //echo $req;
-$trame = trame($bdd, $req[34]);
+$trame = trame($bdd, $req[33]);
 
 ?>
