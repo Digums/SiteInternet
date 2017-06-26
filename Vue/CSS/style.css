@@ -719,7 +719,9 @@ section #pop2 {
 
 /*-----------------------------------------------acceuil user---------------------------------------------------------*/
 
-
+#a_accueil{
+    color: black;
+}
 .pieceacceuil{
     background-color: rgba(0,0,0,0.4);
     border-radius: 5px;
@@ -811,6 +813,11 @@ div.delcapteur{
 div.test{
     margin-top: 10%;
     display: flex;
+}
+
+a{
+    color: white;
+    text-decoration: none;
 }
 
 /*---------------------------------------------------onoff------------------------------------------------------------
