@@ -145,6 +145,7 @@ div#flink a:hover, div#flink a:active {
 
 /*--------------------------------------------------------------------------------------------*/
 /*----------------------------------------------Accueil---------------------------------------------------------------*/
+
 #cadreconnexion{
     background-color: rgba(0,0,0,0.4);
     text-align: justify;
@@ -159,41 +160,33 @@ div#flink a:hover, div#flink a:active {
     background-color: rgba(0,0,0,0.4);
     width: 50%;
     height: 51.5%;
-    margin-left: 25%;
+    margin-left: 22%;
     margin-top: 10%;
     border-radius: 5px;
 }
-#cadreinscription{
-    text-align: justify;
-    margin-top: 0%;
-    margin-left: 0%;
-    margin-right: 75%;
-    padding: 5px;
-    border-radius: 5px;
-    width: 300px;
-    height: 300px;
-    position:absolute;
+#methodinscrpition{
+    display: flex;
+    justify-content: space-around;
 }
-
-#gauche{
+/*#gauche{
     float:left;
     width:40%;
     margin-left: 7%;
 }
 #droite{
-    float: right;
-    width: 10%;
-
-}
+    margin-left: 150%;
+    width: 200%;
+    height: 500px;
+}*/
 
 #buttoninscrire {
     background-color: #4CAF50;
     color: white;
     padding: 10.5px 20px;
-    margin-top: 300%;
+    margin-top: 40%;
     border: none;
     cursor: pointer;
-    margin-left: 83.5%;
+    margin-left: 27%;
     border-radius: 5px;
 }
 #pasencoreinscrit{

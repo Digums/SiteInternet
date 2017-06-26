@@ -24,8 +24,7 @@ if (!isset($_SESSION['checkinscription'])) {
     ?>
 </header>
 <div id="animaccueil">
-    <div id="cadreinscription">
-        <form method="post" action="../Controleur/general-controleur.php">
+        <form id="methodinscrpition" method="post" action="../Controleur/general-controleur.php">
         <div id="gauche">
             <p><label>Nom*</label></br>
                 <input type="text" name="nom" placeholder="" required></p>
@@ -65,12 +64,15 @@ if (!isset($_SESSION['checkinscription'])) {
                     <option value="chine">Chine</option>
                     <option value="japon">Japon</option>
                 </select>
-            </p>
+            </p><br>
+            <div id="checkcgu">
+                <input type="checkbox"required><a href="CGU.php">J'accepte les CGU</a>
+            </div>
             <button type="submit" id="buttoninscrire">S'inscrire</button>
         </div>
             <p><?php if ($_SESSION['checkinscription']==1){  echo "retaper mdp"; }   ?></p>
         </form>
-    </div>
+        </div>
 </div>
 <footer>
     <?php
