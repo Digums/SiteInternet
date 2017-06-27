@@ -39,7 +39,7 @@ elseif ($client == true) { ?>
                 </div> </li>
             <li ><a                     title = "Profil"              href = "profilUtilisateur.php"   >Profil</a ></li >
             <li ><a                     title = "Aide"                href = "aide.php" > Aide </a ></li >
-                <li><form action="../Controleur/general-controleur.php"><button type="submit" id="btndecon" name="btndecon"> Déconnexion</button> </form></li>
+                <li><form method="post" action="../Controleur/general-controleur.php"><button type="submit" id="btndecon" name="btndecon"> Déconnexion</button> </form></li>
             </div>
         </ul >
     </div >
