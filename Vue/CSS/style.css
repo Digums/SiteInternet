@@ -76,7 +76,7 @@ div.menutop li a {
 
 div.menutop li a:hover {
     background-color: rgba(255,255,255,0.4);
-    color: #4CAF50;
+    color: #54E85A;
 }
 div.menutop.dropdown:hover .dropbtn {
     color: lightgray;
@@ -139,7 +139,7 @@ div#flink a {
 }
 div#flink a:hover, div#flink a:active {
     background-color: rgba(255,255,255,0.4);
-    color: #4CAF50;
+    color: #54E85A;
 }
 
 
@@ -734,9 +734,10 @@ section #pop2 {
 .bonjour{
     background-color: rgba(255,255,255,0.4);
     border-radius: 5px;
-    width: 35%;
+    width: 75%;
+    height: 30%;
     padding-left: 7px;
-    margin-left: 25%;
+    margin-left: 17%;
     color: black;
     font-family: Impact;
     font-size: 2em;
@@ -746,8 +747,8 @@ section #pop2 {
 .derniermsg{
     background-color: rgba(255,255,255,0.4);
     border-radius: 5px;
-    width: 45%;
-    height: 225px;
+    width: 75%;
+    height: 61%;
     padding-left: 7px;
     margin-left: 17%;
     color: black;
