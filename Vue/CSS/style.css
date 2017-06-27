@@ -215,23 +215,23 @@ div#flink a:hover, div#flink a:active {
 
 #align{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 .img1{
 
     width: 20%;
-    height: 20%;
+    height: 263px;
 }
 
 .img2{
 
     width: 20%;
-    height: 20%;
+    height: 263px;
 }
 
 .img3{
     width: 20%;
-    height: 20%;
+    height: 263px;
 }
 /* -------------------------------------------------------------------------------------------------------------------*/
 /* Set a style for all buttons */
