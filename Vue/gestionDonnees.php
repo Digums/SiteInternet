@@ -13,10 +13,10 @@ echo $reponse['nom_capteur'];
 echo $reponse['valeur2'];*/
 
 $req=donneesTrame();
-//for($i=0, $size=count($req); $i<$size; $i++){
-
-//}
+for($i=0, $size=count($req); $i<$size; $i++){
+    $trame = trame($bdd, $req[$i]);
+}
 //echo $req;
-$trame = trame($bdd, $req[33]);
+
 
 ?>

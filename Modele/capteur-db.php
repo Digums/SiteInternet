@@ -65,7 +65,8 @@ function getCapteurSalle($bdd, $piece){
         $req = $bdd->prepare('SELECT capteur.nom_capteur, donnees.donnee
                               FROM capteur
                               JOIN donnees ON capteur.id = donnees.id_capteur
-                              WHERE capteur.id_piece = :piece');
+                              WHERE capteur.id_piece = :piece 
+                              ORDER BY donnee ASC');
         $req->bindParam(':piece', $piece);
         $req->execute();
         return $req;
@@ -111,22 +112,27 @@ function trame($bdd, $trame){
     $sec = substr($trame,31,2);
     echo("<br />$t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec<br />");
 
-    if($c == 3){
+    /*if($c == 3){
         $i = 0.1;
-        $id = $n;
+        $id = 24;
         $date = "$year-$month-$day $hour:$min:$sec";
         $donnee = $v * $i . " °C";
+    }
+    if($c == 4){
+        $id = 27;
+        $date = "$year-$month-$day $hour:$min:$sec";
+        $donnee = $v * 1 . " %";
     }
     echo $c . "<br />";
     echo $donnee . "<br />";
     echo $v . "<br />";
     echo $date;
 
-    $req = $bdd->prepare("INSERT INTO donnees(donnee, id_capteur, date) VALUES (:donnee, :idcapteur, :date)");
+    $req = $bdd->prepare("UPDATE donnees SET donnee = :donnee, date=:date WHERE id=:idcapteur");
     $req->bindParam(':donnee', $donnee);
     $req->bindParam(':idcapteur', $id);
     $req->bindParam(':date', $date);
     $req->execute();
-    echo "Vous avez réussi !";
+    echo "Vous avez réussi !";*/
 }
 ?>
