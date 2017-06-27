@@ -1,4 +1,5 @@
 <?php
+session_start();
 require("../Modele/connexion_M.php");
 include("../Modele/messagerie-db.php");
 ?>

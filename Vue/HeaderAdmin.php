@@ -17,11 +17,9 @@ require ("../Modele/messagerie-db.php");
         <div class="menudroite">
             <li><a                     title="Utilisateurs"  href="GestionUtilisateur.php">Utilisateurs</a></li>
             <li><a                     title="Maisons"     href="">Maisons</a></li>
-            <li><a                     title="Messages"             href="">Messages</a></li>
+            <li><a                     title="Messages"             href="contact.php">Messages</a></li>
             <li><a                     title="Données"                href="">Données</a></li>
-            <!--<li style="float: right"><button   onclick="document.getElementById('id01').style.display='block'">Se connecter</button></li>-->
-
-            <!--<li style="float: right"><button   onclick="document.getElementById('id01').style.display='block'">Se connecter</button></li>-->
+            <li><form action="../Controleur/general-controleur.php"><button type="submit" id="btndecon" name="btndecon"> Déconnexion</button> </form></li>
         </div>
     </ul>
 </div>
