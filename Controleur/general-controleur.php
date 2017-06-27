@@ -19,14 +19,13 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         echo $_SESSION['checkinscription'];
 
-        header("Location: ../Vue/inscription.php");
-    }
-    if (isset($_POST['btndecon'])){
-session_unset();
-session_destroy();
 
+    }
+    header("Location: ../Vue/inscription.php");
 }
-    header("Location: ../Vue/accueil.php");
+
+if (isset($_POST['btndecon'])){
+    session_destroy();
 }
 
 ?>

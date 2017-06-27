@@ -18,13 +18,8 @@ if (!isset($_SESSION['verif'])) {
 </head>
 <body id="bodyaccueil">
 
-<header>
-    <?php
-    require ("HeaderAdmin.php");
-    ?>
-</header>
 <div id="cadreconnexion">
-    <form method="post" action="../Modele/TraitementConnexion.php">
+    <form method="post" action="../Modele/TraitementConnexionAdmin.php">
 
         <div class="container">
             <label><b>Email</b></label>

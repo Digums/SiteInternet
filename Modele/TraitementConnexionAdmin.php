@@ -35,7 +35,7 @@ if($donnees!=null){
         echo $_SESSION['id'];
         echo $_SESSION['idmaison'];
 
-        header("Location: ../Vue/accueil_admin.php ");
+        header("Location: ../Vue/GestionUtilisateur.php ");
 
 
 
